@@ -1,0 +1,196 @@
+@use '../abstracts'as abstract;
+@use '../mixins'as mixin;
+
+footer {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #42413a;
+    // background-color: mixin.m-get-key(abstract.$s-colours, dark-grey);
+    color: mixin.m-get-key(abstract.$s-colours, white);
+    height: 100%;
+    border-top: 3px solid #f28b00;
+    margin: 0px 0px 10px 0px;
+    justify-content: space-between;
+
+    @include mixin.m-respond-to(small-max, abstract.$s-breakpoints) {
+        width: 300px;
+    }
+
+    @include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+        display: flex;
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+
+        color: mixin.m-get-key(abstract.$s-colours, white);
+        text-decoration: none;
+    }
+
+    /*div {
+        flex: 1 1 auto;
+    }*/
+
+    .leftFooter {
+        display: none;
+        align-self: center;
+        padding: 0.8*26.25px 0.8*20px 0.8*32.5px 0.8*20px;
+        //padding: 0.8*20px;
+        font-size: 0.8*15px;
+        text-align: left;
+
+        @include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+            display: flex;
+            width: 100%;
+        }
+
+        @include mixin.m-respond-to(small-max, abstract.$s-breakpoints) {
+            padding: 10px;
+        }
+
+        .arthaus-icon {
+            box-sizing: border-box;
+            margin-right: 0.8*20px;
+            flex: 0 0 0.8*60px;
+            background: url(../images/footer/Arthaus-Logo-Badge.png) top center no-repeat;
+            background-size: cover;
+            height: 48px;
+            min-width: 40px;
+        }
+
+        .copy-right {
+            margin-top: 12px;
+            font-size: 10px;
+        }
+    }
+
+    .rightFooter {
+        display: flex;
+        align-self: center;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 0.8*26.25px 0.8*20px 0.8*32.5px 0.8*20px;
+        //padding: 0.8*20px;
+
+        @include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+            align-items: flex-end;
+        }
+
+        @include mixin.m-respond-to(small-max, abstract.$s-breakpoints) {
+            padding: 10px;
+            width: 100%;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .arthaus-social {
+
+            ul {
+
+                li {
+                    padding: 0 0.8*14.25px;
+                    cursor: pointer;
+                    font-size: 0.8*14px;
+
+                    &:first-of-type {
+                        padding: 0 0.8*10px 0 0;
+                    }
+
+                    &:last-of-type {
+                        padding: 0 0 0 0.8*10px;
+                    }
+                }
+            }
+        }
+
+        .footer-social-icon {
+            max-width: 20px;
+            max-height: 20px;
+        }
+
+        .arthaus-terms {
+            padding-top: 0.8*12.5px;
+            font-size: 0.8*13.75px;
+            width: 100%;
+            text-align: center;
+
+            ul {
+
+                li {
+                    padding: 0 0 0 0.8*10px !important;
+
+                    &:last-of-type {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 759px) {
+            .arthaus-terms {
+                padding-top: 5px;
+                font-size: 12px;
+            }
+        }
+
+        .footer-social-icon {
+            max-width: 24px;
+            max-height: 24px;
+        }
+
+        .arthaus-copyright {
+            padding-top: 0.8*5px;
+            font-size: 0.8*11px !important;
+        }
+    }
+
+    .block--fullWidth {
+        width: 100vw !important;
+        margin-left: -50vw !important;
+        left: 50%;
+        position: relative;
+
+    }
+
+    .with-borderTop {
+        border-top: 3px solid #f28b00;
+    }
+
+    .maxFullWidth {
+        max-width: 944px;
+        margin: 0 auto;
+    }
+
+    .facebook-icon {
+        max-width: 10.26px !important;
+    }
+
+    .arthaus-certifications {
+        display: flex;
+        width: 100%;
+        padding-top: 20px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .footer-logo {
+        img {
+            width: 100%;
+        }
+
+        &.bsi-logo {
+            max-width: 90px;
+        }
+
+        &.cyber-logo {
+            max-width: 45px;
+        }
+    }
+}

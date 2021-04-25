@@ -1,0 +1,43 @@
+$white: #ffffff !default;
+$important: !important;
+//
+// Variables
+//
+// You can override the default values by setting the variables in your Sass
+// before importing the normalize-scss library.
+
+// The font size set on the root html element.
+$base-font-size: 16px !default;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 24px !default;
+
+// The length unit in which to output vertical rhythm values.
+// Supported values: px, em, rem.
+$base-unit: 'em' !default;
+
+// The default font family.
+$base-font-family: sans-serif !default;
+
+// The font sizes for h1-h6.
+$h1-font-size: 2    * $base-font-size !default;
+$h2-font-size: 1.5  * $base-font-size !default;
+$h3-font-size: 1.17 * $base-font-size !default;
+$h4-font-size: 1    * $base-font-size !default;
+$h5-font-size: 0.83 * $base-font-size !default;
+$h6-font-size: 0.67 * $base-font-size !default;
+
+// The amount lists and blockquotes are indented.
+$indent-amount: 40px !default;
+
+$darkGrey: #42413a;
+$lightGrey: #878679;
+$midGrey: #6c6b5f;
+$burgundy: #8e5562;
+$green: #7fa000;
+$navy: #212040;
+$whiteGrey: #f6f6f6;
+$darkBlue: #365b7f ;
+$teal: #62ae9f;
+$mainOrange: #f28b00;
+$darkOrange: #c37000;

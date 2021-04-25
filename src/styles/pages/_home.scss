@@ -1,0 +1,49 @@
+@use '../abstracts' as abstract;
+
+.home {
+    .block {
+        .content {
+            h1 {
+                font-size: 0.8*22px;
+                color: abstract.$v-white !important;
+            }
+
+            h2 {
+                font-size: 0.8*22px;
+                color: abstract.$v-white;
+            }
+
+            h2.caps {
+                font-size: 0.8*13px;
+                color: abstract.$v-white;
+            }
+        }
+    }
+}
+
+footer {
+    margin: 8px 0 10px 0;
+}
+
+@media (max-width: 759px) {
+    .home {
+        .block {
+            .content {
+                h1 {
+                    font-size: 16px;
+                    color: abstract.$v-white abstract.$v-important;
+                }
+
+                h2 {
+                    font-size: 16px;
+                    color: abstract.$v-white;
+                }
+
+                h2.caps {
+                    font-size: 11px;
+                    color: abstract.$v-white;
+                }
+            }
+        }
+    }
+}

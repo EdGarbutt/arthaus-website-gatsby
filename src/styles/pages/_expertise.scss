@@ -1,0 +1,545 @@
+.expertise {
+
+    /* SUB NAV */
+    nav.sub-nav {
+        height: 0.8*60px;
+        z-index: 150;
+        text-align: center;
+
+        @media only screen and (max-width: 759px) {
+            max-width: 300px;
+            display: flex;
+            justify-content: space-evenly;
+
+            .opt {
+                width: 50px;
+                font-size: 11px;
+            }
+        }
+
+        .opt {
+            font-size: 0.8*20px;
+            font-weight: bold;
+            display: inline-block;
+            height: 0.8*40px;
+            width: 180px;
+            margin: 0.8*10px 0;
+            padding: 0.8*8px 0;
+            text-decoration: none;
+
+
+            a {
+                color: #525252;
+                text-decoration: none;
+            }
+        }
+
+        //      @media screen and (max-width: 759px) {
+        //     nav.sub-nav .opt {
+        //         width: 50px;
+        //     }
+        // }
+        .b-active {
+            &:after {
+                margin: 0.8*22px 0 0 -55*0.8px !important;
+            }
+        }
+
+        .c-active {
+            &:after {
+                margin: 0.8*22px 0 0 -85*0.8px !important;
+            }
+        }
+
+        .d-active {
+            &:after {
+                margin: 0.8*22px 0 0 -40*0.8px !important;
+            }
+        }
+
+        .active {
+            text-decoration: none;
+
+            a {
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            span {
+                border-bottom: 0.8*4px solid #F28B02;
+                padding-bottom: 0.8*4px;
+            }
+        }
+    }
+
+    // @media screen and (max-width: 759px) {
+    //     nav.sub-nav-scrolled {
+    //         max-width: 150px;
+    //     }
+    // }
+
+    .sub-nav-scrolled {
+        position: fixed;
+        max-width: 0.8*1180px;
+        width: 100%;
+        top: 0.8*76px;
+
+        @media only screen and (max-width: 1239px) {
+            max-width: 700px;
+        }
+
+        @media only screen and (max-width: 759px) {
+            max-width: 300px;
+            display: flex;
+            justify-content: space-evenly;
+
+            .opt {
+                width: 50px;
+            }
+        }
+    }
+
+    .expertise-img {
+        width: 100%;
+        max-width: 472px;
+    }
+
+    .expertise-img__desktop {
+        display: block;
+    }
+
+    .expertise-img__mobile {
+        display: none;
+    }
+
+    @media only screen and (max-width:991px) {
+        .expertise-img__desktop {
+            display: none;
+        }
+
+        .expertise-img__mobile {
+            display: block;
+
+        }
+    }
+
+    .grey-section {
+        background-color: #85857d;
+        color: white;
+        padding: 0.8*55px 15px;
+        text-align: center;
+
+        .title {
+            font-size: 0.8*35px;
+            font-weight: bold;
+        }
+
+        .sub-title {
+            font-size: 16px;
+        }
+    }
+
+    .orange-section {
+        background-color: #f28b00;
+        font-size: 16px;
+        text-align: center;
+        padding: 0.8*30px 0.8*15px;
+
+        a {
+            color: white;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .orange {
+        background-color: #f28b00;
+
+        .brand-title {
+            margin: 0.8*25px 0;
+        }
+    }
+
+    .content-box {
+        /*padding: 70px 40px;*/
+        padding: 0.8*24px 40px;
+
+        .title {
+            font-size: 0.8*34px;
+            font-weight: bold;
+            color: #767676;
+            margin: 0 0 10px 0;
+        }
+
+        .text p {
+            font-size: 16px;
+            color: #767676;
+        }
+
+        img {
+            padding: 0.8*10px;
+
+            width: auto;
+
+            @media only screen and (max-width: 1239px) {
+                height: 230px;
+
+            }
+
+            @media only screen and (max-width: 759px) {
+                height: 120px;
+            }
+        }
+    }
+
+    .grey {
+        background-color: #dddddd;
+        width: 100%;
+        min-height: 0.8*40px;
+        text-align: center;
+        padding: 0.8*15px 0;
+    }
+
+    .page-section-1 {
+        .text {
+            font-size: 0.8*35px;
+            font-weight: bold;
+            color: #767676;
+            text-align: center;
+            padding: 0.8*24px 0.8*15px;
+            max-width: 0.8*950px;
+            margin: 0 auto;
+        }
+    }
+
+    #branding.sub-nav-clicked,
+    #communications.sub-nav-clicked,
+    #digital.sub-nav-clicked {
+        padding-top: 130*0.8px;
+        margin-top: -130*0.8px;
+    }
+
+    #branding.main-nav-clicked,
+    #communications.main-nav-clicked,
+    #digital.main-nav-clicked {
+        padding-top: 190*0.8px;
+        margin-top: -190*0.8px;
+    }
+
+    @media only screen and (max-width: 1239px) {
+
+        .page-section-1 {
+            .text {
+                font-size: 25px;
+                color: #767676;
+                text-align: center;
+                padding: 60px 15px;
+                max-width: 950px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 759px) {
+
+        .page-section-1 {
+            .text {
+                font-size: 20px;
+                color: #767676;
+                text-align: center;
+                padding: 30px 15px;
+                max-width: 950px;
+                margin: 0 auto;
+            }
+        }
+
+        .content-box {
+            padding: 30px 0;
+        }
+    }
+
+    /* TITLE COMPONENT */
+    .title-component-branding {
+        background-image: url(/images/expertise/branding_header_resize.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 0.8*265px;
+        padding: 0.8*75px 0.8*110px;
+
+        .title {
+            font-size: 0.8*70px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sub-title {
+            font-size: 0.8*21px;
+            color: white;
+            margin: 0;
+            padding: 5px 0 0 4px;
+        }
+    }
+
+    .title-component-communications {
+        background-image: url(/images/expertise/comms_header_resize.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 0.8*265px;
+        padding: 0.8*75px 0.8*110px;
+
+        .title {
+            font-size: 0.8*70px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sub-title {
+            font-size: 0.8*21px;
+            color: white;
+            margin: 0;
+            padding: 5px 0 0 4px;
+        }
+    }
+
+    .title-component-digital {
+        background-image: url(/images/expertise/digital_header_resize.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 0.8*265px;
+        padding: 0.8*75px 0.8*110px;
+
+        .title {
+            font-size: 0.8*70px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sub-title {
+            font-size: 0.8*21px;
+            color: white;
+            margin: 0;
+            padding: 5px 0 0 4px;
+        }
+    }
+
+    @media only screen and (max-width: 1239px) {
+        .title-component-branding {
+            background-image: url(/images/expertise/branding_header_resize.jpg);
+            background-size: cover;
+            background-position-x: -350px;
+            min-height: 265px;
+            padding: 75px 50px;
+
+            .title {
+                font-size: 35px;
+                font-weight: bold;
+                color: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            .sub-title {
+                font-size: 14px;
+                color: white;
+                margin: 0;
+                padding: 5px 0 0 4px;
+            }
+        }
+
+        .title-component-communications {
+            background-image: url(/images/expertise/comms_header_resize.jpg);
+            background-size: cover;
+            background-position-x: -350px;
+            min-height: 265px;
+            padding: 75px 50px;
+
+            .title {
+                font-size: 35px;
+                font-weight: bold;
+                color: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            .sub-title {
+                font-size: 14px;
+                color: white;
+                margin: 0;
+                padding: 5px 0 0 4px;
+            }
+        }
+
+        .title-component-digital {
+            background-image: url(/images/expertise/digital_header_resize.jpg);
+            background-size: cover;
+            background-position-x: -350px;
+            min-height: 265px;
+            padding: 75px 50px;
+
+            .title {
+                font-size: 35px;
+                font-weight: bold;
+                color: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            .sub-title {
+                font-size: 14px;
+                color: white;
+                margin: 0;
+                padding: 5px 0 0 4px;
+            }
+        }
+    }
+
+    #contact {
+        margin-top: 20px;
+        padding: 15px;
+
+        .btn {
+            padding-bottom: 3px;
+            padding-top: 3px;
+            color: #f28b00;
+            background-color: #fff;
+            width: fit-content;
+            border-radius: 2px;
+        }
+
+        .btn:hover {
+            color: #fff;
+            background-color: #f28b00;
+            border: 1px solid #fff;
+        }
+
+        #contactUsModal {
+
+            h2 {
+                color: #525252;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            #contactClose,
+            #contactSave {
+                color: #fff;
+            }
+
+            #contactSave {
+                background-color: #f28b00;
+            }
+
+            #contactSave:hover {
+                background-color: #fff;
+                color: #f28b00;
+                border: 1px solid #f28b00;
+            }
+
+            #contactClose {
+                float: left;
+                background-color: #515151;
+            }
+
+            #contactClose:hover {
+                background-color: #fff;
+                color: #66665d;
+                border: 1px solid #66665d;
+            }
+
+            textarea {
+                height: 100px;
+                resize: none;
+            }
+
+            .modal-header {
+                border-bottom: none;
+            }
+
+            .modal-footer {
+                border-top: none;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 759px) {
+        .title-component-branding {
+            background-image: url(/images/expertise/branding_header_resize.jpg);
+            background-size: cover;
+            min-height: 165px;
+            padding: 75px 15px;
+
+            .title {
+                font-size: 35px;
+                text-align: center;
+                font-weight: bold;
+                color: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            .sub-title {
+                font-size: 13px;
+                text-align: center;
+                color: white;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .title-component-communications {
+            background-image: url(/images/expertise/comms_header_resize.jpg);
+            background-size: cover;
+            min-height: 165px;
+            padding: 75px 15px;
+
+            .title {
+                font-size: 35px;
+                text-align: center;
+                font-weight: bold;
+                color: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            .sub-title {
+                font-size: 13px;
+                text-align: center;
+                color: white;
+                margin: 0;
+            }
+        }
+
+        .title-component-digital {
+            background-image: url('/images/expertise/digital_header_resize.jpg');
+            background-size: cover;
+            min-height: 165px;
+            padding: 75px 15px;
+
+            .title {
+                font-size: 35px;
+                text-align: center;
+                font-weight: bold;
+                color: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            .sub-title {
+                font-size: 13px;
+                text-align: center;
+                color: white;
+                margin: 0;
+            }
+        }
+    }
+}

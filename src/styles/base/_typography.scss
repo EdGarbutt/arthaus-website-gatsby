@@ -1,0 +1,504 @@
+//@forward '../abstracts/mixins' as mixin.m-*;
+//@use '../abstracts/settings' as s;
+@use '../abstracts' as abstract;
+@use '../mixins' as mixin;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+body {
+    font-family: "LatoWebLight";
+    font-size: 62.5%;
+}
+
+.strong {
+    font-weight: bold !important;
+    color: #525252;
+}
+
+.home,
+.work,
+.about,
+.expertise,
+.contact {
+
+    main {
+
+        .content {
+            color: mixin.m-get-key(abstract.$s-colours, white);
+
+            h1 {
+                font-size: 1.5em;
+                color: #525252;
+            }
+
+            h2 {
+                font-size: 1.5em;
+                /*color: #525252;*/
+
+                &.caps {
+                    font-size: 1.3em;
+                    text-transform: uppercase;
+                }
+            }
+
+            p {
+                font-size: 1.1em;
+                color: #525252;
+            }
+
+            .plusIcon {
+                font-size: 3em;
+            }
+            // Generate CSS Rules for tabvar view and above
+            @include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+                padding: 0.8*20px;
+
+                h1 {
+                    font-size: 0.8*2.2em;
+                }
+
+                h2 {
+                    font-size: 0.8*22px;
+
+                    &.caps {
+                        font-size: 0.8*1.3em;
+                        text-transform: uppercase;
+                    }
+                }
+
+                p {
+                    font-size: 0.8*1.6em;
+                }
+
+                .plusIcon {
+                    font-size: 0.8*5em;
+                    margin-bottom: -0.8*3px;
+                }
+            }
+        }
+    }
+}
+
+.project {
+
+    main {
+
+        .content {
+            color: mixin.m-get-key(abstract.$s-colours, black);
+
+            p {
+                /*font-size: 2.4em;*/
+                font-size: 0.8*3.2em;
+            }
+
+            &.projectNavigation {
+                color: mixin.m-get-key(abstract.$s-colours, dark-grey);
+                font-size: 0.8*3.5em;
+            }
+        }
+    }
+}
+
+.contact,
+.about,
+.expertise {
+
+    .mainWrapper {
+
+        .content {
+            color: mixin.m-get-key(abstract.$s-colours, black);
+
+            .arthaus-address {
+                font-size: 0.8*1.6em;
+            }
+
+            .color-teal {
+                color: mixin.m-get-key(abstract.$s-colours, teal);
+            }
+
+            .arthaus-social {
+
+                ul {
+
+                    li {
+                        a {
+                            color: mixin.m-get-key(abstract.$s-colours, teal);
+                            font-size: 0.8*3.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+header {
+    /* Navigation text */
+    nav {
+        .desktop-menu {
+            a {
+                font-family: "LatoWebLight";
+                color: mixin.m-get-key(abstract.$s-colours, dark-grey);
+                font-size: 0.8*15px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 700;
+
+                &.highlight {
+                    padding-bottom: 0.8*4px;
+                    border-bottom: 0.8*4px solid mixin.m-get-key(abstract.$s-colours, orange);
+
+                    &:hover {
+                        color: mixin.m-get-key(abstract.$s-colours, dark-grey);
+                    }
+                }
+
+                &:hover {
+                    padding-bottom: 0.8*4px;
+                    border-bottom: 0.8*4px solid mixin.m-get-key(abstract.$s-colours, orange);
+                }
+            }
+
+            .active {
+                padding-bottom: 0.8*4px;
+                border-bottom: 0.8*4px solid mixin.m-get-key(abstract.$s-colours, orange);
+            }
+        }
+        ul {
+            li {
+                a:not(.home-link) {
+                    font-family: "LatoWebLight";
+                    color: mixin.m-get-key(abstract.$s-colours, dark-grey);
+                    font-size: 0.8*15px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 700;
+
+                    &.highlight {
+                        padding-bottom: 0.8*4px;
+                        border-bottom: 0.8*4px solid mixin.m-get-key(abstract.$s-colours, orange);
+
+                        &:hover {
+                            color: mixin.m-get-key(abstract.$s-colours, dark-grey);
+                        }
+                    }
+
+                    &:hover {
+                        padding-bottom: 0.8*4px;
+                        border-bottom: 0.8*4px solid mixin.m-get-key(abstract.$s-colours, orange);
+                    }
+                }
+
+                .active {
+                    padding-bottom: 0.8*4px;
+                    border-bottom: 0.8*4px solid mixin.m-get-key(abstract.$s-colours, orange);
+                }
+            }
+        }
+    }
+}
+
+/* Footer text */
+footer {
+    color: mixin.m-get-key(abstract.$s-colours, white);
+    font-size: 0.8*1.3em;
+
+    a {
+        color: mixin.m-get-key(abstract.$s-colours, white);
+        text-decoration: none;
+
+        &:hover {
+            color: #f28b00;
+        }
+    }
+
+    .arthaus-copyright {
+        font-size: 0.8*1.1em;
+    }
+
+    .arthaus-social {
+        ul {
+            li {
+                a {
+                    font-size: 0.8*2.2em;
+                }
+            }
+        }
+    }
+}
+
+.masthead {
+    color: mixin.m-get-key(abstract.$s-colours, white);
+
+    h1 {
+        font-family: "LatoWebBlack";
+        font-size: 4em;
+
+        @include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+            font-size: 8em;
+        }
+
+        @include mixin.m-respond-to(large, abstract.$s-breakpoints) {
+            font-size: 0.8*12em;
+        }
+
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        font-family: "LatoWeb";
+        font-size: 1.2em;
+
+        @include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+            font-size: 2em;
+        }
+
+        @include mixin.m-respond-to(large, abstract.$s-breakpoints) {
+            font-size: 0.8*2.7em;
+        }
+
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.project-filter {
+    color: mixin.m-get-key(abstract.$s-colours, black);
+    font-size: 1em;
+
+    @include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+        font-size: 0.8*2em;
+    }
+
+    text-transform: uppercase;
+
+    ul {
+        li {
+            font-weight: bold;
+            cursor: pointer;
+
+            &:first-of-type {
+                cursor: default;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.heading1 {
+    font-family: LatoWebBlack;
+    color: #878679;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 5rem;
+
+    &.underline {
+        border-bottom: 4px solid mixin.m-get-key(abstract.$s-colours, orange);
+    }
+
+    @media only screen and (max-width:758px) {
+        font-size: 4rem;
+            line-height:2;
+
+        &.underline {
+            border-bottom: 2px solid mixin.m-get-key(abstract.$s-colours, orange);
+        }
+    }
+}
+
+.heading2 {
+    font-family: LatoWebBlack;
+    font-size: 42px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    margin-top: 0;
+   
+
+    @media only screen and (max-width:758px) {
+        font-size: 3rem;
+    }
+
+    
+    &.heading2--darkGrey {
+        color: mixin.m-get-key(abstract.$s-colours, dark-grey);
+    }
+
+    &.heading2--mainOrange {
+        color: mixin.m-get-key(abstract.$s-colours, orange);
+    }
+
+    &.heading2--teal {
+        color: mixin.m-get-key(abstract.$s-colours, teal);
+    }
+
+    &.heading2--burgundy {
+        color: mixin.m-get-key(abstract.$s-colours, burgundy);
+    }
+
+    &.heading2--green {
+        color: mixin.m-get-key(abstract.$s-colours, green);
+    }
+
+    &.heading2--darkBlue {
+        color: mixin.m-get-key(abstract.$s-colours, dark-blue);
+    }
+
+    &.heading2--navy {
+        color: mixin.m-get-key(abstract.$s-colours, navy);
+    }
+}
+.heading3 {
+    font-family: LatoWebBlack;
+    font-size:21px;
+    @media only screen and (max-width:758px){
+        font-size: 19px;
+    }
+}
+.subHead {
+    font-family: LatoWeb;
+    color: #878679;
+    font-size: 22px;
+    letter-spacing: 2px;
+    
+
+    @media only screen and (max-width:758px) {
+        font-size: 1.8rem;
+    }
+}
+
+.bodyText {
+    font-family: LatoWeb;
+    color: #878679;
+    font-size: 1.6rem;
+    padding-bottom:18px;
+    @media only screen and (max-width:758px) {
+        font-size: 1.4rem;
+        padding-bottom:9px;
+    }
+}
+
+.smallText1 {
+    font-family: LatoWeb;
+    color: #878679;
+    font-size:16px;
+
+    @media only screen and (max-width:758px) {
+        font-size: 1.4rem;
+    }
+}
+
+    .smallText1--white {
+        color: white;
+    }
+
+    .smallText2 {
+        font-family: LatoWebBlack;
+        font-size: 1.6rem;
+         @media only screen and (max-width:758px) {
+        font-size: 1.4rem;}
+        &.smallText2--darkGrey {
+            color: mixin.m-get-key(abstract.$s-colours, dark-grey);
+        }
+
+        &.smallText2--mainOrange {
+            color: mixin.m-get-key(abstract.$s-colours, orange);
+        }
+
+        &.smallText2--teal {
+            color: mixin.m-get-key(abstract.$s-colours, teal);
+        }
+
+        &.smallText2--burgundy {
+            color: mixin.m-get-key(abstract.$s-colours, burgundy);
+        }
+
+        &.smallText2--green {
+            color: mixin.m-get-key(abstract.$s-colours, green);
+        }
+
+        &.smallText2--darkBlue {
+            color: mixin.m-get-key(abstract.$s-colours, dark-blue);
+        }
+
+        &.smallText2--navy {
+            color: mixin.m-get-key(abstract.$s-colours, navy);
+        }
+    }
+
+    .factsText {
+        font-family: LatoWebBlack;
+        font-weight: bolder;
+    }
+
+    .letter-spacing--none{
+        letter-spacing:0;
+    }
+    .text-center {
+        text-align: center;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+    .text--lightGrey {
+        color: mixin.m-get-key(abstract.$s-colours, light-grey);
+    }
+    .text--midGrey{
+        color: mixin.m-get-key(abstract.$s-colours, mid-grey);
+    }
+    .text--darkGrey {
+        color: mixin.m-get-key(abstract.$s-colours, dark-grey);
+    }
+
+    .text--mainOrange {
+        color: mixin.m-get-key(abstract.$s-colours, orange);
+    }
+
+    .text--teal {
+        color: mixin.m-get-key(abstract.$s-colours, teal);
+    }
+
+    .text--burgundy {
+        color: mixin.m-get-key(abstract.$s-colours, burgundy);
+    }
+
+    .text--green {
+        color: mixin.m-get-key(abstract.$s-colours, green);
+    }
+
+    .text--darkBlue {
+        color: mixin.m-get-key(abstract.$s-colours, dark-blue);
+    }
+
+    .text--darkOrange {
+        color: mixin.m-get-key(abstract.$s-colours, dark-orange);
+    }
+
+    .text--navy {
+        color: mixin.m-get-key(abstract.$s-colours, navy);
+    }
+
+    .text--white {
+        color: mixin.m-get-key(abstract.$s-colours, white);
+    }
+
+    .text-size--19 {
+        font-size: 19px;
+    }
+
+
+.page-title__wrap {
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    @media only screen and (max-width:758px) {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+}
+
+.col-form-label{
+    font-size:16px;
+}

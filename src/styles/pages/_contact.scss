@@ -1,0 +1,211 @@
+.contact {
+    .form-group {
+        padding-left: 0;
+    }
+
+    .get-direction {
+        //padding: 7px 0;
+        margin-bottom: 10px;
+    }
+
+    @media only screen and (min-width:992px) {
+        .get-direction:first-child {
+            padding: 0;
+
+            .form-control {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        .get-direction:last-child .form-control {
+            padding-left: 0;
+
+            .form-control {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+
+    h2:not(.modal-title) {
+        //padding: 35px 35px 0 35px;
+        margin: 0;
+    }
+
+    h3 {
+        padding: 0 0 0 0.8*35px;
+        font-size: 0.8*21px;
+        color: #1f1f1f;
+    }
+
+    .color-teal {
+        padding: 0 0 0 0.8*35px;
+        color: #4caeae;
+        font-size: 0.8*16px;
+    }
+
+    .color-orange {
+        padding: 0 0 0 0.8*35px;
+        color: #f28b00;
+        font-size: 0.8*16px;
+    }
+
+
+
+    .head-image {
+        max-width: 100%;
+        margin: 0.8*25px 0 0 0;
+    }
+
+    .map-image {
+        margin: 0.8*20px 0;
+        max-width: 100%;
+    }
+
+    .arthaus-social-main {
+
+        ul {
+            list-style-type: none;
+
+            li {
+                padding: 0 0.8*5px;
+                cursor: pointer;
+                display: inline-block;
+
+                a {
+                    color: #f28b00;
+                    font-size: 0.8*34px;
+
+                    img {
+                        max-width: 25px;
+                        max-height: 25px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .arthaus-address {
+        text-align: left;
+    }
+
+    .details-container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        #contact-left {
+            flex: 1;
+
+            h3 {
+                text-transform: uppercase;
+            }
+        }
+
+        #contact-right {
+            flex: 1;
+            padding: 0.8*20px;
+        }
+
+        @media only screen and (min-width: 1239px) {}
+
+        @media only screen and (min-width: 759px) {
+            flex-direction: row;
+        }
+    }
+
+
+
+    #contact-area {
+        padding: 0.8*15px;
+
+        .btn {
+            padding-bottom: 0.8*3px;
+            padding-top: 0.8*3px;
+            color: #f28b00;
+            background-color: #fff;
+            width: fit-content;
+            border-radius: 2px;
+        }
+
+        .btn:hover {
+            color: #fff;
+            background-color: #f28b00;
+            border: 1px solid #fff;
+        }
+
+        #contactUsModal {
+            color: #f28b00;
+
+            h2 {
+                color: #525252;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            #contactClose,
+            #contactSave {
+                color: #fff;
+            }
+
+            #contactSave {
+                background-color: #f28b00;
+            }
+
+            #contactSave:hover {
+                background-color: #fff;
+                color: #f28b00;
+                border: 1px solid #f28b00;
+            }
+
+            #contactClose {
+                float: left;
+                background-color: #515151;
+            }
+
+            #contactClose:hover {
+                background-color: #fff;
+                color: #66665d;
+                border: 1px solid #66665d;
+            }
+
+            textarea {
+                height: 100px;
+                resize: none;
+            }
+
+            .modal-header {
+                border-bottom: none;
+            }
+
+            .modal-footer {
+                border-top: none;
+            }
+        }
+    }
+
+    #directions-request {
+        cursor: pointer;
+        border: none;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+
+        @media only screen and (min-width: 991px) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    #directions-field {
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,114 @@
+// @use 'index' as abstract;
+
+/* ======== Functions ======== */
+
+/* Calculate the block size */
+@function calculate-block-size($blocks, $size, $gutter) {
+    // calc = (number of blocks * block size) + (number of gaps * gap size)
+    $value: ($blocks * $size) + (($blocks - 1) * $gutter);
+    @return $value;
+}
+
+// generates a map of sizes
+// takes in a screen size
+// takes in a map of block counts for the size
+@function generate-sizes-map($block-types, $blocks-count, $width, $height, $gutter-size) {
+
+    $map: ();
+
+    @each $block-varter in $block-types {
+        // gets the index number of the varter
+        /*$i: index($block-types, $block-varter);*/
+        $w: #{$block-varter}-width;
+        $h: #{$block-varter}-height;
+
+        // get the width block count
+        $width-count: get-key($blocks-count, $w);
+        $width-value: calculate-block-size($width-count, $width, $gutter-size);
+        $map: add-to-map($map, $w, round($width-value));
+
+        // get the height block count
+        $height-count: get-key($blocks-count, $h);
+        $height-value: 0;
+        @if $height-count > 0 {
+            $height-value: calculate-block-size($height-count, $height, $gutter-size);
+        } 
+        /*$height-value: calculate-block-size($height-count, $height, $gutter-size);*/
+        $map: add-to-map($map, $h, round($height-value));
+    }
+    @return $map;
+}
+
+/* function to get a key from the map */
+/* checks and returns an error if required */
+/* to use in place of map-get (for error) */
+@function get-key($map, $key){
+
+    // get the width block count
+    @if map-has-key($map, $key) {
+        @return map-get($map, $key);
+    }
+    @warn "The key #{$key} is not in the map.";
+    @return null;
+
+}
+
+/* function to add item to a map */
+@function add-to-map($map, $key, $value) {
+    $new: ($key: $value);
+    @return map-merge($map, $new);
+}
+
+/* get the dimensions from the sizes map */
+@function get-dimension($map, $varter, $dimension){
+    $map-var: #{$varter}-#{$dimension};
+    $map-val: get-key($map, $map-var);
+    @return $map-val;
+}
+
+/* ======== Mixins ======== */
+
+/* Fill entire area with clickable link */
+@mixin fillin {
+	background: get-key($colours, white);
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+    z-index: 2;
+}
+
+/* generate the relevant code for the media query breakpoint */
+/* https://www.sitepoint.com/managing-responsive-breakpoints-sass/ */
+@mixin respond-to($name, $breakpoints) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $name) {
+        // Prints a media query based on the value
+        @media #{inspect(get-key($breakpoints, $name))} {
+            @content;
+        }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoints}`. " + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+
+
+/* ========= Layout ========= */
+
+@mixin output-layout-dimensions($map, $varter) {
+    $w: get-dimension($map, $varter, width);
+    $h: get-dimension($map, $varter, height);
+    @if $w > 0 {
+        width: $w + px;
+    }
+    @if $h > 0 {
+        height: $h + px;
+    }
+}

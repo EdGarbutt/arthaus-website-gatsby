@@ -1,0 +1,387 @@
+@use '../abstracts' as abstract;
+@use '../mixins' as mixin;
+
+// Layout Mixin
+@mixin layout ($layout, $blocks) {
+
+    $margin: mixin.m-get-key($layout, margin);
+
+    .home,
+    .work,
+    .about,
+    .expertise,
+    .contact,
+    .terms-conditions {
+        
+        .container {
+            width: mixin.m-get-key($layout, main);
+        }
+
+        main {
+            display: flex;
+            flex-flow: column;
+            width: mixin.m-get-key($layout, mainWrapper);
+
+            .blocksContent,
+            .blocksWrapper {
+
+                .block {
+                   // margin: $margin;
+                    margin: $margin $margin 0 $margin;
+
+                    .content {
+                        background-position: center;
+                        background-size: 100% 100%;
+                    }
+                }
+
+                .blockMainRow {
+                    margin-left: -$margin;
+                }
+
+                .type-a {
+                    @include mixin.m-output-layout-dimensions($blocks, a);
+                }
+
+                .type-b {
+                    @include mixin.m-output-layout-dimensions($blocks, b);
+                }
+
+                .type-c {
+                    @include mixin.m-output-layout-dimensions($blocks, c);
+                }
+
+                .type-d {
+                    @include mixin.m-output-layout-dimensions($blocks, d);
+                }
+
+                .type-e {
+                    @include mixin.m-output-layout-dimensions($blocks, e);
+                }
+
+                .type-f {
+                    @include mixin.m-output-layout-dimensions($blocks, f);
+                }
+
+                .type-fa {
+                    @include mixin.m-output-layout-dimensions($blocks, fa);
+                }
+
+                .type-g {
+                    @include mixin.m-output-layout-dimensions($blocks, g);
+                }
+
+                .type-h {
+                    @include mixin.m-output-layout-dimensions($blocks, h);
+                }
+
+                .type-i {
+                    @include mixin.m-output-layout-dimensions($blocks, i);
+                }
+
+                .type-j {
+                    @include mixin.m-output-layout-dimensions($blocks, j);
+                }
+
+                .type-ja {
+                    @include mixin.m-output-layout-dimensions($blocks, ja);
+                }
+
+                .type-k {
+                    @include mixin.m-output-layout-dimensions($blocks, k);
+                }
+
+                .type-l {
+                    @include mixin.m-output-layout-dimensions($blocks, l);
+                }
+
+                .bottom {
+                    margin-right: -$margin;
+                    margin-bottom: 0;
+                    margin-left: -$margin;
+                }
+
+                .top {
+                    margin-right: -$margin;
+                    margin-top: -$margin;
+                    margin-left: -$margin;
+                }
+            }
+        }
+    }
+}
+
+/* generate the maps for the layouts */
+$block-sizes-small: mixin.m-generate-sizes-map(abstract.$s-block-types, abstract.$s-block-count-small, mixin.m-get-key(abstract.$s-block-sizes,small-width), mixin.m-get-key(abstract.$s-block-sizes,small-height), mixin.m-get-key(abstract.$s-gutter-sizes,small));
+
+$block-sizes-medium: mixin.m-generate-sizes-map(abstract.$s-block-types, abstract.$s-block-count-medium, mixin.m-get-key(abstract.$s-block-sizes,medium-width), mixin.m-get-key(abstract.$s-block-sizes,medium-height), mixin.m-get-key(abstract.$s-gutter-sizes,medium));
+
+$block-sizes-large: mixin.m-generate-sizes-map(abstract.$s-block-types, abstract.$s-block-count-large, mixin.m-get-key(abstract.$s-block-sizes,large-width), mixin.m-get-key(abstract.$s-block-sizes,large-height), mixin.m-get-key(abstract.$s-gutter-sizes,large));
+
+
+
+@include mixin.m-respond-to(small-max, abstract.$s-breakpoints) {
+    @include layout(abstract.$s-layout-sizes-small, $block-sizes-small);
+}
+
+@include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+    @include layout(abstract.$s-layout-sizes-medium, $block-sizes-medium);
+ }
+
+@include mixin.m-respond-to(large, abstract.$s-breakpoints) {
+    @include layout(abstract.$s-layout-sizes-large, $block-sizes-large);
+}
+
+//bkg colors:
+.bkg--whiteGrey {
+    background-color: abstract.$v-whiteGrey;
+}
+
+.bkg--darkGrey {
+    background-color: abstract.$v-darkGrey;
+}
+
+.bkg--white {
+    background-color: white;
+}
+
+.bkg--mainOrange {
+    background-color: abstract.$v-mainOrange;
+}
+
+.bkg--teal {
+    background-color: abstract.$v-teal;
+}
+//padding
+
+.padding-b--18 {
+    padding-bottom: 18px;
+}
+
+.padding-b--20 {
+    padding-bottom: 20px;
+}
+
+.padding-b--30 {
+    padding-bottom: 30px;
+}
+
+.padding-b--40 {
+    padding-bottom: 40px;
+}
+
+.padding-b--60 {
+    padding-bottom: 30px;
+}
+
+.padding-t--30 {
+    padding-top: 30px;
+}
+
+.padding-b--10 {
+    padding-bottom: 10px;
+}
+
+.padding-b--25 {
+    padding-bottom: 25px;
+}
+
+.padding-b--60{
+    padding-bottom:60px;
+}
+
+
+.margin-b--60 {
+    margin-bottom: 60px;
+}
+
+.padding-t--10 {
+    padding-top: 10px;
+}
+.padding-t--18 {
+    padding-top: 18px;
+}
+.padding-t--20 {
+    padding-top: 20px;
+}
+
+
+.padding-t--25 {
+    padding-top: 25px;
+}
+.padding-t--30 {
+    padding-top: 30px;
+}
+.padding-t--40 {
+    padding-top: 40px;
+}
+.padding-t--60 {
+    padding-top: 60px;
+}
+.padding-l--none {
+    padding-left: 0;
+}
+
+.padding-r--none {
+    padding-right: 0;
+}
+
+.padding-t--none {
+    padding-top: 0;
+}
+
+.padding-b--none {
+    padding-bottom: 0;
+}
+
+.padding--none {
+    padding: 0;
+}
+
+.padding-l--5 {
+    padding-left: 5px;
+}
+
+.padding-r--5 {
+    padding-right: 5px;
+}
+
+.padding-l--15 {
+    padding-left: 15px;
+}
+
+.padding-r--15 {
+    padding-right: 15px;
+}
+
+.padding-l--20 {
+    padding-left: 20px;
+}
+
+.padding-r--20 {
+    padding-right: 20px;
+}
+
+//margin
+.margin--none {
+    margin: 0;
+}
+//display
+.display-flex {
+    display: flex;
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    &.direction-col {
+        flex-direction: column;
+    }
+
+    &.justify-spaceBetween {
+        justify-content: space-between;
+    }
+
+    &.justify-end {
+        justify-content: flex-end;
+    }
+}
+
+.border {
+    border: 1px solid;
+}
+
+.border--darkGrey {
+    border-color: abstract.$v-darkGrey;
+}
+
+.border--mainOrange {
+    border-color: #fce7ca;
+}
+
+.border--teal {
+    border-color: #deeeeb;
+}
+
+.border--burgundy {
+    border-color: #e8dddf;
+}
+
+.border--green {
+    border-color: #e5ebcf;
+}
+
+.border--darkBlue {
+    border-color: #d7dee5;
+}
+
+.border--navy {
+    border-color: #d4d3db;
+}
+
+.border-bottom {
+    border-bottom: 2px solid;
+}
+//image
+figure {
+    margin: 0 !important;
+}
+
+.img-fullWidth {
+    width: 100%;
+}
+
+//height
+.height-auto {
+    height: auto !important;
+}
+
+hr {
+    margin: 0 auto;
+    border: 0;
+    border-top: 1px solid silver;
+    max-width: 800px;
+}
+@media only screen and (max-width:758px) {
+    .padding-b--10{
+        padding-bottom:5px;
+    }
+    
+    .padding-b--18 {
+        padding-bottom: 9px;
+    }
+
+    .padding-b--20 {
+        padding-bottom: 10px;
+    }
+
+    .padding-b--40 {
+        padding-bottom: 20px;
+    }
+
+    .padding-b--30 {
+        padding-bottom: 15px;
+    }
+
+    .padding-b--60 {
+        padding-bottom: 30px;
+    }
+    .padding-t--18 {
+        padding-top: 9px;
+    }
+    .padding-t--30 {
+        padding-top: 15px;
+    }
+
+    .padding-t--60{
+        padding-top:30px;
+    }
+
+    .margin-b--60 {
+        margin-bottom: 30px;
+    }
+}
