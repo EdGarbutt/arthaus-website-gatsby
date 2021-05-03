@@ -1,14 +1,16 @@
 import React from 'react'
 
-import InstagramIcon from '../images/footer/Instagram.png'
-import LinkedInIcon from '../images/footer/linkedin.png'
-import TwitterInIcon from '../images/footer/twitter.png'
-import FacebbokIcon from '../images/footer/facebook.png'
+import InstagramIcon from '../images/footer/dec2020/Instagram.png'
+import LinkedInIcon from '../images/footer/dec2020/linkedin.png'
+import TwitterInIcon from '../images/footer/dec2020/twitter.png'
+import FacebookIcon from '../images/footer/dec2020/facebook.png'
+import BSILogo from '../images/about/BSI Logo_white.png'
+import CertifiedLogo from '../images/about/Certified.png'
 
 
 const Footer = () => {
     return (
-        <footer className="dark-grey with-borderTop">
+        <footer className="bkg--darkGrey with-borderTop">
             <div className="leftFooter">
                 <div className="arthaus-icon"></div>
                 <div className="arthaus-address">
@@ -16,6 +18,16 @@ const Footer = () => {
                     <p>24/26 Old Brewery Lane</p>
                     <p>New Street, Henley on Thames,</p>
                     <p>Oxon, RG9 2DE</p>
+                    <p>
+                        T: <a href="tel:+441628487333">+44 (0)1628 487 333</a>
+                    </p>
+                    <p>
+                        E: <a href="mailto:think@arthaus.co.uk">think@arthaus.co.uk</a>
+                    </p>
+                    <p className="copy-right">
+                        &#169; Arthaus
+                        <span className="cDate">2021</span>
+                    </p>
                 </div>
             </div>
             <div className="rightFooter">
@@ -44,19 +56,28 @@ const Footer = () => {
                         <li>
                             <a href="https://www.facebook.com/ArtHaus.design/" rel="noopener noreferrer"
                                 target="_blank">
-                                <img className="footer-social-icon facebook-icon" src={FacebbokIcon}
+                                <img className="footer-social-icon facebook-icon" src={FacebookIcon}
                                     alt="Social media icon, facebook icon in grey links to company's facebook account" />
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div className="arthaus-terms">
-                    <a href="/privacy-terms-conditions.html" rel="noopener noreferrer">
-                        <p>Privacy, terms &amp; conditions</p>
-                    </a>
+                <div class="arthaus-terms">
+                    <p style={{ width: "100%" }}>
+                        <a href="/documents/Privacy Policy.pdf" rel="noopener noreferrer" target="_blank">Privacy</a>
+                        &#8194; | &#8194;
+                        <a href="/privacy-terms-conditions.html" rel="noopener noreferrer" target="_blank">Terms &amp;
+                            Conditions
+                        </a>
+                    </p>
                 </div>
-                <div className="arthaus-copyright">
-                    <p>© Copyright Arthaus <span className="cDate">2020</span></p>
+                <div className="arthaus-certifications">
+                    <figure className="footer-logo bsi-logo">
+                        <img src={BSILogo} alt="BSI logo in white" />
+                    </figure>
+                    <figure className="footer-logo cyber-logo">
+                        <img src={CertifiedLogo} alt="cyber essentials logo in color" />
+                    </figure>
                 </div>
             </div>
         </footer>
@@ -64,3 +85,4 @@ const Footer = () => {
 }
 
 export default Footer
+          
