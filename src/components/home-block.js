@@ -7,7 +7,7 @@ const HomeBlock = (props) => {
 
     if (cell.url) {
         cell_content.push(
-            React.createElement('a', { class: 'social-post__link', 
+            React.createElement('a', { className: 'social-post__link', 
             rel: 'noopener noreferrer', href: cell.url }, 'Read more')
         );
     }
@@ -17,7 +17,7 @@ const HomeBlock = (props) => {
             cell_content.push(
                 React.createElement(
                     x.html_tag, 
-                    (x.classes ? { class: x.classes.join(' ') } : {}),
+                    (x.classes ? { className: x.classes.join(' ') } : {}),
                     x.text
                 )
             )
@@ -26,11 +26,11 @@ const HomeBlock = (props) => {
 
     if (cell.content.top) {
         cell_content.push(
-            React.createElement('div', { class: 'top' },
+            React.createElement('div', { className: 'top' },
                 cell.content.top.map(x => 
                     React.createElement(
                         x.html_tag, 
-                        (x.classes ? { class: x.classes.join(' ') } : {}),
+                        (x.classes ? { className: x.classes.join(' ') } : {}),
                         x.text
                     )
                 )
@@ -39,13 +39,12 @@ const HomeBlock = (props) => {
     }
 
     if (cell.content.bottom) {
-        console.log(cell.content.bottom);
         cell_content.push(
-            React.createElement('div', { class: 'bottom' },
+            React.createElement('div', { className: 'bottom' },
                 cell.content.bottom.map(x => 
                     React.createElement(
                         x.html_tag, 
-                        (x.classes ? { class: x.classes.join(' ') } : {}), 
+                        (x.classes ? { className: x.classes.join(' ') } : {}), 
                         x.text
                     )
                 )
@@ -55,13 +54,13 @@ const HomeBlock = (props) => {
 
     if (cell.url) {
         cell_content.push(
-            React.createElement('span', { class: 'plus-icon fa fa-plus-circle' }, '')
+            React.createElement('span', { className: 'plus-icon fa fa-plus-circle' }, '')
         );  
     }
 
     return (
         <div className={cell.classes.join(' ')}>
-            {React.createElement('div', { class: 'content' }, cell_content)}
+            {React.createElement('div', { className: 'content' }, cell_content)}
         </div>
     )
 }
