@@ -1,0 +1,20 @@
+@use 'variables' as v;
+// List Icons
+// -------------------------
+
+.#{v.$fa-css-prefix}-ul {
+  padding-left: 0;
+  margin-left: v.$fa-li-width;
+  list-style-type: none;
+  > li { position: relative; }
+}
+.#{v.$fa-css-prefix}-li {
+  position: absolute;
+  left: -#{v.$fa-li-width};
+  width: v.$fa-li-width;
+  top: (2em / 14);
+  text-align: center;
+  &.#{v.$fa-css-prefix}-lg {
+    left: -#{v.$fa-li-width} + (4em / 14);
+  }
+}

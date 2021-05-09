@@ -1,0 +1,790 @@
+@use 'variables' as v;
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+
+.#{v.$fa-css-prefix}-glass:before { content: v.$fa-var-glass; }
+.#{v.$fa-css-prefix}-music:before { content: v.$fa-var-music; }
+.#{v.$fa-css-prefix}-search:before { content: v.$fa-var-search; }
+.#{v.$fa-css-prefix}-envelope-o:before { content: v.$fa-var-envelope-o; }
+.#{v.$fa-css-prefix}-heart:before { content: v.$fa-var-heart; }
+.#{v.$fa-css-prefix}-star:before { content: v.$fa-var-star; }
+.#{v.$fa-css-prefix}-star-o:before { content: v.$fa-var-star-o; }
+.#{v.$fa-css-prefix}-user:before { content: v.$fa-var-user; }
+.#{v.$fa-css-prefix}-film:before { content: v.$fa-var-film; }
+.#{v.$fa-css-prefix}-th-large:before { content: v.$fa-var-th-large; }
+.#{v.$fa-css-prefix}-th:before { content: v.$fa-var-th; }
+.#{v.$fa-css-prefix}-th-list:before { content: v.$fa-var-th-list; }
+.#{v.$fa-css-prefix}-check:before { content: v.$fa-var-check; }
+.#{v.$fa-css-prefix}-remove:before,
+.#{v.$fa-css-prefix}-close:before,
+.#{v.$fa-css-prefix}-times:before { content: v.$fa-var-times; }
+.#{v.$fa-css-prefix}-search-plus:before { content: v.$fa-var-search-plus; }
+.#{v.$fa-css-prefix}-search-minus:before { content: v.$fa-var-search-minus; }
+.#{v.$fa-css-prefix}-power-off:before { content: v.$fa-var-power-off; }
+.#{v.$fa-css-prefix}-signal:before { content: v.$fa-var-signal; }
+.#{v.$fa-css-prefix}-gear:before,
+.#{v.$fa-css-prefix}-cog:before { content: v.$fa-var-cog; }
+.#{v.$fa-css-prefix}-trash-o:before { content: v.$fa-var-trash-o; }
+.#{v.$fa-css-prefix}-home:before { content: v.$fa-var-home; }
+.#{v.$fa-css-prefix}-file-o:before { content: v.$fa-var-file-o; }
+.#{v.$fa-css-prefix}-clock-o:before { content: v.$fa-var-clock-o; }
+.#{v.$fa-css-prefix}-road:before { content: v.$fa-var-road; }
+.#{v.$fa-css-prefix}-download:before { content: v.$fa-var-download; }
+.#{v.$fa-css-prefix}-arrow-circle-o-down:before { content: v.$fa-var-arrow-circle-o-down; }
+.#{v.$fa-css-prefix}-arrow-circle-o-up:before { content: v.$fa-var-arrow-circle-o-up; }
+.#{v.$fa-css-prefix}-inbox:before { content: v.$fa-var-inbox; }
+.#{v.$fa-css-prefix}-play-circle-o:before { content: v.$fa-var-play-circle-o; }
+.#{v.$fa-css-prefix}-rotate-right:before,
+.#{v.$fa-css-prefix}-repeat:before { content: v.$fa-var-repeat; }
+.#{v.$fa-css-prefix}-refresh:before { content: v.$fa-var-refresh; }
+.#{v.$fa-css-prefix}-list-alt:before { content: v.$fa-var-list-alt; }
+.#{v.$fa-css-prefix}-lock:before { content: v.$fa-var-lock; }
+.#{v.$fa-css-prefix}-flag:before { content: v.$fa-var-flag; }
+.#{v.$fa-css-prefix}-headphones:before { content: v.$fa-var-headphones; }
+.#{v.$fa-css-prefix}-volume-off:before { content: v.$fa-var-volume-off; }
+.#{v.$fa-css-prefix}-volume-down:before { content: v.$fa-var-volume-down; }
+.#{v.$fa-css-prefix}-volume-up:before { content: v.$fa-var-volume-up; }
+.#{v.$fa-css-prefix}-qrcode:before { content: v.$fa-var-qrcode; }
+.#{v.$fa-css-prefix}-barcode:before { content: v.$fa-var-barcode; }
+.#{v.$fa-css-prefix}-tag:before { content: v.$fa-var-tag; }
+.#{v.$fa-css-prefix}-tags:before { content: v.$fa-var-tags; }
+.#{v.$fa-css-prefix}-book:before { content: v.$fa-var-book; }
+.#{v.$fa-css-prefix}-bookmark:before { content: v.$fa-var-bookmark; }
+.#{v.$fa-css-prefix}-print:before { content: v.$fa-var-print; }
+.#{v.$fa-css-prefix}-camera:before { content: v.$fa-var-camera; }
+.#{v.$fa-css-prefix}-font:before { content: v.$fa-var-font; }
+.#{v.$fa-css-prefix}-bold:before { content: v.$fa-var-bold; }
+.#{v.$fa-css-prefix}-italic:before { content: v.$fa-var-italic; }
+.#{v.$fa-css-prefix}-text-height:before { content: v.$fa-var-text-height; }
+.#{v.$fa-css-prefix}-text-width:before { content: v.$fa-var-text-width; }
+.#{v.$fa-css-prefix}-align-left:before { content: v.$fa-var-align-left; }
+.#{v.$fa-css-prefix}-align-center:before { content: v.$fa-var-align-center; }
+.#{v.$fa-css-prefix}-align-right:before { content: v.$fa-var-align-right; }
+.#{v.$fa-css-prefix}-align-justify:before { content: v.$fa-var-align-justify; }
+.#{v.$fa-css-prefix}-list:before { content: v.$fa-var-list; }
+.#{v.$fa-css-prefix}-dedent:before,
+.#{v.$fa-css-prefix}-outdent:before { content: v.$fa-var-outdent; }
+.#{v.$fa-css-prefix}-indent:before { content: v.$fa-var-indent; }
+.#{v.$fa-css-prefix}-video-camera:before { content: v.$fa-var-video-camera; }
+.#{v.$fa-css-prefix}-photo:before,
+.#{v.$fa-css-prefix}-image:before,
+.#{v.$fa-css-prefix}-picture-o:before { content: v.$fa-var-picture-o; }
+.#{v.$fa-css-prefix}-pencil:before { content: v.$fa-var-pencil; }
+.#{v.$fa-css-prefix}-map-marker:before { content: v.$fa-var-map-marker; }
+.#{v.$fa-css-prefix}-adjust:before { content: v.$fa-var-adjust; }
+.#{v.$fa-css-prefix}-tint:before { content: v.$fa-var-tint; }
+.#{v.$fa-css-prefix}-edit:before,
+.#{v.$fa-css-prefix}-pencil-square-o:before { content: v.$fa-var-pencil-square-o; }
+.#{v.$fa-css-prefix}-share-square-o:before { content: v.$fa-var-share-square-o; }
+.#{v.$fa-css-prefix}-check-square-o:before { content: v.$fa-var-check-square-o; }
+.#{v.$fa-css-prefix}-arrows:before { content: v.$fa-var-arrows; }
+.#{v.$fa-css-prefix}-step-backward:before { content: v.$fa-var-step-backward; }
+.#{v.$fa-css-prefix}-fast-backward:before { content: v.$fa-var-fast-backward; }
+.#{v.$fa-css-prefix}-backward:before { content: v.$fa-var-backward; }
+.#{v.$fa-css-prefix}-play:before { content: v.$fa-var-play; }
+.#{v.$fa-css-prefix}-pause:before { content: v.$fa-var-pause; }
+.#{v.$fa-css-prefix}-stop:before { content: v.$fa-var-stop; }
+.#{v.$fa-css-prefix}-forward:before { content: v.$fa-var-forward; }
+.#{v.$fa-css-prefix}-fast-forward:before { content: v.$fa-var-fast-forward; }
+.#{v.$fa-css-prefix}-step-forward:before { content: v.$fa-var-step-forward; }
+.#{v.$fa-css-prefix}-eject:before { content: v.$fa-var-eject; }
+.#{v.$fa-css-prefix}-chevron-left:before { content: v.$fa-var-chevron-left; }
+.#{v.$fa-css-prefix}-chevron-right:before { content: v.$fa-var-chevron-right; }
+.#{v.$fa-css-prefix}-plus-circle:before { content: v.$fa-var-plus-circle; }
+.#{v.$fa-css-prefix}-minus-circle:before { content: v.$fa-var-minus-circle; }
+.#{v.$fa-css-prefix}-times-circle:before { content: v.$fa-var-times-circle; }
+.#{v.$fa-css-prefix}-check-circle:before { content: v.$fa-var-check-circle; }
+.#{v.$fa-css-prefix}-question-circle:before { content: v.$fa-var-question-circle; }
+.#{v.$fa-css-prefix}-info-circle:before { content: v.$fa-var-info-circle; }
+.#{v.$fa-css-prefix}-crosshairs:before { content: v.$fa-var-crosshairs; }
+.#{v.$fa-css-prefix}-times-circle-o:before { content: v.$fa-var-times-circle-o; }
+.#{v.$fa-css-prefix}-check-circle-o:before { content: v.$fa-var-check-circle-o; }
+.#{v.$fa-css-prefix}-ban:before { content: v.$fa-var-ban; }
+.#{v.$fa-css-prefix}-arrow-left:before { content: v.$fa-var-arrow-left; }
+.#{v.$fa-css-prefix}-arrow-right:before { content: v.$fa-var-arrow-right; }
+.#{v.$fa-css-prefix}-arrow-up:before { content: v.$fa-var-arrow-up; }
+.#{v.$fa-css-prefix}-arrow-down:before { content: v.$fa-var-arrow-down; }
+.#{v.$fa-css-prefix}-mail-forward:before,
+.#{v.$fa-css-prefix}-share:before { content: v.$fa-var-share; }
+.#{v.$fa-css-prefix}-expand:before { content: v.$fa-var-expand; }
+.#{v.$fa-css-prefix}-compress:before { content: v.$fa-var-compress; }
+.#{v.$fa-css-prefix}-plus:before { content: v.$fa-var-plus; }
+.#{v.$fa-css-prefix}-minus:before { content: v.$fa-var-minus; }
+.#{v.$fa-css-prefix}-asterisk:before { content: v.$fa-var-asterisk; }
+.#{v.$fa-css-prefix}-exclamation-circle:before { content: v.$fa-var-exclamation-circle; }
+.#{v.$fa-css-prefix}-gift:before { content: v.$fa-var-gift; }
+.#{v.$fa-css-prefix}-leaf:before { content: v.$fa-var-leaf; }
+.#{v.$fa-css-prefix}-fire:before { content: v.$fa-var-fire; }
+.#{v.$fa-css-prefix}-eye:before { content: v.$fa-var-eye; }
+.#{v.$fa-css-prefix}-eye-slash:before { content: v.$fa-var-eye-slash; }
+.#{v.$fa-css-prefix}-warning:before,
+.#{v.$fa-css-prefix}-exclamation-triangle:before { content: v.$fa-var-exclamation-triangle; }
+.#{v.$fa-css-prefix}-plane:before { content: v.$fa-var-plane; }
+.#{v.$fa-css-prefix}-calendar:before { content: v.$fa-var-calendar; }
+.#{v.$fa-css-prefix}-random:before { content: v.$fa-var-random; }
+.#{v.$fa-css-prefix}-comment:before { content: v.$fa-var-comment; }
+.#{v.$fa-css-prefix}-magnet:before { content: v.$fa-var-magnet; }
+.#{v.$fa-css-prefix}-chevron-up:before { content: v.$fa-var-chevron-up; }
+.#{v.$fa-css-prefix}-chevron-down:before { content: v.$fa-var-chevron-down; }
+.#{v.$fa-css-prefix}-retweet:before { content: v.$fa-var-retweet; }
+.#{v.$fa-css-prefix}-shopping-cart:before { content: v.$fa-var-shopping-cart; }
+.#{v.$fa-css-prefix}-folder:before { content: v.$fa-var-folder; }
+.#{v.$fa-css-prefix}-folder-open:before { content: v.$fa-var-folder-open; }
+.#{v.$fa-css-prefix}-arrows-v:before { content: v.$fa-var-arrows-v; }
+.#{v.$fa-css-prefix}-arrows-h:before { content: v.$fa-var-arrows-h; }
+.#{v.$fa-css-prefix}-bar-chart-o:before,
+.#{v.$fa-css-prefix}-bar-chart:before { content: v.$fa-var-bar-chart; }
+.#{v.$fa-css-prefix}-twitter-square:before { content: v.$fa-var-twitter-square; }
+.#{v.$fa-css-prefix}-facebook-square:before { content: v.$fa-var-facebook-square; }
+.#{v.$fa-css-prefix}-camera-retro:before { content: v.$fa-var-camera-retro; }
+.#{v.$fa-css-prefix}-key:before { content: v.$fa-var-key; }
+.#{v.$fa-css-prefix}-gears:before,
+.#{v.$fa-css-prefix}-cogs:before { content: v.$fa-var-cogs; }
+.#{v.$fa-css-prefix}-comments:before { content: v.$fa-var-comments; }
+.#{v.$fa-css-prefix}-thumbs-o-up:before { content: v.$fa-var-thumbs-o-up; }
+.#{v.$fa-css-prefix}-thumbs-o-down:before { content: v.$fa-var-thumbs-o-down; }
+.#{v.$fa-css-prefix}-star-half:before { content: v.$fa-var-star-half; }
+.#{v.$fa-css-prefix}-heart-o:before { content: v.$fa-var-heart-o; }
+.#{v.$fa-css-prefix}-sign-out:before { content: v.$fa-var-sign-out; }
+.#{v.$fa-css-prefix}-linkedin-square:before { content: v.$fa-var-linkedin-square; }
+.#{v.$fa-css-prefix}-thumb-tack:before { content: v.$fa-var-thumb-tack; }
+.#{v.$fa-css-prefix}-external-link:before { content: v.$fa-var-external-link; }
+.#{v.$fa-css-prefix}-sign-in:before { content: v.$fa-var-sign-in; }
+.#{v.$fa-css-prefix}-trophy:before { content: v.$fa-var-trophy; }
+.#{v.$fa-css-prefix}-github-square:before { content: v.$fa-var-github-square; }
+.#{v.$fa-css-prefix}-upload:before { content: v.$fa-var-upload; }
+.#{v.$fa-css-prefix}-lemon-o:before { content: v.$fa-var-lemon-o; }
+.#{v.$fa-css-prefix}-phone:before { content: v.$fa-var-phone; }
+.#{v.$fa-css-prefix}-square-o:before { content: v.$fa-var-square-o; }
+.#{v.$fa-css-prefix}-bookmark-o:before { content: v.$fa-var-bookmark-o; }
+.#{v.$fa-css-prefix}-phone-square:before { content: v.$fa-var-phone-square; }
+.#{v.$fa-css-prefix}-twitter:before { content: v.$fa-var-twitter; }
+.#{v.$fa-css-prefix}-facebook-f:before,
+.#{v.$fa-css-prefix}-facebook:before { content: v.$fa-var-facebook; }
+.#{v.$fa-css-prefix}-github:before { content: v.$fa-var-github; }
+.#{v.$fa-css-prefix}-unlock:before { content: v.$fa-var-unlock; }
+.#{v.$fa-css-prefix}-credit-card:before { content: v.$fa-var-credit-card; }
+.#{v.$fa-css-prefix}-feed:before,
+.#{v.$fa-css-prefix}-rss:before { content: v.$fa-var-rss; }
+.#{v.$fa-css-prefix}-hdd-o:before { content: v.$fa-var-hdd-o; }
+.#{v.$fa-css-prefix}-bullhorn:before { content: v.$fa-var-bullhorn; }
+.#{v.$fa-css-prefix}-bell:before { content: v.$fa-var-bell; }
+.#{v.$fa-css-prefix}-certificate:before { content: v.$fa-var-certificate; }
+.#{v.$fa-css-prefix}-hand-o-right:before { content: v.$fa-var-hand-o-right; }
+.#{v.$fa-css-prefix}-hand-o-left:before { content: v.$fa-var-hand-o-left; }
+.#{v.$fa-css-prefix}-hand-o-up:before { content: v.$fa-var-hand-o-up; }
+.#{v.$fa-css-prefix}-hand-o-down:before { content: v.$fa-var-hand-o-down; }
+.#{v.$fa-css-prefix}-arrow-circle-left:before { content: v.$fa-var-arrow-circle-left; }
+.#{v.$fa-css-prefix}-arrow-circle-right:before { content: v.$fa-var-arrow-circle-right; }
+.#{v.$fa-css-prefix}-arrow-circle-up:before { content: v.$fa-var-arrow-circle-up; }
+.#{v.$fa-css-prefix}-arrow-circle-down:before { content: v.$fa-var-arrow-circle-down; }
+.#{v.$fa-css-prefix}-globe:before { content: v.$fa-var-globe; }
+.#{v.$fa-css-prefix}-wrench:before { content: v.$fa-var-wrench; }
+.#{v.$fa-css-prefix}-tasks:before { content: v.$fa-var-tasks; }
+.#{v.$fa-css-prefix}-filter:before { content: v.$fa-var-filter; }
+.#{v.$fa-css-prefix}-briefcase:before { content: v.$fa-var-briefcase; }
+.#{v.$fa-css-prefix}-arrows-alt:before { content: v.$fa-var-arrows-alt; }
+.#{v.$fa-css-prefix}-group:before,
+.#{v.$fa-css-prefix}-users:before { content: v.$fa-var-users; }
+.#{v.$fa-css-prefix}-chain:before,
+.#{v.$fa-css-prefix}-link:before { content: v.$fa-var-link; }
+.#{v.$fa-css-prefix}-cloud:before { content: v.$fa-var-cloud; }
+.#{v.$fa-css-prefix}-flask:before { content: v.$fa-var-flask; }
+.#{v.$fa-css-prefix}-cut:before,
+.#{v.$fa-css-prefix}-scissors:before { content: v.$fa-var-scissors; }
+.#{v.$fa-css-prefix}-copy:before,
+.#{v.$fa-css-prefix}-files-o:before { content: v.$fa-var-files-o; }
+.#{v.$fa-css-prefix}-paperclip:before { content: v.$fa-var-paperclip; }
+.#{v.$fa-css-prefix}-save:before,
+.#{v.$fa-css-prefix}-floppy-o:before { content: v.$fa-var-floppy-o; }
+.#{v.$fa-css-prefix}-square:before { content: v.$fa-var-square; }
+.#{v.$fa-css-prefix}-navicon:before,
+.#{v.$fa-css-prefix}-reorder:before,
+.#{v.$fa-css-prefix}-bars:before { content: v.$fa-var-bars; }
+.#{v.$fa-css-prefix}-list-ul:before { content: v.$fa-var-list-ul; }
+.#{v.$fa-css-prefix}-list-ol:before { content: v.$fa-var-list-ol; }
+.#{v.$fa-css-prefix}-strikethrough:before { content: v.$fa-var-strikethrough; }
+.#{v.$fa-css-prefix}-underline:before { content: v.$fa-var-underline; }
+.#{v.$fa-css-prefix}-table:before { content: v.$fa-var-table; }
+.#{v.$fa-css-prefix}-magic:before { content: v.$fa-var-magic; }
+.#{v.$fa-css-prefix}-truck:before { content: v.$fa-var-truck; }
+.#{v.$fa-css-prefix}-pinterest:before { content: v.$fa-var-pinterest; }
+.#{v.$fa-css-prefix}-pinterest-square:before { content: v.$fa-var-pinterest-square; }
+.#{v.$fa-css-prefix}-google-plus-square:before { content: v.$fa-var-google-plus-square; }
+.#{v.$fa-css-prefix}-google-plus:before { content: v.$fa-var-google-plus; }
+.#{v.$fa-css-prefix}-money:before { content: v.$fa-var-money; }
+.#{v.$fa-css-prefix}-caret-down:before { content: v.$fa-var-caret-down; }
+.#{v.$fa-css-prefix}-caret-up:before { content: v.$fa-var-caret-up; }
+.#{v.$fa-css-prefix}-caret-left:before { content: v.$fa-var-caret-left; }
+.#{v.$fa-css-prefix}-caret-right:before { content: v.$fa-var-caret-right; }
+.#{v.$fa-css-prefix}-columns:before { content: v.$fa-var-columns; }
+.#{v.$fa-css-prefix}-unsorted:before,
+.#{v.$fa-css-prefix}-sort:before { content: v.$fa-var-sort; }
+.#{v.$fa-css-prefix}-sort-down:before,
+.#{v.$fa-css-prefix}-sort-desc:before { content: v.$fa-var-sort-desc; }
+.#{v.$fa-css-prefix}-sort-up:before,
+.#{v.$fa-css-prefix}-sort-asc:before { content: v.$fa-var-sort-asc; }
+.#{v.$fa-css-prefix}-envelope:before { content: v.$fa-var-envelope; }
+.#{v.$fa-css-prefix}-linkedin:before { content: v.$fa-var-linkedin; }
+.#{v.$fa-css-prefix}-rotate-left:before,
+.#{v.$fa-css-prefix}-undo:before { content: v.$fa-var-undo; }
+.#{v.$fa-css-prefix}-legal:before,
+.#{v.$fa-css-prefix}-gavel:before { content: v.$fa-var-gavel; }
+.#{v.$fa-css-prefix}-dashboard:before,
+.#{v.$fa-css-prefix}-tachometer:before { content: v.$fa-var-tachometer; }
+.#{v.$fa-css-prefix}-comment-o:before { content: v.$fa-var-comment-o; }
+.#{v.$fa-css-prefix}-comments-o:before { content: v.$fa-var-comments-o; }
+.#{v.$fa-css-prefix}-flash:before,
+.#{v.$fa-css-prefix}-bolt:before { content: v.$fa-var-bolt; }
+.#{v.$fa-css-prefix}-sitemap:before { content: v.$fa-var-sitemap; }
+.#{v.$fa-css-prefix}-umbrella:before { content: v.$fa-var-umbrella; }
+.#{v.$fa-css-prefix}-paste:before,
+.#{v.$fa-css-prefix}-clipboard:before { content: v.$fa-var-clipboard; }
+.#{v.$fa-css-prefix}-lightbulb-o:before { content: v.$fa-var-lightbulb-o; }
+.#{v.$fa-css-prefix}-exchange:before { content: v.$fa-var-exchange; }
+.#{v.$fa-css-prefix}-cloud-download:before { content: v.$fa-var-cloud-download; }
+.#{v.$fa-css-prefix}-cloud-upload:before { content: v.$fa-var-cloud-upload; }
+.#{v.$fa-css-prefix}-user-md:before { content: v.$fa-var-user-md; }
+.#{v.$fa-css-prefix}-stethoscope:before { content: v.$fa-var-stethoscope; }
+.#{v.$fa-css-prefix}-suitcase:before { content: v.$fa-var-suitcase; }
+.#{v.$fa-css-prefix}-bell-o:before { content: v.$fa-var-bell-o; }
+.#{v.$fa-css-prefix}-coffee:before { content: v.$fa-var-coffee; }
+.#{v.$fa-css-prefix}-cutlery:before { content: v.$fa-var-cutlery; }
+.#{v.$fa-css-prefix}-file-text-o:before { content: v.$fa-var-file-text-o; }
+.#{v.$fa-css-prefix}-building-o:before { content: v.$fa-var-building-o; }
+.#{v.$fa-css-prefix}-hospital-o:before { content: v.$fa-var-hospital-o; }
+.#{v.$fa-css-prefix}-ambulance:before { content: v.$fa-var-ambulance; }
+.#{v.$fa-css-prefix}-medkit:before { content: v.$fa-var-medkit; }
+.#{v.$fa-css-prefix}-fighter-jet:before { content: v.$fa-var-fighter-jet; }
+.#{v.$fa-css-prefix}-beer:before { content: v.$fa-var-beer; }
+.#{v.$fa-css-prefix}-h-square:before { content: v.$fa-var-h-square; }
+.#{v.$fa-css-prefix}-plus-square:before { content: v.$fa-var-plus-square; }
+.#{v.$fa-css-prefix}-angle-double-left:before { content: v.$fa-var-angle-double-left; }
+.#{v.$fa-css-prefix}-angle-double-right:before { content: v.$fa-var-angle-double-right; }
+.#{v.$fa-css-prefix}-angle-double-up:before { content: v.$fa-var-angle-double-up; }
+.#{v.$fa-css-prefix}-angle-double-down:before { content: v.$fa-var-angle-double-down; }
+.#{v.$fa-css-prefix}-angle-left:before { content: v.$fa-var-angle-left; }
+.#{v.$fa-css-prefix}-angle-right:before { content: v.$fa-var-angle-right; }
+.#{v.$fa-css-prefix}-angle-up:before { content: v.$fa-var-angle-up; }
+.#{v.$fa-css-prefix}-angle-down:before { content: v.$fa-var-angle-down; }
+.#{v.$fa-css-prefix}-desktop:before { content: v.$fa-var-desktop; }
+.#{v.$fa-css-prefix}-laptop:before { content: v.$fa-var-laptop; }
+.#{v.$fa-css-prefix}-tabvar:before { content: v.$fa-var-tabvar; }
+.#{v.$fa-css-prefix}-mobile-phone:before,
+.#{v.$fa-css-prefix}-mobile:before { content: v.$fa-var-mobile; }
+.#{v.$fa-css-prefix}-circle-o:before { content: v.$fa-var-circle-o; }
+.#{v.$fa-css-prefix}-quote-left:before { content: v.$fa-var-quote-left; }
+.#{v.$fa-css-prefix}-quote-right:before { content: v.$fa-var-quote-right; }
+.#{v.$fa-css-prefix}-spinner:before { content: v.$fa-var-spinner; }
+.#{v.$fa-css-prefix}-circle:before { content: v.$fa-var-circle; }
+.#{v.$fa-css-prefix}-mail-reply:before,
+.#{v.$fa-css-prefix}-reply:before { content: v.$fa-var-reply; }
+.#{v.$fa-css-prefix}-github-alt:before { content: v.$fa-var-github-alt; }
+.#{v.$fa-css-prefix}-folder-o:before { content: v.$fa-var-folder-o; }
+.#{v.$fa-css-prefix}-folder-open-o:before { content: v.$fa-var-folder-open-o; }
+.#{v.$fa-css-prefix}-smile-o:before { content: v.$fa-var-smile-o; }
+.#{v.$fa-css-prefix}-frown-o:before { content: v.$fa-var-frown-o; }
+.#{v.$fa-css-prefix}-meh-o:before { content: v.$fa-var-meh-o; }
+.#{v.$fa-css-prefix}-gamepad:before { content: v.$fa-var-gamepad; }
+.#{v.$fa-css-prefix}-keyboard-o:before { content: v.$fa-var-keyboard-o; }
+.#{v.$fa-css-prefix}-flag-o:before { content: v.$fa-var-flag-o; }
+.#{v.$fa-css-prefix}-flag-checkered:before { content: v.$fa-var-flag-checkered; }
+.#{v.$fa-css-prefix}-terminal:before { content: v.$fa-var-terminal; }
+.#{v.$fa-css-prefix}-code:before { content: v.$fa-var-code; }
+.#{v.$fa-css-prefix}-mail-reply-all:before,
+.#{v.$fa-css-prefix}-reply-all:before { content: v.$fa-var-reply-all; }
+.#{v.$fa-css-prefix}-star-half-empty:before,
+.#{v.$fa-css-prefix}-star-half-full:before,
+.#{v.$fa-css-prefix}-star-half-o:before { content: v.$fa-var-star-half-o; }
+.#{v.$fa-css-prefix}-location-arrow:before { content: v.$fa-var-location-arrow; }
+.#{v.$fa-css-prefix}-crop:before { content: v.$fa-var-crop; }
+.#{v.$fa-css-prefix}-code-fork:before { content: v.$fa-var-code-fork; }
+.#{v.$fa-css-prefix}-unlink:before,
+.#{v.$fa-css-prefix}-chain-broken:before { content: v.$fa-var-chain-broken; }
+.#{v.$fa-css-prefix}-question:before { content: v.$fa-var-question; }
+.#{v.$fa-css-prefix}-info:before { content: v.$fa-var-info; }
+.#{v.$fa-css-prefix}-exclamation:before { content: v.$fa-var-exclamation; }
+.#{v.$fa-css-prefix}-superscript:before { content: v.$fa-var-superscript; }
+.#{v.$fa-css-prefix}-subscript:before { content: v.$fa-var-subscript; }
+.#{v.$fa-css-prefix}-eraser:before { content: v.$fa-var-eraser; }
+.#{v.$fa-css-prefix}-puzzle-piece:before { content: v.$fa-var-puzzle-piece; }
+.#{v.$fa-css-prefix}-microphone:before { content: v.$fa-var-microphone; }
+.#{v.$fa-css-prefix}-microphone-slash:before { content: v.$fa-var-microphone-slash; }
+.#{v.$fa-css-prefix}-shield:before { content: v.$fa-var-shield; }
+.#{v.$fa-css-prefix}-calendar-o:before { content: v.$fa-var-calendar-o; }
+.#{v.$fa-css-prefix}-fire-extinguisher:before { content: v.$fa-var-fire-extinguisher; }
+.#{v.$fa-css-prefix}-rocket:before { content: v.$fa-var-rocket; }
+.#{v.$fa-css-prefix}-maxcdn:before { content: v.$fa-var-maxcdn; }
+.#{v.$fa-css-prefix}-chevron-circle-left:before { content: v.$fa-var-chevron-circle-left; }
+.#{v.$fa-css-prefix}-chevron-circle-right:before { content: v.$fa-var-chevron-circle-right; }
+.#{v.$fa-css-prefix}-chevron-circle-up:before { content: v.$fa-var-chevron-circle-up; }
+.#{v.$fa-css-prefix}-chevron-circle-down:before { content: v.$fa-var-chevron-circle-down; }
+.#{v.$fa-css-prefix}-html5:before { content: v.$fa-var-html5; }
+.#{v.$fa-css-prefix}-css3:before { content: v.$fa-var-css3; }
+.#{v.$fa-css-prefix}-anchor:before { content: v.$fa-var-anchor; }
+.#{v.$fa-css-prefix}-unlock-alt:before { content: v.$fa-var-unlock-alt; }
+.#{v.$fa-css-prefix}-bullseye:before { content: v.$fa-var-bullseye; }
+.#{v.$fa-css-prefix}-ellipsis-h:before { content: v.$fa-var-ellipsis-h; }
+.#{v.$fa-css-prefix}-ellipsis-v:before { content: v.$fa-var-ellipsis-v; }
+.#{v.$fa-css-prefix}-rss-square:before { content: v.$fa-var-rss-square; }
+.#{v.$fa-css-prefix}-play-circle:before { content: v.$fa-var-play-circle; }
+.#{v.$fa-css-prefix}-ticket:before { content: v.$fa-var-ticket; }
+.#{v.$fa-css-prefix}-minus-square:before { content: v.$fa-var-minus-square; }
+.#{v.$fa-css-prefix}-minus-square-o:before { content: v.$fa-var-minus-square-o; }
+.#{v.$fa-css-prefix}-level-up:before { content: v.$fa-var-level-up; }
+.#{v.$fa-css-prefix}-level-down:before { content: v.$fa-var-level-down; }
+.#{v.$fa-css-prefix}-check-square:before { content: v.$fa-var-check-square; }
+.#{v.$fa-css-prefix}-pencil-square:before { content: v.$fa-var-pencil-square; }
+.#{v.$fa-css-prefix}-external-link-square:before { content: v.$fa-var-external-link-square; }
+.#{v.$fa-css-prefix}-share-square:before { content: v.$fa-var-share-square; }
+.#{v.$fa-css-prefix}-compass:before { content: v.$fa-var-compass; }
+.#{v.$fa-css-prefix}-toggle-down:before,
+.#{v.$fa-css-prefix}-caret-square-o-down:before { content: v.$fa-var-caret-square-o-down; }
+.#{v.$fa-css-prefix}-toggle-up:before,
+.#{v.$fa-css-prefix}-caret-square-o-up:before { content: v.$fa-var-caret-square-o-up; }
+.#{v.$fa-css-prefix}-toggle-right:before,
+.#{v.$fa-css-prefix}-caret-square-o-right:before { content: v.$fa-var-caret-square-o-right; }
+.#{v.$fa-css-prefix}-euro:before,
+.#{v.$fa-css-prefix}-eur:before { content: v.$fa-var-eur; }
+.#{v.$fa-css-prefix}-gbp:before { content: v.$fa-var-gbp; }
+.#{v.$fa-css-prefix}-dollar:before,
+.#{v.$fa-css-prefix}-usd:before { content: v.$fa-var-usd; }
+.#{v.$fa-css-prefix}-rupee:before,
+.#{v.$fa-css-prefix}-inr:before { content: v.$fa-var-inr; }
+.#{v.$fa-css-prefix}-cny:before,
+.#{v.$fa-css-prefix}-rmb:before,
+.#{v.$fa-css-prefix}-yen:before,
+.#{v.$fa-css-prefix}-jpy:before { content: v.$fa-var-jpy; }
+.#{v.$fa-css-prefix}-ruble:before,
+.#{v.$fa-css-prefix}-rouble:before,
+.#{v.$fa-css-prefix}-rub:before { content: v.$fa-var-rub; }
+.#{v.$fa-css-prefix}-won:before,
+.#{v.$fa-css-prefix}-krw:before { content: v.$fa-var-krw; }
+.#{v.$fa-css-prefix}-bitcoin:before,
+.#{v.$fa-css-prefix}-btc:before { content: v.$fa-var-btc; }
+.#{v.$fa-css-prefix}-file:before { content: v.$fa-var-file; }
+.#{v.$fa-css-prefix}-file-text:before { content: v.$fa-var-file-text; }
+.#{v.$fa-css-prefix}-sort-alpha-asc:before { content: v.$fa-var-sort-alpha-asc; }
+.#{v.$fa-css-prefix}-sort-alpha-desc:before { content: v.$fa-var-sort-alpha-desc; }
+.#{v.$fa-css-prefix}-sort-amount-asc:before { content: v.$fa-var-sort-amount-asc; }
+.#{v.$fa-css-prefix}-sort-amount-desc:before { content: v.$fa-var-sort-amount-desc; }
+.#{v.$fa-css-prefix}-sort-numeric-asc:before { content: v.$fa-var-sort-numeric-asc; }
+.#{v.$fa-css-prefix}-sort-numeric-desc:before { content: v.$fa-var-sort-numeric-desc; }
+.#{v.$fa-css-prefix}-thumbs-up:before { content: v.$fa-var-thumbs-up; }
+.#{v.$fa-css-prefix}-thumbs-down:before { content: v.$fa-var-thumbs-down; }
+.#{v.$fa-css-prefix}-youtube-square:before { content: v.$fa-var-youtube-square; }
+.#{v.$fa-css-prefix}-youtube:before { content: v.$fa-var-youtube; }
+.#{v.$fa-css-prefix}-xing:before { content: v.$fa-var-xing; }
+.#{v.$fa-css-prefix}-xing-square:before { content: v.$fa-var-xing-square; }
+.#{v.$fa-css-prefix}-youtube-play:before { content: v.$fa-var-youtube-play; }
+.#{v.$fa-css-prefix}-dropbox:before { content: v.$fa-var-dropbox; }
+.#{v.$fa-css-prefix}-stack-overflow:before { content: v.$fa-var-stack-overflow; }
+.#{v.$fa-css-prefix}-instagram:before { content: v.$fa-var-instagram; }
+.#{v.$fa-css-prefix}-flickr:before { content: v.$fa-var-flickr; }
+.#{v.$fa-css-prefix}-adn:before { content: v.$fa-var-adn; }
+.#{v.$fa-css-prefix}-bitbucket:before { content: v.$fa-var-bitbucket; }
+.#{v.$fa-css-prefix}-bitbucket-square:before { content: v.$fa-var-bitbucket-square; }
+.#{v.$fa-css-prefix}-tumblr:before { content: v.$fa-var-tumblr; }
+.#{v.$fa-css-prefix}-tumblr-square:before { content: v.$fa-var-tumblr-square; }
+.#{v.$fa-css-prefix}-long-arrow-down:before { content: v.$fa-var-long-arrow-down; }
+.#{v.$fa-css-prefix}-long-arrow-up:before { content: v.$fa-var-long-arrow-up; }
+.#{v.$fa-css-prefix}-long-arrow-left:before { content: v.$fa-var-long-arrow-left; }
+.#{v.$fa-css-prefix}-long-arrow-right:before { content: v.$fa-var-long-arrow-right; }
+.#{v.$fa-css-prefix}-apple:before { content: v.$fa-var-apple; }
+.#{v.$fa-css-prefix}-windows:before { content: v.$fa-var-windows; }
+.#{v.$fa-css-prefix}-android:before { content: v.$fa-var-android; }
+.#{v.$fa-css-prefix}-linux:before { content: v.$fa-var-linux; }
+.#{v.$fa-css-prefix}-dribbble:before { content: v.$fa-var-dribbble; }
+.#{v.$fa-css-prefix}-skype:before { content: v.$fa-var-skype; }
+.#{v.$fa-css-prefix}-foursquare:before { content: v.$fa-var-foursquare; }
+.#{v.$fa-css-prefix}-trello:before { content: v.$fa-var-trello; }
+.#{v.$fa-css-prefix}-female:before { content: v.$fa-var-female; }
+.#{v.$fa-css-prefix}-male:before { content: v.$fa-var-male; }
+.#{v.$fa-css-prefix}-gittip:before,
+.#{v.$fa-css-prefix}-gratipay:before { content: v.$fa-var-gratipay; }
+.#{v.$fa-css-prefix}-sun-o:before { content: v.$fa-var-sun-o; }
+.#{v.$fa-css-prefix}-moon-o:before { content: v.$fa-var-moon-o; }
+.#{v.$fa-css-prefix}-archive:before { content: v.$fa-var-archive; }
+.#{v.$fa-css-prefix}-bug:before { content: v.$fa-var-bug; }
+.#{v.$fa-css-prefix}-vk:before { content: v.$fa-var-vk; }
+.#{v.$fa-css-prefix}-weibo:before { content: v.$fa-var-weibo; }
+.#{v.$fa-css-prefix}-renren:before { content: v.$fa-var-renren; }
+.#{v.$fa-css-prefix}-pagelines:before { content: v.$fa-var-pagelines; }
+.#{v.$fa-css-prefix}-stack-exchange:before { content: v.$fa-var-stack-exchange; }
+.#{v.$fa-css-prefix}-arrow-circle-o-right:before { content: v.$fa-var-arrow-circle-o-right; }
+.#{v.$fa-css-prefix}-arrow-circle-o-left:before { content: v.$fa-var-arrow-circle-o-left; }
+.#{v.$fa-css-prefix}-toggle-left:before,
+.#{v.$fa-css-prefix}-caret-square-o-left:before { content: v.$fa-var-caret-square-o-left; }
+.#{v.$fa-css-prefix}-dot-circle-o:before { content: v.$fa-var-dot-circle-o; }
+.#{v.$fa-css-prefix}-wheelchair:before { content: v.$fa-var-wheelchair; }
+.#{v.$fa-css-prefix}-vimeo-square:before { content: v.$fa-var-vimeo-square; }
+.#{v.$fa-css-prefix}-turkish-lira:before,
+.#{v.$fa-css-prefix}-try:before { content: v.$fa-var-try; }
+.#{v.$fa-css-prefix}-plus-square-o:before { content: v.$fa-var-plus-square-o; }
+.#{v.$fa-css-prefix}-space-shuttle:before { content: v.$fa-var-space-shuttle; }
+.#{v.$fa-css-prefix}-slack:before { content: v.$fa-var-slack; }
+.#{v.$fa-css-prefix}-envelope-square:before { content: v.$fa-var-envelope-square; }
+.#{v.$fa-css-prefix}-wordpress:before { content: v.$fa-var-wordpress; }
+.#{v.$fa-css-prefix}-openid:before { content: v.$fa-var-openid; }
+.#{v.$fa-css-prefix}-institution:before,
+.#{v.$fa-css-prefix}-bank:before,
+.#{v.$fa-css-prefix}-university:before { content: v.$fa-var-university; }
+.#{v.$fa-css-prefix}-mortar-board:before,
+.#{v.$fa-css-prefix}-graduation-cap:before { content: v.$fa-var-graduation-cap; }
+.#{v.$fa-css-prefix}-yahoo:before { content: v.$fa-var-yahoo; }
+.#{v.$fa-css-prefix}-google:before { content: v.$fa-var-google; }
+.#{v.$fa-css-prefix}-reddit:before { content: v.$fa-var-reddit; }
+.#{v.$fa-css-prefix}-reddit-square:before { content: v.$fa-var-reddit-square; }
+.#{v.$fa-css-prefix}-stumbleupon-circle:before { content: v.$fa-var-stumbleupon-circle; }
+.#{v.$fa-css-prefix}-stumbleupon:before { content: v.$fa-var-stumbleupon; }
+.#{v.$fa-css-prefix}-delicious:before { content: v.$fa-var-delicious; }
+.#{v.$fa-css-prefix}-digg:before { content: v.$fa-var-digg; }
+.#{v.$fa-css-prefix}-pied-piper-pp:before { content: v.$fa-var-pied-piper-pp; }
+.#{v.$fa-css-prefix}-pied-piper-alt:before { content: v.$fa-var-pied-piper-alt; }
+.#{v.$fa-css-prefix}-drupal:before { content: v.$fa-var-drupal; }
+.#{v.$fa-css-prefix}-joomla:before { content: v.$fa-var-joomla; }
+.#{v.$fa-css-prefix}-language:before { content: v.$fa-var-language; }
+.#{v.$fa-css-prefix}-fax:before { content: v.$fa-var-fax; }
+.#{v.$fa-css-prefix}-building:before { content: v.$fa-var-building; }
+.#{v.$fa-css-prefix}-child:before { content: v.$fa-var-child; }
+.#{v.$fa-css-prefix}-paw:before { content: v.$fa-var-paw; }
+.#{v.$fa-css-prefix}-spoon:before { content: v.$fa-var-spoon; }
+.#{v.$fa-css-prefix}-cube:before { content: v.$fa-var-cube; }
+.#{v.$fa-css-prefix}-cubes:before { content: v.$fa-var-cubes; }
+.#{v.$fa-css-prefix}-behance:before { content: v.$fa-var-behance; }
+.#{v.$fa-css-prefix}-behance-square:before { content: v.$fa-var-behance-square; }
+.#{v.$fa-css-prefix}-steam:before { content: v.$fa-var-steam; }
+.#{v.$fa-css-prefix}-steam-square:before { content: v.$fa-var-steam-square; }
+.#{v.$fa-css-prefix}-recycle:before { content: v.$fa-var-recycle; }
+.#{v.$fa-css-prefix}-automobile:before,
+.#{v.$fa-css-prefix}-car:before { content: v.$fa-var-car; }
+.#{v.$fa-css-prefix}-cab:before,
+.#{v.$fa-css-prefix}-taxi:before { content: v.$fa-var-taxi; }
+.#{v.$fa-css-prefix}-tree:before { content: v.$fa-var-tree; }
+.#{v.$fa-css-prefix}-spotify:before { content: v.$fa-var-spotify; }
+.#{v.$fa-css-prefix}-deviantart:before { content: v.$fa-var-deviantart; }
+.#{v.$fa-css-prefix}-soundcloud:before { content: v.$fa-var-soundcloud; }
+.#{v.$fa-css-prefix}-database:before { content: v.$fa-var-database; }
+.#{v.$fa-css-prefix}-file-pdf-o:before { content: v.$fa-var-file-pdf-o; }
+.#{v.$fa-css-prefix}-file-word-o:before { content: v.$fa-var-file-word-o; }
+.#{v.$fa-css-prefix}-file-excel-o:before { content: v.$fa-var-file-excel-o; }
+.#{v.$fa-css-prefix}-file-powerpoint-o:before { content: v.$fa-var-file-powerpoint-o; }
+.#{v.$fa-css-prefix}-file-photo-o:before,
+.#{v.$fa-css-prefix}-file-picture-o:before,
+.#{v.$fa-css-prefix}-file-image-o:before { content: v.$fa-var-file-image-o; }
+.#{v.$fa-css-prefix}-file-zip-o:before,
+.#{v.$fa-css-prefix}-file-archive-o:before { content: v.$fa-var-file-archive-o; }
+.#{v.$fa-css-prefix}-file-sound-o:before,
+.#{v.$fa-css-prefix}-file-audio-o:before { content: v.$fa-var-file-audio-o; }
+.#{v.$fa-css-prefix}-file-movie-o:before,
+.#{v.$fa-css-prefix}-file-video-o:before { content: v.$fa-var-file-video-o; }
+.#{v.$fa-css-prefix}-file-code-o:before { content: v.$fa-var-file-code-o; }
+.#{v.$fa-css-prefix}-vine:before { content: v.$fa-var-vine; }
+.#{v.$fa-css-prefix}-codepen:before { content: v.$fa-var-codepen; }
+.#{v.$fa-css-prefix}-jsfiddle:before { content: v.$fa-var-jsfiddle; }
+.#{v.$fa-css-prefix}-life-bouy:before,
+.#{v.$fa-css-prefix}-life-buoy:before,
+.#{v.$fa-css-prefix}-life-saver:before,
+.#{v.$fa-css-prefix}-support:before,
+.#{v.$fa-css-prefix}-life-ring:before { content: v.$fa-var-life-ring; }
+.#{v.$fa-css-prefix}-circle-o-notch:before { content: v.$fa-var-circle-o-notch; }
+.#{v.$fa-css-prefix}-ra:before,
+.#{v.$fa-css-prefix}-resistance:before,
+.#{v.$fa-css-prefix}-rebel:before { content: v.$fa-var-rebel; }
+.#{v.$fa-css-prefix}-ge:before,
+.#{v.$fa-css-prefix}-empire:before { content: v.$fa-var-empire; }
+.#{v.$fa-css-prefix}-git-square:before { content: v.$fa-var-git-square; }
+.#{v.$fa-css-prefix}-git:before { content: v.$fa-var-git; }
+.#{v.$fa-css-prefix}-y-combinator-square:before,
+.#{v.$fa-css-prefix}-yc-square:before,
+.#{v.$fa-css-prefix}-hacker-news:before { content: v.$fa-var-hacker-news; }
+.#{v.$fa-css-prefix}-tencent-weibo:before { content: v.$fa-var-tencent-weibo; }
+.#{v.$fa-css-prefix}-qq:before { content: v.$fa-var-qq; }
+.#{v.$fa-css-prefix}-wechat:before,
+.#{v.$fa-css-prefix}-weixin:before { content: v.$fa-var-weixin; }
+.#{v.$fa-css-prefix}-send:before,
+.#{v.$fa-css-prefix}-paper-plane:before { content: v.$fa-var-paper-plane; }
+.#{v.$fa-css-prefix}-send-o:before,
+.#{v.$fa-css-prefix}-paper-plane-o:before { content: v.$fa-var-paper-plane-o; }
+.#{v.$fa-css-prefix}-history:before { content: v.$fa-var-history; }
+.#{v.$fa-css-prefix}-circle-thin:before { content: v.$fa-var-circle-thin; }
+.#{v.$fa-css-prefix}-header:before { content: v.$fa-var-header; }
+.#{v.$fa-css-prefix}-paragraph:before { content: v.$fa-var-paragraph; }
+.#{v.$fa-css-prefix}-sliders:before { content: v.$fa-var-sliders; }
+.#{v.$fa-css-prefix}-share-alt:before { content: v.$fa-var-share-alt; }
+.#{v.$fa-css-prefix}-share-alt-square:before { content: v.$fa-var-share-alt-square; }
+.#{v.$fa-css-prefix}-bomb:before { content: v.$fa-var-bomb; }
+.#{v.$fa-css-prefix}-soccer-ball-o:before,
+.#{v.$fa-css-prefix}-futbol-o:before { content: v.$fa-var-futbol-o; }
+.#{v.$fa-css-prefix}-tty:before { content: v.$fa-var-tty; }
+.#{v.$fa-css-prefix}-binoculars:before { content: v.$fa-var-binoculars; }
+.#{v.$fa-css-prefix}-plug:before { content: v.$fa-var-plug; }
+.#{v.$fa-css-prefix}-slideshare:before { content: v.$fa-var-slideshare; }
+.#{v.$fa-css-prefix}-twitch:before { content: v.$fa-var-twitch; }
+.#{v.$fa-css-prefix}-yelp:before { content: v.$fa-var-yelp; }
+.#{v.$fa-css-prefix}-newspaper-o:before { content: v.$fa-var-newspaper-o; }
+.#{v.$fa-css-prefix}-wifi:before { content: v.$fa-var-wifi; }
+.#{v.$fa-css-prefix}-calculator:before { content: v.$fa-var-calculator; }
+.#{v.$fa-css-prefix}-paypal:before { content: v.$fa-var-paypal; }
+.#{v.$fa-css-prefix}-google-walvar:before { content: v.$fa-var-google-walvar; }
+.#{v.$fa-css-prefix}-cc-visa:before { content: v.$fa-var-cc-visa; }
+.#{v.$fa-css-prefix}-cc-mastercard:before { content: v.$fa-var-cc-mastercard; }
+.#{v.$fa-css-prefix}-cc-discover:before { content: v.$fa-var-cc-discover; }
+.#{v.$fa-css-prefix}-cc-amex:before { content: v.$fa-var-cc-amex; }
+.#{v.$fa-css-prefix}-cc-paypal:before { content: v.$fa-var-cc-paypal; }
+.#{v.$fa-css-prefix}-cc-stripe:before { content: v.$fa-var-cc-stripe; }
+.#{v.$fa-css-prefix}-bell-slash:before { content: v.$fa-var-bell-slash; }
+.#{v.$fa-css-prefix}-bell-slash-o:before { content: v.$fa-var-bell-slash-o; }
+.#{v.$fa-css-prefix}-trash:before { content: v.$fa-var-trash; }
+.#{v.$fa-css-prefix}-copyright:before { content: v.$fa-var-copyright; }
+.#{v.$fa-css-prefix}-at:before { content: v.$fa-var-at; }
+.#{v.$fa-css-prefix}-eyedropper:before { content: v.$fa-var-eyedropper; }
+.#{v.$fa-css-prefix}-paint-brush:before { content: v.$fa-var-paint-brush; }
+.#{v.$fa-css-prefix}-birthday-cake:before { content: v.$fa-var-birthday-cake; }
+.#{v.$fa-css-prefix}-area-chart:before { content: v.$fa-var-area-chart; }
+.#{v.$fa-css-prefix}-pie-chart:before { content: v.$fa-var-pie-chart; }
+.#{v.$fa-css-prefix}-line-chart:before { content: v.$fa-var-line-chart; }
+.#{v.$fa-css-prefix}-lastfm:before { content: v.$fa-var-lastfm; }
+.#{v.$fa-css-prefix}-lastfm-square:before { content: v.$fa-var-lastfm-square; }
+.#{v.$fa-css-prefix}-toggle-off:before { content: v.$fa-var-toggle-off; }
+.#{v.$fa-css-prefix}-toggle-on:before { content: v.$fa-var-toggle-on; }
+.#{v.$fa-css-prefix}-bicycle:before { content: v.$fa-var-bicycle; }
+.#{v.$fa-css-prefix}-bus:before { content: v.$fa-var-bus; }
+.#{v.$fa-css-prefix}-ioxhost:before { content: v.$fa-var-ioxhost; }
+.#{v.$fa-css-prefix}-angellist:before { content: v.$fa-var-angellist; }
+.#{v.$fa-css-prefix}-cc:before { content: v.$fa-var-cc; }
+.#{v.$fa-css-prefix}-shekel:before,
+.#{v.$fa-css-prefix}-sheqel:before,
+.#{v.$fa-css-prefix}-ils:before { content: v.$fa-var-ils; }
+.#{v.$fa-css-prefix}-meanpath:before { content: v.$fa-var-meanpath; }
+.#{v.$fa-css-prefix}-buysellads:before { content: v.$fa-var-buysellads; }
+.#{v.$fa-css-prefix}-connectdevelop:before { content: v.$fa-var-connectdevelop; }
+.#{v.$fa-css-prefix}-dashcube:before { content: v.$fa-var-dashcube; }
+.#{v.$fa-css-prefix}-forumbee:before { content: v.$fa-var-forumbee; }
+.#{v.$fa-css-prefix}-leanpub:before { content: v.$fa-var-leanpub; }
+.#{v.$fa-css-prefix}-sellsy:before { content: v.$fa-var-sellsy; }
+.#{v.$fa-css-prefix}-shirtsinbulk:before { content: v.$fa-var-shirtsinbulk; }
+.#{v.$fa-css-prefix}-simplybuilt:before { content: v.$fa-var-simplybuilt; }
+.#{v.$fa-css-prefix}-skyatlas:before { content: v.$fa-var-skyatlas; }
+.#{v.$fa-css-prefix}-cart-plus:before { content: v.$fa-var-cart-plus; }
+.#{v.$fa-css-prefix}-cart-arrow-down:before { content: v.$fa-var-cart-arrow-down; }
+.#{v.$fa-css-prefix}-diamond:before { content: v.$fa-var-diamond; }
+.#{v.$fa-css-prefix}-ship:before { content: v.$fa-var-ship; }
+.#{v.$fa-css-prefix}-user-secret:before { content: v.$fa-var-user-secret; }
+.#{v.$fa-css-prefix}-motorcycle:before { content: v.$fa-var-motorcycle; }
+.#{v.$fa-css-prefix}-street-view:before { content: v.$fa-var-street-view; }
+.#{v.$fa-css-prefix}-heartbeat:before { content: v.$fa-var-heartbeat; }
+.#{v.$fa-css-prefix}-venus:before { content: v.$fa-var-venus; }
+.#{v.$fa-css-prefix}-mars:before { content: v.$fa-var-mars; }
+.#{v.$fa-css-prefix}-mercury:before { content: v.$fa-var-mercury; }
+.#{v.$fa-css-prefix}-intersex:before,
+.#{v.$fa-css-prefix}-transgender:before { content: v.$fa-var-transgender; }
+.#{v.$fa-css-prefix}-transgender-alt:before { content: v.$fa-var-transgender-alt; }
+.#{v.$fa-css-prefix}-venus-double:before { content: v.$fa-var-venus-double; }
+.#{v.$fa-css-prefix}-mars-double:before { content: v.$fa-var-mars-double; }
+.#{v.$fa-css-prefix}-venus-mars:before { content: v.$fa-var-venus-mars; }
+.#{v.$fa-css-prefix}-mars-stroke:before { content: v.$fa-var-mars-stroke; }
+.#{v.$fa-css-prefix}-mars-stroke-v:before { content: v.$fa-var-mars-stroke-v; }
+.#{v.$fa-css-prefix}-mars-stroke-h:before { content: v.$fa-var-mars-stroke-h; }
+.#{v.$fa-css-prefix}-neuter:before { content: v.$fa-var-neuter; }
+.#{v.$fa-css-prefix}-genderless:before { content: v.$fa-var-genderless; }
+.#{v.$fa-css-prefix}-facebook-official:before { content: v.$fa-var-facebook-official; }
+.#{v.$fa-css-prefix}-pinterest-p:before { content: v.$fa-var-pinterest-p; }
+.#{v.$fa-css-prefix}-whatsapp:before { content: v.$fa-var-whatsapp; }
+.#{v.$fa-css-prefix}-server:before { content: v.$fa-var-server; }
+.#{v.$fa-css-prefix}-user-plus:before { content: v.$fa-var-user-plus; }
+.#{v.$fa-css-prefix}-user-times:before { content: v.$fa-var-user-times; }
+.#{v.$fa-css-prefix}-hotel:before,
+.#{v.$fa-css-prefix}-bed:before { content: v.$fa-var-bed; }
+.#{v.$fa-css-prefix}-viacoin:before { content: v.$fa-var-viacoin; }
+.#{v.$fa-css-prefix}-train:before { content: v.$fa-var-train; }
+.#{v.$fa-css-prefix}-subway:before { content: v.$fa-var-subway; }
+.#{v.$fa-css-prefix}-medium:before { content: v.$fa-var-medium; }
+.#{v.$fa-css-prefix}-yc:before,
+.#{v.$fa-css-prefix}-y-combinator:before { content: v.$fa-var-y-combinator; }
+.#{v.$fa-css-prefix}-optin-monster:before { content: v.$fa-var-optin-monster; }
+.#{v.$fa-css-prefix}-opencart:before { content: v.$fa-var-opencart; }
+.#{v.$fa-css-prefix}-expeditedssl:before { content: v.$fa-var-expeditedssl; }
+.#{v.$fa-css-prefix}-battery-4:before,
+.#{v.$fa-css-prefix}-battery:before,
+.#{v.$fa-css-prefix}-battery-full:before { content: v.$fa-var-battery-full; }
+.#{v.$fa-css-prefix}-battery-3:before,
+.#{v.$fa-css-prefix}-battery-three-quarters:before { content: v.$fa-var-battery-three-quarters; }
+.#{v.$fa-css-prefix}-battery-2:before,
+.#{v.$fa-css-prefix}-battery-half:before { content: v.$fa-var-battery-half; }
+.#{v.$fa-css-prefix}-battery-1:before,
+.#{v.$fa-css-prefix}-battery-quarter:before { content: v.$fa-var-battery-quarter; }
+.#{v.$fa-css-prefix}-battery-0:before,
+.#{v.$fa-css-prefix}-battery-empty:before { content: v.$fa-var-battery-empty; }
+.#{v.$fa-css-prefix}-mouse-pointer:before { content: v.$fa-var-mouse-pointer; }
+.#{v.$fa-css-prefix}-i-cursor:before { content: v.$fa-var-i-cursor; }
+.#{v.$fa-css-prefix}-object-group:before { content: v.$fa-var-object-group; }
+.#{v.$fa-css-prefix}-object-ungroup:before { content: v.$fa-var-object-ungroup; }
+.#{v.$fa-css-prefix}-sticky-note:before { content: v.$fa-var-sticky-note; }
+.#{v.$fa-css-prefix}-sticky-note-o:before { content: v.$fa-var-sticky-note-o; }
+.#{v.$fa-css-prefix}-cc-jcb:before { content: v.$fa-var-cc-jcb; }
+.#{v.$fa-css-prefix}-cc-diners-club:before { content: v.$fa-var-cc-diners-club; }
+.#{v.$fa-css-prefix}-clone:before { content: v.$fa-var-clone; }
+.#{v.$fa-css-prefix}-balance-scale:before { content: v.$fa-var-balance-scale; }
+.#{v.$fa-css-prefix}-hourglass-o:before { content: v.$fa-var-hourglass-o; }
+.#{v.$fa-css-prefix}-hourglass-1:before,
+.#{v.$fa-css-prefix}-hourglass-start:before { content: v.$fa-var-hourglass-start; }
+.#{v.$fa-css-prefix}-hourglass-2:before,
+.#{v.$fa-css-prefix}-hourglass-half:before { content: v.$fa-var-hourglass-half; }
+.#{v.$fa-css-prefix}-hourglass-3:before,
+.#{v.$fa-css-prefix}-hourglass-end:before { content: v.$fa-var-hourglass-end; }
+.#{v.$fa-css-prefix}-hourglass:before { content: v.$fa-var-hourglass; }
+.#{v.$fa-css-prefix}-hand-grab-o:before,
+.#{v.$fa-css-prefix}-hand-rock-o:before { content: v.$fa-var-hand-rock-o; }
+.#{v.$fa-css-prefix}-hand-stop-o:before,
+.#{v.$fa-css-prefix}-hand-paper-o:before { content: v.$fa-var-hand-paper-o; }
+.#{v.$fa-css-prefix}-hand-scissors-o:before { content: v.$fa-var-hand-scissors-o; }
+.#{v.$fa-css-prefix}-hand-lizard-o:before { content: v.$fa-var-hand-lizard-o; }
+.#{v.$fa-css-prefix}-hand-spock-o:before { content: v.$fa-var-hand-spock-o; }
+.#{v.$fa-css-prefix}-hand-pointer-o:before { content: v.$fa-var-hand-pointer-o; }
+.#{v.$fa-css-prefix}-hand-peace-o:before { content: v.$fa-var-hand-peace-o; }
+.#{v.$fa-css-prefix}-trademark:before { content: v.$fa-var-trademark; }
+.#{v.$fa-css-prefix}-registered:before { content: v.$fa-var-registered; }
+.#{v.$fa-css-prefix}-creative-commons:before { content: v.$fa-var-creative-commons; }
+.#{v.$fa-css-prefix}-gg:before { content: v.$fa-var-gg; }
+.#{v.$fa-css-prefix}-gg-circle:before { content: v.$fa-var-gg-circle; }
+.#{v.$fa-css-prefix}-tripadvisor:before { content: v.$fa-var-tripadvisor; }
+.#{v.$fa-css-prefix}-odnoklassniki:before { content: v.$fa-var-odnoklassniki; }
+.#{v.$fa-css-prefix}-odnoklassniki-square:before { content: v.$fa-var-odnoklassniki-square; }
+.#{v.$fa-css-prefix}-get-pocket:before { content: v.$fa-var-get-pocket; }
+.#{v.$fa-css-prefix}-wikipedia-w:before { content: v.$fa-var-wikipedia-w; }
+.#{v.$fa-css-prefix}-safari:before { content: v.$fa-var-safari; }
+.#{v.$fa-css-prefix}-chrome:before { content: v.$fa-var-chrome; }
+.#{v.$fa-css-prefix}-firefox:before { content: v.$fa-var-firefox; }
+.#{v.$fa-css-prefix}-opera:before { content: v.$fa-var-opera; }
+.#{v.$fa-css-prefix}-internet-explorer:before { content: v.$fa-var-internet-explorer; }
+.#{v.$fa-css-prefix}-tv:before,
+.#{v.$fa-css-prefix}-television:before { content: v.$fa-var-television; }
+.#{v.$fa-css-prefix}-contao:before { content: v.$fa-var-contao; }
+.#{v.$fa-css-prefix}-500px:before { content: v.$fa-var-500px; }
+.#{v.$fa-css-prefix}-amazon:before { content: v.$fa-var-amazon; }
+.#{v.$fa-css-prefix}-calendar-plus-o:before { content: v.$fa-var-calendar-plus-o; }
+.#{v.$fa-css-prefix}-calendar-minus-o:before { content: v.$fa-var-calendar-minus-o; }
+.#{v.$fa-css-prefix}-calendar-times-o:before { content: v.$fa-var-calendar-times-o; }
+.#{v.$fa-css-prefix}-calendar-check-o:before { content: v.$fa-var-calendar-check-o; }
+.#{v.$fa-css-prefix}-industry:before { content: v.$fa-var-industry; }
+.#{v.$fa-css-prefix}-map-pin:before { content: v.$fa-var-map-pin; }
+.#{v.$fa-css-prefix}-map-signs:before { content: v.$fa-var-map-signs; }
+.#{v.$fa-css-prefix}-map-o:before { content: v.$fa-var-map-o; }
+.#{v.$fa-css-prefix}-map:before { content: v.$fa-var-map; }
+.#{v.$fa-css-prefix}-commenting:before { content: v.$fa-var-commenting; }
+.#{v.$fa-css-prefix}-commenting-o:before { content: v.$fa-var-commenting-o; }
+.#{v.$fa-css-prefix}-houzz:before { content: v.$fa-var-houzz; }
+.#{v.$fa-css-prefix}-vimeo:before { content: v.$fa-var-vimeo; }
+.#{v.$fa-css-prefix}-black-tie:before { content: v.$fa-var-black-tie; }
+.#{v.$fa-css-prefix}-fonticons:before { content: v.$fa-var-fonticons; }
+.#{v.$fa-css-prefix}-reddit-alien:before { content: v.$fa-var-reddit-alien; }
+.#{v.$fa-css-prefix}-edge:before { content: v.$fa-var-edge; }
+.#{v.$fa-css-prefix}-credit-card-alt:before { content: v.$fa-var-credit-card-alt; }
+.#{v.$fa-css-prefix}-codiepie:before { content: v.$fa-var-codiepie; }
+.#{v.$fa-css-prefix}-modx:before { content: v.$fa-var-modx; }
+.#{v.$fa-css-prefix}-fort-awesome:before { content: v.$fa-var-fort-awesome; }
+.#{v.$fa-css-prefix}-usb:before { content: v.$fa-var-usb; }
+.#{v.$fa-css-prefix}-product-hunt:before { content: v.$fa-var-product-hunt; }
+.#{v.$fa-css-prefix}-mixcloud:before { content: v.$fa-var-mixcloud; }
+.#{v.$fa-css-prefix}-scribd:before { content: v.$fa-var-scribd; }
+.#{v.$fa-css-prefix}-pause-circle:before { content: v.$fa-var-pause-circle; }
+.#{v.$fa-css-prefix}-pause-circle-o:before { content: v.$fa-var-pause-circle-o; }
+.#{v.$fa-css-prefix}-stop-circle:before { content: v.$fa-var-stop-circle; }
+.#{v.$fa-css-prefix}-stop-circle-o:before { content: v.$fa-var-stop-circle-o; }
+.#{v.$fa-css-prefix}-shopping-bag:before { content: v.$fa-var-shopping-bag; }
+.#{v.$fa-css-prefix}-shopping-basket:before { content: v.$fa-var-shopping-basket; }
+.#{v.$fa-css-prefix}-hashtag:before { content: v.$fa-var-hashtag; }
+.#{v.$fa-css-prefix}-bluetooth:before { content: v.$fa-var-bluetooth; }
+.#{v.$fa-css-prefix}-bluetooth-b:before { content: v.$fa-var-bluetooth-b; }
+.#{v.$fa-css-prefix}-percent:before { content: v.$fa-var-percent; }
+.#{v.$fa-css-prefix}-gitlab:before { content: v.$fa-var-gitlab; }
+.#{v.$fa-css-prefix}-wpbeginner:before { content: v.$fa-var-wpbeginner; }
+.#{v.$fa-css-prefix}-wpforms:before { content: v.$fa-var-wpforms; }
+.#{v.$fa-css-prefix}-envira:before { content: v.$fa-var-envira; }
+.#{v.$fa-css-prefix}-universal-access:before { content: v.$fa-var-universal-access; }
+.#{v.$fa-css-prefix}-wheelchair-alt:before { content: v.$fa-var-wheelchair-alt; }
+.#{v.$fa-css-prefix}-question-circle-o:before { content: v.$fa-var-question-circle-o; }
+.#{v.$fa-css-prefix}-blind:before { content: v.$fa-var-blind; }
+.#{v.$fa-css-prefix}-audio-description:before { content: v.$fa-var-audio-description; }
+.#{v.$fa-css-prefix}-volume-control-phone:before { content: v.$fa-var-volume-control-phone; }
+.#{v.$fa-css-prefix}-braille:before { content: v.$fa-var-braille; }
+.#{v.$fa-css-prefix}-assistive-listening-systems:before { content: v.$fa-var-assistive-listening-systems; }
+.#{v.$fa-css-prefix}-asl-interpreting:before,
+.#{v.$fa-css-prefix}-american-sign-language-interpreting:before { content: v.$fa-var-american-sign-language-interpreting; }
+.#{v.$fa-css-prefix}-deafness:before,
+.#{v.$fa-css-prefix}-hard-of-hearing:before,
+.#{v.$fa-css-prefix}-deaf:before { content: v.$fa-var-deaf; }
+.#{v.$fa-css-prefix}-glide:before { content: v.$fa-var-glide; }
+.#{v.$fa-css-prefix}-glide-g:before { content: v.$fa-var-glide-g; }
+.#{v.$fa-css-prefix}-signing:before,
+.#{v.$fa-css-prefix}-sign-language:before { content: v.$fa-var-sign-language; }
+.#{v.$fa-css-prefix}-low-vision:before { content: v.$fa-var-low-vision; }
+.#{v.$fa-css-prefix}-viadeo:before { content: v.$fa-var-viadeo; }
+.#{v.$fa-css-prefix}-viadeo-square:before { content: v.$fa-var-viadeo-square; }
+.#{v.$fa-css-prefix}-snapchat:before { content: v.$fa-var-snapchat; }
+.#{v.$fa-css-prefix}-snapchat-ghost:before { content: v.$fa-var-snapchat-ghost; }
+.#{v.$fa-css-prefix}-snapchat-square:before { content: v.$fa-var-snapchat-square; }
+.#{v.$fa-css-prefix}-pied-piper:before { content: v.$fa-var-pied-piper; }
+.#{v.$fa-css-prefix}-first-order:before { content: v.$fa-var-first-order; }
+.#{v.$fa-css-prefix}-yoast:before { content: v.$fa-var-yoast; }
+.#{v.$fa-css-prefix}-themeisle:before { content: v.$fa-var-themeisle; }
+.#{v.$fa-css-prefix}-google-plus-circle:before,
+.#{v.$fa-css-prefix}-google-plus-official:before { content: v.$fa-var-google-plus-official; }
+.#{v.$fa-css-prefix}-fa:before,
+.#{v.$fa-css-prefix}-font-awesome:before { content: v.$fa-var-font-awesome; }
+.#{v.$fa-css-prefix}-handshake-o:before { content: v.$fa-var-handshake-o; }
+.#{v.$fa-css-prefix}-envelope-open:before { content: v.$fa-var-envelope-open; }
+.#{v.$fa-css-prefix}-envelope-open-o:before { content: v.$fa-var-envelope-open-o; }
+.#{v.$fa-css-prefix}-linode:before { content: v.$fa-var-linode; }
+.#{v.$fa-css-prefix}-address-book:before { content: v.$fa-var-address-book; }
+.#{v.$fa-css-prefix}-address-book-o:before { content: v.$fa-var-address-book-o; }
+.#{v.$fa-css-prefix}-vcard:before,
+.#{v.$fa-css-prefix}-address-card:before { content: v.$fa-var-address-card; }
+.#{v.$fa-css-prefix}-vcard-o:before,
+.#{v.$fa-css-prefix}-address-card-o:before { content: v.$fa-var-address-card-o; }
+.#{v.$fa-css-prefix}-user-circle:before { content: v.$fa-var-user-circle; }
+.#{v.$fa-css-prefix}-user-circle-o:before { content: v.$fa-var-user-circle-o; }
+.#{v.$fa-css-prefix}-user-o:before { content: v.$fa-var-user-o; }
+.#{v.$fa-css-prefix}-id-badge:before { content: v.$fa-var-id-badge; }
+.#{v.$fa-css-prefix}-drivers-license:before,
+.#{v.$fa-css-prefix}-id-card:before { content: v.$fa-var-id-card; }
+.#{v.$fa-css-prefix}-drivers-license-o:before,
+.#{v.$fa-css-prefix}-id-card-o:before { content: v.$fa-var-id-card-o; }
+.#{v.$fa-css-prefix}-quora:before { content: v.$fa-var-quora; }
+.#{v.$fa-css-prefix}-free-code-camp:before { content: v.$fa-var-free-code-camp; }
+.#{v.$fa-css-prefix}-telegram:before { content: v.$fa-var-telegram; }
+.#{v.$fa-css-prefix}-thermometer-4:before,
+.#{v.$fa-css-prefix}-thermometer:before,
+.#{v.$fa-css-prefix}-thermometer-full:before { content: v.$fa-var-thermometer-full; }
+.#{v.$fa-css-prefix}-thermometer-3:before,
+.#{v.$fa-css-prefix}-thermometer-three-quarters:before { content: v.$fa-var-thermometer-three-quarters; }
+.#{v.$fa-css-prefix}-thermometer-2:before,
+.#{v.$fa-css-prefix}-thermometer-half:before { content: v.$fa-var-thermometer-half; }
+.#{v.$fa-css-prefix}-thermometer-1:before,
+.#{v.$fa-css-prefix}-thermometer-quarter:before { content: v.$fa-var-thermometer-quarter; }
+.#{v.$fa-css-prefix}-thermometer-0:before,
+.#{v.$fa-css-prefix}-thermometer-empty:before { content: v.$fa-var-thermometer-empty; }
+.#{v.$fa-css-prefix}-shower:before { content: v.$fa-var-shower; }
+.#{v.$fa-css-prefix}-bathtub:before,
+.#{v.$fa-css-prefix}-s15:before,
+.#{v.$fa-css-prefix}-bath:before { content: v.$fa-var-bath; }
+.#{v.$fa-css-prefix}-podcast:before { content: v.$fa-var-podcast; }
+.#{v.$fa-css-prefix}-window-maximize:before { content: v.$fa-var-window-maximize; }
+.#{v.$fa-css-prefix}-window-minimize:before { content: v.$fa-var-window-minimize; }
+.#{v.$fa-css-prefix}-window-restore:before { content: v.$fa-var-window-restore; }
+.#{v.$fa-css-prefix}-times-rectangle:before,
+.#{v.$fa-css-prefix}-window-close:before { content: v.$fa-var-window-close; }
+.#{v.$fa-css-prefix}-times-rectangle-o:before,
+.#{v.$fa-css-prefix}-window-close-o:before { content: v.$fa-var-window-close-o; }
+.#{v.$fa-css-prefix}-bandcamp:before { content: v.$fa-var-bandcamp; }
+.#{v.$fa-css-prefix}-grav:before { content: v.$fa-var-grav; }
+.#{v.$fa-css-prefix}-etsy:before { content: v.$fa-var-etsy; }
+.#{v.$fa-css-prefix}-imdb:before { content: v.$fa-var-imdb; }
+.#{v.$fa-css-prefix}-ravelry:before { content: v.$fa-var-ravelry; }
+.#{v.$fa-css-prefix}-eercast:before { content: v.$fa-var-eercast; }
+.#{v.$fa-css-prefix}-microchip:before { content: v.$fa-var-microchip; }
+.#{v.$fa-css-prefix}-snowflake-o:before { content: v.$fa-var-snowflake-o; }
+.#{v.$fa-css-prefix}-superpowers:before { content: v.$fa-var-superpowers; }
+.#{v.$fa-css-prefix}-wpexplorer:before { content: v.$fa-var-wpexplorer; }
+.#{v.$fa-css-prefix}-meetup:before { content: v.$fa-var-meetup; }

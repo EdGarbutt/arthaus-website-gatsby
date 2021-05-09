@@ -1,1 +1,18 @@
-@forward 'core';
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+@forward "variables";
+@forward "mixins";
+@forward "path";
+@forward "core";
+@forward "larger";
+@forward "fixed-width";
+@forward "list";
+@forward "bordered-pulled";
+@forward "animated";
+@forward "rotated-flipped";
+@forward "stacked";
+@forward "icons";
+@forward "screen-reader";

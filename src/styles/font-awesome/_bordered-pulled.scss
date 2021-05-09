@@ -1,0 +1,26 @@
+@use 'variables' as v;
+// Bordered & Pulled
+// -------------------------
+
+.#{v.$fa-css-prefix}-border {
+  padding: .2em .25em .15em;
+  border: solid .08em v.$fa-border-color;
+  border-radius: .1em;
+}
+
+.#{v.$fa-css-prefix}-pull-left { float: left; }
+.#{v.$fa-css-prefix}-pull-right { float: right; }
+
+.#{v.$fa-css-prefix} {
+  &.#{v.$fa-css-prefix}-pull-left { margin-right: .3em; }
+  &.#{v.$fa-css-prefix}-pull-right { margin-left: .3em; }
+}
+
+/* Deprecated as of 4.4.0 */
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+.#{v.$fa-css-prefix} {
+  &.pull-left { margin-right: .3em; }
+  &.pull-right { margin-left: .3em; }
+}

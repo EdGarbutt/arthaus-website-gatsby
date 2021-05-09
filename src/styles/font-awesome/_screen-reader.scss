@@ -1,0 +1,6 @@
+@use 'mixins' as m;
+// Screen Readers
+// -------------------------
+
+.sr-only { @include m.sr-only(); }
+.sr-only-focusable { @include m.sr-only-focusable(); }

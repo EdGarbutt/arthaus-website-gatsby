@@ -1,0 +1,21 @@
+@use 'variables' as v;
+// Stacked Icons
+// -------------------------
+
+.#{v.$fa-css-prefix}-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.#{v.$fa-css-prefix}-stack-1x, .#{v.$fa-css-prefix}-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.#{v.$fa-css-prefix}-stack-1x { line-height: inherit; }
+.#{v.$fa-css-prefix}-stack-2x { font-size: 2em; }
+.#{v.$fa-css-prefix}-inverse { color: v.$fa-inverse; }

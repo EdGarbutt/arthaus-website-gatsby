@@ -1,0 +1,16 @@
+@use 'variables' as v;
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{v.$fa-font-path}/fontawesome-webfont.eot?v=#{v.$fa-version}');
+  src: url('#{v.$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{v.$fa-version}') format('embedded-opentype'),
+    url('#{v.$fa-font-path}/fontawesome-webfont.woff2?v=#{v.$fa-version}') format('woff2'),
+    url('#{v.$fa-font-path}/fontawesome-webfont.woff?v=#{v.$fa-version}') format('woff'),
+    url('#{v.$fa-font-path}/fontawesome-webfont.ttf?v=#{v.$fa-version}') format('truetype'),
+    url('#{v.$fa-font-path}/fontawesome-webfont.svg?v=#{v.$fa-version}#fontawesomeregular') format('svg');
+//  src: url('#{v.$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
