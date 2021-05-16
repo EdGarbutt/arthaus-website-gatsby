@@ -62,7 +62,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div class="arthaus-terms">
+                <div className="arthaus-terms">
                     <p style={{ width: "100%" }}>
                         <a href="/documents/Privacy Policy.pdf" rel="noopener noreferrer" target="_blank">Privacy</a>
                         &#8194; | &#8194;

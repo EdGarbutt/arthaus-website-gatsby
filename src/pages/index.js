@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import Layout from '../components/layout'
 import HomeBlock from '../components/home-block'
@@ -268,7 +268,7 @@ const Home = () => {
     ]
 
     return (
-        <Layout>
+        <Layout id="home-page" page_class="home">
             <div className="homepage-grid">
                 {gridCells.map((cell, index) => {
                     return <HomeBlock key={index} index={index} data={cell} />

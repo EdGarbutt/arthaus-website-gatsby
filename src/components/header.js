@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useLocation } from '@reach/router'
 
 import { Link } from 'gatsby'
@@ -24,8 +24,7 @@ const Header = () => {
     });
 
     useState(() => {
-        console.log("changed");
-        if (location.pathname == "/insights" && searchParameters.has("postType")) {
+        if (location.pathname === "/insights" && searchParameters.has("postType")) {
             switch(searchParameters.get("postType")) {
                 case "blogPost":
                     setPathState({
@@ -49,8 +48,33 @@ const Header = () => {
                     break;
             }
         }
-        console.log(location)
-      }, [])
+    }, [])
+
+
+    const onInsightCategoryChangedHandler = (insight_type) => {
+        switch(insight_type) {
+            case "blogPost":
+                setPathState({
+                    insightBlogSelected: true
+                });
+                break;
+            case "inspiration":
+                setPathState({
+                    insightInspirationSelected: true
+                });
+                break;
+            case "socialPost":
+                setPathState({
+                    insightSocialSelected: true
+                });
+                break;
+            case "allPost":
+                setPathState({
+                    insightAllSelected: true
+                });
+                break;
+        }
+    }
 
     return (
         <header>
@@ -74,25 +98,25 @@ const Header = () => {
                         <Link id="desktop-insights" to="/insights" activeClassName="active" rel="noopener noreferrer">Insights</Link>
                         {/* <a id="desktop-insights" href="insights/index.html" rel="noopener noreferrer">Insights</a> */}
                         <ul className="insights-list">
-                            <li className={"insights-list__item" + (pathState.insightBlogSelected ? " post-active" : "")} data-postType="blogPost">
+                            <li className={"insights-list__item" + (pathState.insightBlogSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("blogPost")}>
                                 <Link to="/insights?postType=blogPost">
                                     <img className="insights-item__icon" src={BlogIcon} alt="Blog Icon" />
                                     <span>BLOG</span>
                                 </Link>
                             </li>
-                            <li className={"insights-list__item" + (pathState.insightInspirationSelected ? " post-active" : "")} data-postType="inspiration">
+                            <li className={"insights-list__item" + (pathState.insightInspirationSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("inspiration")}>
                                 <Link to="/insights?postType=inspiration">
                                     <img style={{position: "relative", left: "-3px"}} className="insights-item__icon" src={InspirationIcon} alt="Inspiration Icon" />
                                     <span>INSPIRATION</span>
                                 </Link>
                             </li>
-                            <li className={"insights-list__item" + (pathState.insightSocialSelected ? " post-active" : "")} data-postType="socialPost">
+                            <li className={"insights-list__item" + (pathState.insightSocialSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("socialPost")}>
                                 <Link to="/insights?postType=socialPost">
                                     <img className="insights-item__icon" src={SocialsIcon} alt="Socials Icon" />
                                     <span>SOCIAL</span>
                                 </Link>
                             </li>
-                            <li className={"insights-list__item" + (pathState.insightAllSelected ? " post-active" : "")} data-postType="allPost">
+                            <li className={"insights-list__item" + (pathState.insightAllSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("allPost")}>
                                 <Link to="/insights?postType=all">
                                     <img className="insights-item__icon" src={AllIcon} alt="Icon of all" />
                                     <span>ALL</span>
@@ -126,21 +150,21 @@ const Header = () => {
                         <li>
                             <Link id="mobile-insights" to="/insights" activeClassName="active" rel="noopener noreferrer">Insights</Link>
                             <ul className="mobile__insights-list">
-                                <li className={"mobile__insights-item" + (pathState.insightBlogSelected ? " post-active" : "")} data-postType="blogPost">
+                                <li className={"mobile__insights-item" + (pathState.insightBlogSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("blogPost")}>
                                     <img className="insights-item__icon" src={BlogIcon} alt="Insights Icon" />
                                     <Link to="/insights?postType=blogPost">BLOG</Link>
                                 </li>
-                                <li className={"mobile__insights-item" + (pathState.insightInspirationSelected ? " post-active" : "")} data-postType="inspiration">
+                                <li className={"mobile__insights-item" + (pathState.insightInspirationSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("inspiration")}>
                                     <img style={{position: "relative", left: "-3px"}} className="insights-item__icon"
                                         src={InspirationIcon} alt="Inspiration Icon" />
                                         <Link to="/insights?postType=inspiration">INSPIRATION</Link>
                                 </li>
-                                <li className={"mobile__insights-item" + (pathState.insightSocialSelected ? " post-active" : "")} data-postType="socialPost">
+                                <li className={"mobile__insights-item" + (pathState.insightSocialSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("socialPost")}>
                                     <img className="insights-item__icon" src={SocialsIcon} alt="Socials Icon" /><a
                                         href="insights/index.html?postType=socialPost">SOCIAL</a>
                                         <Link to="/insights?postType=socialPost">SOCIAL</Link>
                                 </li>
-                                <li className={"mobile__insights-item" + (pathState.insightAllSelected ? " post-active" : "")} data-postType="allPost">
+                                <li className={"mobile__insights-item" + (pathState.insightAllSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("allPost")}>
                                     <img className="insights-item__icon" src={AllIcon} alt="Insights Icon" />
                                     <Link to="/insights?postType=all">ALL</Link>
                                 </li>
