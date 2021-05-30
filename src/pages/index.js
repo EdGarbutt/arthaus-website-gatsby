@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import HomeBlock from '../components/home-block'
+import HomeBlock from '../components/home-components/home-block'
 
 
 const Home = () => {

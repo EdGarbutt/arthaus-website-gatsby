@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import Layout from '../components/layout';
 
-import WOW from 'wowjs/dist/wow'
-
 import EmployeeEngagementIcon from '../images/about/icons/ee-icon.png'
 import MarketingCommunicationsIcon from '../images/about/icons/mc-icon.png'
 import TalentManagementIcon from '../images/about/icons/tm-icon.png'
@@ -26,19 +24,187 @@ import TouristikLogo from '../images/about/clients/tui_logo.png'
 import WavesLogo from '../images/about/clients/waves_logo.png'
 import WorldPayLogo from '../images/about/clients/worldpay_logo.png'
 
+import MarkLuckettPortrait from '../images/about/staff/Mark L.png'
+import MarkBowermanPortrait from '../images/about/staff/Mark B.png'
+import BeckyCarterPortrait from '../images/about/staff/Becky.png'
+import ClaireWatsonPortrait from '../images/about/staff/Claire.png'
+import MatthewMasiakPortrait from '../images/about/staff/Matthew.png'
+import MichaelSpiersPortrait from '../images/about/staff/Mike.png'
+import CallumKingPortrait from '../images/about/staff/Callum.png'
+import HasanAfzalPortrait from '../images/about/staff/Hasan.png'
+import ThaoTruongPortrait from '../images/about/staff/Thao.png'
+import RoxyBradleyPortrait from '../images/about/staff/Roxy.png'
+
 import BSILogo from '../images/about/BSI logo.png'
 import CyberEssentialsLogo from '../images/about/Certified.png'
 
+import SubNav from '../components/about-components/sub-navigation'
+import Specialisms from '../components/about-components/specialisms/index'
+import Facts from '../components/about-components/facts/index'
+import OurPeople from '../components/about-components/people/index'
 
+import GetInTouch from '../components/contact-form'
 
 const About = () => {
-    const wow = new WOW.WOW();
-   wow.init();
 
     // useEffect(() => {
     //     const wow = new WOW.WOW();
     //     wow.init();
     // });
+
+    const about_data = {
+      specialisms: {
+        introduction: {
+          heading: "Brand development \n & communications",
+          body: [
+            "Arthaus is a multi discipline design agency, based in the Old Brewery, Henley.",
+
+            "Our unique mix of design communications expertise and leading edge technology \
+            capability, enables us to deliver great user experiences and tangible business \
+            benefits through both traditional and digital mediums."
+          ]
+        },
+        specialism_list: [
+          {
+            title: "Employee engagement",
+            icon_url: EmployeeEngagementIcon,
+            colour: "burgundy",
+            alternative_text: "icon represent employee engagement aspect"
+          },
+          {
+            title: "Marketing communications",
+            icon_url: MarketingCommunicationsIcon,
+            colour: "darkBlue",
+            alternative_text: "icon represent marketing communications aspect"
+          },
+          {
+            title: "Talent management",
+            icon_url: TalentManagementIcon,
+            colour: "green",
+            alternative_text: "icon represent talent management aspect"
+          },
+          {
+            title: "Employer branding",
+            icon_url: EmployeeBrandingIcon,
+            colour: "mainOrange",
+            alternative_text: "icon represent employer branding aspect"
+          },
+          {
+            title: "Internal communications",
+            icon_url: InternalCommunicationsIcon,
+            colour: "teal",
+            alternative_text: "icon represent internal communications aspect"
+          },
+          {
+            title: "Employee development",
+            icon_url: EmployeeDevelopmentIcon,
+            colour: "navy",
+            alternative_text: "icon represent employee development aspect"
+          },
+        ]
+      },
+      facts: {
+        title: "A FEW FACTS ABOUT US",
+        fact_blocks: [
+          {
+            top_text: "IN BUSINESS FOR",
+            numeric_value: 25,
+            measurement: "",
+            bottom_text: "YEARS",
+            colour: "burgundy"
+          },
+          {
+            top_text: "WE ARE",
+            numeric_value: 100,
+            measurement: "%",
+            bottom_text: "PRIVATELY\nOWNED",
+            colour: "darkBlue"
+          },
+          {
+            top_text: "WE'VE CREATED",
+            numeric_value: 14,
+            measurement: "",
+            bottom_text: "THOUSAND\nJOB TICKETS",
+            colour: "green"
+          },
+          {
+            top_text: "WE HAVE OVER",
+            numeric_value: 180,
+            measurement: "",
+            bottom_text: "YEARS OF\nEXPERIENCE",
+            colour: "mainOrange"
+          }
+        ]
+      },
+      people: {
+        title: "Our people",
+        body: "A diverse team of creative designers and developers headed up by a very experienced group of directors.",
+        employees: [
+          {
+            name: "Mark Luckett",
+            role: "chairman",
+            image_url: MarkLuckettPortrait,
+            alternative_text: "staff photo in grey scale -Mark Luckett __ chairman"
+          },
+          {
+            name: "Mark Bowerman",
+            role: "Managing Director",
+            image_url: MarkBowermanPortrait,
+            alternative_text: "staff photo in grey scale -Mark Bowerman __ Managing Director"
+          },
+          {
+            name: "Becky Carter",
+            role: "Director/Creative Director",
+            image_url: BeckyCarterPortrait,
+            alternative_text: "staff photo in grey scale -Becky Carter __ Director/Creative Director"
+          },
+          {
+            name: "Claire Watson",
+            role: "Finance Manager",
+            image_url: ClaireWatsonPortrait,
+            alternative_text: "staff photo in grey scale -Claire Watson __ Finance Manager"
+          },
+          {
+            name: "Matthew Masiak",
+            role: "Development Manager",
+            image_url: MatthewMasiakPortrait,
+            alternative_text: "staff photo in grey scale -Matthew Masiak __ Development Manager"
+          },
+          {
+            name: "Michael Spiers",
+            role: "Senior Designer",
+            image_url: MichaelSpiersPortrait,
+            alternative_text: "staff photo in grey scale -Michael Spiers __ Senior Designer"
+          },
+          {
+            name: "Callum King",
+            role: "web developer",
+            image_url: CallumKingPortrait,
+            alternative_text: "staff photo in grey scale -Callum King __ web developer"
+          },
+          {
+            name: "Hasan Afzal",
+            role: "Junior Developer",
+            image_url: HasanAfzalPortrait,
+            alternative_text: "staff photo in grey scale -Hasan Afzal __ Junior Developer"
+          },
+          {
+            name: "Thao Truong",
+            role: "web developer",
+            image_url: ThaoTruongPortrait,
+            alternative_text: "staff photo in grey scale -Thao Truong __ web developer"
+          },
+          {
+            name: "Roxy Bradley",
+            role: "graphic designer",
+            image_url: RoxyBradleyPortrait,
+            alternative_text: "staff photo in grey scale -Roxy Bradley __ graphic designer"
+          }
+        ]
+      } 
+    }
+
+    
 
     return (
         <Layout page_class="about">
@@ -47,325 +213,15 @@ const About = () => {
                 <div className="blockRow">
                   <div className="block type-h height-auto">
                     <h1 className="text-center page-title__wrap">
-                      <span className="heading1 underline padding-b--18"
-                        >About us</span
-                      >
+                      <span className="heading1 underline padding-b--18">About us</span>
                     </h1>
-                    <div className="bkg--white">
-                      <nav className="sub-nav">
-                        <div className="opt active">
-                          <a
-                            className="scroll"
-                            href="#facts"
-                            rel="noopener noreferrer"
-                            ><span>FACTS</span></a
-                          >
-                        </div>
-                        <div className="opt">
-                          <a
-                            className="scroll"
-                            href="#people"
-                            rel="noopener noreferrer"
-                            ><span>PEOPLE</span></a
-                          >
-                        </div>
-                        <div className="opt">
-                          <a
-                            className="scroll"
-                            href="#clients"
-                            rel="noopener noreferrer"
-                            ><span>CLIENTS</span></a
-                          >
-                        </div>
-                      </nav>
-                    </div>
+                    <SubNav />
+                    <Specialisms data={about_data.specialisms} />
+                    <Facts data={about_data.facts} />
+                    <OurPeople data={about_data.people} />
+                    
 
-                    <section
-                      id="specialisms"
-                      className="specialisms animated padding-b--30 padding-t--30"
-                    >
-                      <div className="container-fluid">
-                        <div className="row">
-                          <div className="col-xs-12 col-md-12 padding--none">
-                            <div className="row">
-                              <div className="col-md-6">
-                                <h2
-                                  className="heading2 strong text-left heading2--burgundy padding-b--18"
-                                >
-                                  Brand development <br />
-                                  &amp; communications
-                                </h2>
-
-                                <p className="bodyText padding-b--10">
-                                  Arthaus is a multi discipline design agency,
-                                  based in the Old Brewery, Henley.
-                                </p>
-                                <p className="bodyText">
-                                  Our unique mix of design communications
-                                  expertise and leading edge technology
-                                  capability, enables us to deliver great user
-                                  experiences and tangible business benefits
-                                  through both traditional and digital mediums.
-                                </p>
-                              </div>
-                              <div
-                                className="col-md-6 display-flex flex-wrap justify-end padding-l--none spec-list"
-                              >
-                                <div
-                                  className="spec-wrap padding-l--5 padding-r--5"
-                                >
-                                  <div
-                                    className="display-flex direction-col align-center border border--burgundy padding-b--25 padding-t--25"
-                                  >
-                                    <figure className="spec-icon">
-                                      <img
-                                        src={EmployeeEngagementIcon}
-                                        alt="icon represent employee engagement aspect"
-                                      />
-                                    </figure>
-
-                                    <p
-                                      className="strong smallText2 smallText2--burgundy text-center"
-                                    >
-                                      Employee<br />engagement
-                                    </p>
-                                  </div>
-                                </div>
-                                <div
-                                  className="spec-wrap padding-l--5 padding-r--5"
-                                >
-                                  <div
-                                    className="display-flex direction-col align-center border border--darkBlue padding-b--25 padding-t--25"
-                                  >
-                                    <figure className="spec-icon">
-                                      <img
-                                        src={MarketingCommunicationsIcon}
-                                        alt="icon represent marketing communications aspect"
-                                      />
-                                    </figure>
-
-                                    <p
-                                      className="strong smallText2 smallText2--darkBlue text-center"
-                                    >
-                                      Marketing<br />communications
-                                    </p>
-                                  </div>
-                                </div>
-                                <div
-                                  className="spec-wrap padding-l--5 padding-r--5"
-                                >
-                                  <div
-                                    className="display-flex direction-col align-center border border--green padding-b--25 padding-t--25"
-                                  >
-                                    <figure className="spec-icon">
-                                      <img
-                                        src={TalentManagementIcon}
-                                        alt="icon represent talent management aspect"
-                                      />
-                                    </figure>
-
-                                    <p
-                                      className="strong smallText2 smallText2--green text-center"
-                                    >
-                                      Talent<br />management
-                                    </p>
-                                  </div>
-                                </div>
-
-                                <div
-                                  className="spec-wrap padding-l--5 padding-r--5"
-                                >
-                                  <div
-                                    className="display-flex direction-col align-center border border--mainOrange padding-b--25 padding-t--25"
-                                  >
-                                    <figure className="spec-icon">
-                                      <img
-                                        src={EmployeeBrandingIcon}
-                                        alt="icon represent employer branding aspect"
-                                      />
-                                    </figure>
-
-                                    <p
-                                      className="strong smallText2 smallText2--mainOrange text-center"
-                                    >
-                                      Employer<br />branding
-                                    </p>
-                                  </div>
-                                </div>
-                                <div
-                                  className="spec-wrap padding-l--5 padding-r--5"
-                                >
-                                  <div
-                                    className="display-flex direction-col align-center border border--teal padding-b--25 padding-t--25"
-                                  >
-                                    <figure className="spec-icon">
-                                      <img
-                                        src={InternalCommunicationsIcon}
-                                        alt="icon represent internal communications aspect"
-                                      />
-                                    </figure>
-
-                                    <p
-                                      className="strong smallText2 smallText2--teal text-center"
-                                    >
-                                      Internal<br />communications
-                                    </p>
-                                  </div>
-                                </div>
-                                <div
-                                  className="spec-wrap padding-l--5 padding-r--5"
-                                >
-                                  <div
-                                    className="display-flex direction-col align-center border border--navy padding-b--25 padding-t--25"
-                                  >
-                                    <figure className="spec-icon">
-                                      <img
-                                        src={EmployeeDevelopmentIcon}
-                                        alt="icon represent employee development aspect"
-                                      />
-                                    </figure>
-
-                                    <p
-                                      className="strong smallText2 smallText2--navy text-center"
-                                    >
-                                      Employee<br />development
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-
-                    <section
-                      id="facts"
-                      className="facts animated wow fadeIn padding-b--30 padding-t--30"
-                      data-wow-duration="1s"
-                    >
-                      <div className="row">
-                        <div className="col-xs-12 col-md-12 text-center">
-                          <div
-                            className="container-fluid b"
-                            style={{maxWidth: 944 + 'px', margin: '0 auto'}}
-                          >
-                            <p
-                              style={{}}
-                              className="subHead text-center padding-b--30"
-                            >
-                              A FEW FACTS ABOUT US
-                            </p>
-
-                            <div className="display-flex" id="counter">
-                              <div className="padding--none counter-wrap">
-                                <div
-                                  className="counter-item text-center wow fadeIn"
-                                  data-wow-duration="1s"
-                                >
-                                  <p className="smallText1 top">IN BUSINESS FOR</p>
-                                  <p className="subHead text--burgundy">
-                                    <span className="count-value" data-count="25"
-                                      >0</span
-                                    >
-                                  </p>
-                                  <p className="smallText1 bottom">YEARS</p>
-                                  
-                                </div>
-                              </div>
-                              <div className="padding--none counter-wrap">
-                                <div
-                                  className="counter-item text-center wow fadeIn"
-                                  data-wow-duration="1s"
-                                >
-                                  <p className="smallText1 top">WE ARE</p>
-                                  <p
-                                    className="subHead text--darkBlue"
-                                    style={{lineHeight: 1, paddingTop: 5 + "px"}}
-                                  >
-                                    <span className="count-value" data-count="100"
-                                      >0</span
-                                    ><span className="count-value">%</span>
-                                  </p>
-                                  <p className="smallText1 bottom">
-                                    PRIVATELY<br />OWNED
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="padding--none counter-wrap">
-                                <div
-                                  className="counter-item text-center wow fadeIn"
-                                  data-wow-duration="1s"
-                                >
-                                  <p className="smallText1 top">WE‘VE CREATED</p>
-                                  <p
-                                    className="subHead text--green"
-                                    style={{lineHeight: 1, paddingTop: "5px"}}
-                                  >
-                                    <span className="count-value" data-count="14"
-                                      >0</span
-                                    >
-                                  </p>
-                                  <p className="smallText1 bottom">
-                                    THOUSAND<br />JOB TICKETS
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="padding--none counter-wrap">
-                                <div
-                                  className="counter-item text-center wow fadeIn"
-                                  data-wow-duration="1s"
-                                >
-                                  <p className="smallText1 top">WE HAVE OVER</p>
-                                  <p
-                                    className="subHead text--mainOrange"
-                                    style={{lineHeight: 1, paddingTop: 5 + "px"}}
-                                  >
-                                    <span className="count-value" data-count="180"
-                                      >0</span
-                                    >
-                                  </p>
-                                  <p className="smallText1 bottom">
-                                    YEARS OF<br />EXPERIENCE
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-
-                    <section
-                      id="people"
-                      className="animated padding-b--30 padding-t--30"
-                    >
-                      <div className="row">
-                        <div className="col-xs-12 col-md-12">
-                          <div className="row">
-                            <h2
-                              className="heading2 heading2--green strong text-center padding-b--18"
-                            >
-                              Our people
-                            </h2>
-
-                            <p
-                              className="bodyText text-center"
-                              style={{margin: "0 auto"}}
-                            >
-                              A diverse team of creative designers and
-                              developers headed up by a very experienced group
-                              of directors.
-                            </p>
-                          </div>
-
-                          <div
-                            id="staff-list"
-                            className="row padding-l--15 padding-r--15"
-                          ></div>
-                        </div>
-                      </div>
-                    </section>
+                    
 
                     <section
                       id="testimonials"
@@ -690,103 +546,7 @@ const About = () => {
                     </section>
 
                     {/* <!--============================== New form here ======================--> */}
-                    <section id="contact-form">
-                      <div className="container-fluid">
-                        <div className="row">
-                          <div
-                            className="col-xs-12 col-md-12 text-center bkg--whiteGrey padding-b--30 padding-t--30"
-                          >
-                            <h2
-                              className="strong heading2 text--midGrey padding-b--18"
-                              id="contactUsModalLabel"
-                            >
-                              Get in touch
-                            </h2>
-                            <p className="bodyText padding-b--30">
-                              Contact us to find out how we can help you.
-                            </p>
-                            <div style={{maxWidth: 650 + "px", margin: "0 auto"}}>
-                              <form
-                                className="text-left"
-                                method="POST"
-                                action="/contact/contact.aspx/SubmitContactForm"
-                              >
-                                <input
-                                  type="checkbox"
-                                  name="_honeypot"
-                                  style={{display: "none"}}
-                                  tabIndex="-1"
-                                  autoComplete="off"
-                                />
-                                <input
-                                  type="hidden"
-                                  name="_redirect"
-                                  value="https://arthaus.co.uk/thanks.html"
-                                />
-                                <div className="form-group col-md-6">
-                                  <label
-                                    htmlFor="recipient-name"
-                                    className="col-form-label"
-                                    >Your name:</label
-                                  >
-                                  <input
-                                    type="text"
-                                    className="form-control"
-                                    name="name"
-                                    id="recipient-name"
-                                    required
-                                  />
-                                </div>
-                                <div className="form-group col-md-6">
-                                  <label
-                                    htmlFor="recipient-email"
-                                    className="col-form-label"
-                                    >Your email:</label
-                                  >
-                                  <input
-                                    type="email"
-                                    className="form-control"
-                                    name="email"
-                                    id="recipient-email"
-                                    required
-                                  />
-                                </div>
-                                <div className="form-group col-md-9">
-                                  <label
-                                    htmlFor="message-text"
-                                    className="col-form-label col-form-label-lg"
-                                  >
-                                    Your message
-                                  </label>
-                                  <textarea
-                                    className="form-control"
-                                    name="message"
-                                    id="message-text"
-                                  ></textarea>
-                                </div>
-                                <div className="form-group col-md-12">
-                                  <div
-                                    className="g-recaptcha"
-                                    data-sitekey="6LdoKucUAAAAAPfEAJG2r0NnwY_xjvhRk2_x7CZc"
-                                  ></div>
-                                </div>
-                                <div
-                                  className="form-group col-md-3 form-group--sendMsg-btn"
-                                >
-                                  <button
-                                    id="contactSave"
-                                    type="submit"
-                                    className="btn bkg--mainOrange smallText1 smallText1--white btn--fullWidth btn--sendMsg"
-                                  >
-                                    Send message
-                                  </button>
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
+                    <GetInTouch />
                   </div>
                 </div>
               </div>

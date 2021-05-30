@@ -25,8 +25,7 @@ const Footer = () => {
                         E: <a href="mailto:think@arthaus.co.uk">think@arthaus.co.uk</a>
                     </p>
                     <p className="copy-right">
-                        &#169; Arthaus
-                        <span className="cDate">2021</span>
+                        &#169; Arthaus <span className="cDate">2021</span>
                     </p>
                 </div>
             </div>
