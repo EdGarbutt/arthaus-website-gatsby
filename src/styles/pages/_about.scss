@@ -99,6 +99,10 @@
     }
 
     #facts {
+        .bottom {
+            white-space: pre-line;
+        }
+
         .box-element {
             @media screen and (min-width: 992px) and (max-width: 1239px) {
                 p.orange {
@@ -560,10 +564,6 @@
             font-size: 50px;
         }
     
-        .staff-card {
-            display: inline-block;
-        }
-    
         .staff-list .staff-card:last-child {
             padding-bottom: 0;
         }
@@ -572,6 +572,10 @@
             @media only screen and (max-width:758px) {
                 justify-content: center !important;
             }
+        }
+
+        .staff-card {
+            display: inline-block;
         }
     
         .staff-card:nth-child(6n+1) .staff-role {
@@ -646,6 +650,7 @@
         }
     
         .testimonial-text {
+            white-space: pre-line;
             min-height: 176px;
     
             @media only screen and (min-width:760px) {
@@ -658,5 +663,7 @@
             list-style: none;
         }
     
-
+        .Cyber-Essentials-logo {
+            max-width: 74px;
+        }
 }
