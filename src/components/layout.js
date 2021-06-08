@@ -5,14 +5,14 @@ import Footer from './footer'
 
 import '../styles/index.scss'
 
-const Layout = (props) => {
-    const layout_identifier = props.id ? props.id : "";
+const Layout = ({children, id, page_class}) => {
+    const layout_identifier = id ? id : "";
     return (
-        <div id={layout_identifier} className={props.page_class}>
+        <div id={layout_identifier} className={page_class}>
             <div className="container">
                 <Header />
                 <main>
-                    {props.children}
+                    {children}
                 </main>
                 <Footer />
             </div>
