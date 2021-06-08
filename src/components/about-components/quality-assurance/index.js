@@ -10,8 +10,8 @@ const QualityAssurance = ({ data: { title, certifications } }) => {
                     <h2 className="strong heading2 heading2--teal text-center padding-b--18">
                         {title}
                     </h2>
-                    {certifications.map(certification => {
-                        return <IndividualCertification data={certification} />
+                    {certifications.map((certification, index) => {
+                        return <IndividualCertification key={index} data={certification} />
                     })}
                 </div>
             </div>

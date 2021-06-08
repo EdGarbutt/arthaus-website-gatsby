@@ -9,7 +9,7 @@ const ClientBlock = ({ data: { logo, alternative_text }, index }) => {
             <img
                 style={{animationDelay: animation_delay_time}}
                 id={client_logo_id}
-                className="client-logo animated wow fadeIn"
+                className="client-logo"
                 src={logo}
                 alt={alternative_text}
             />

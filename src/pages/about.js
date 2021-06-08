@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Layout from '../components/layout';
 
 import EmployeeEngagementIcon from '../images/about/icons/ee-icon.png'
@@ -42,7 +42,7 @@ import HSBCTestimonialLogo from '../images/about/clients/icons/Logos_HSBC.png'
 import BSILogo from '../images/about/BSI logo.png'
 import CyberEssentialsLogo from '../images/about/Certified.png'
 
-import SubNav from '../components/about-components/sub-navigation'
+import SubNav from '../components/sub-navigation'
 import Specialisms from '../components/about-components/specialisms/index'
 import Facts from '../components/about-components/facts/index'
 import OurPeople from '../components/about-components/people/index'
@@ -55,6 +55,26 @@ import GetInTouch from '../components/contact-form'
 const About = () => {
 
     const about_data = {
+      sub_navigation: {
+        links: [
+          {
+            link: "facts",
+            offset: -100
+          },
+          {
+            link: "people",
+            offset: -100
+          },
+          {
+            link: "clients",
+            offset: -100
+          }
+          // "all",
+          // "branding",
+          // "digital",
+          // "communications"
+        ]
+      },
       specialisms: {
         introduction: {
           heading: "Brand development \n & communications",
@@ -341,7 +361,7 @@ const About = () => {
                     <h1 className="text-center page-title__wrap">
                       <span className="heading1 underline padding-b--18">About us</span>
                     </h1>
-                    <SubNav />
+                    <SubNav data={about_data.sub_navigation} />
                     <Specialisms data={about_data.specialisms} />
                     <Facts data={about_data.facts} />
                     <OurPeople data={about_data.people} />

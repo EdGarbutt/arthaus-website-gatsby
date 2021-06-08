@@ -2,6 +2,7 @@
 
     /* SUB NAV */
     nav.sub-nav {
+        background-color: #ffffff;
         height: 0.8*60px;
         z-index: 150;
         text-align: center;
@@ -13,7 +14,7 @@
 
             .opt {
                 width: 50px;
-                font-size: 11px;
+                font-size: 0.8*17.5px !important;
             }
         }
 
@@ -31,6 +32,7 @@
             a {
                 color: #525252;
                 text-decoration: none;
+                cursor: pointer;
             }
         }
 
@@ -106,6 +108,7 @@
 
     .expertise-img__desktop {
         display: block;
+        position: relative;
     }
 
     .expertise-img__mobile {
@@ -164,7 +167,8 @@
 
     .content-box {
         /*padding: 70px 40px;*/
-        padding: 0.8*24px 40px;
+        // padding: 0.8*24px 40px;
+        padding: 0;
 
         .title {
             font-size: 0.8*34px;
@@ -181,7 +185,7 @@
         img {
             padding: 0.8*10px;
 
-            width: auto;
+            width: 100%;
 
             @media only screen and (max-width: 1239px) {
                 height: 230px;
@@ -212,6 +216,10 @@
             max-width: 0.8*950px;
             margin: 0 auto;
         }
+    }
+
+    .no-padding-left {
+        padding-left: 0;
     }
 
     #branding.sub-nav-clicked,
@@ -542,4 +550,63 @@
             }
         }
     }
+
+    /* ---------- ANIMATIONS ---------- */
+
+    div[id$="-content"] {
+        &.animation {
+            animation-duration: 1s;
+            animation-name: fadein;
+            animation-fill-mode: forwards;
+
+           .expertise-img__desktop {
+                &.left-slide {
+                    animation-name: leftslidein;
+                }
+
+                &.right-slide {
+                    animation-name: rightslidein;
+                }
+
+                &.animation {
+                    animation-duration: 1s;
+                }
+            }
+        }
+        opacity: 0;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes leftslidein {
+        from {
+            right: 100%;
+        }
+
+        to {
+            right: 0%;
+        }
+    }
+
+    @keyframes rightslidein {
+        from {
+            left: 100%;
+        }
+
+        to {
+            left: 0%;
+        }
+    }
+
+
+    
+    /* -------------------------------- */
 }

@@ -17,12 +17,12 @@ const People = ({ data: { title, body, employees } }) => {
                 </p>
                 </div>
 
-                <div id="staff-list" className="row padding-l--15 padding-r--15">
-                    <ul className="display-flex flex-wrap justify-spaceBetween staff-list" style={{paddingLeft: 0}}>
-                        {employees.map(employee => {
-                            return <Employee data={employee} />
+                <div id="staff-list" className="row padding-l--15 padding-r--15 padding-b--20">
+                    <div className="staff-list" style={{paddingLeft: 0}}>
+                        {employees.map((employee, index) => {
+                            return <Employee key={index} data={employee} />
                         })}
-                    </ul>
+                    </div>
                 </div>
             </div>
             </div>

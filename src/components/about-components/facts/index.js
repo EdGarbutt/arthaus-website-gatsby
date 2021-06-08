@@ -15,8 +15,8 @@ const Facts = ({ data: { title, fact_blocks } }) => {
                             {title}
                         </p>
                         <div className="display-flex" id="counter">
-                            {fact_blocks.map(item => {
-                                return <FactBlock data={item} />
+                            {fact_blocks.map((item, index) => {
+                                return <FactBlock key={index} data={item} />
                             })}
                         </div>
                     </div>

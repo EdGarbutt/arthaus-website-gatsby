@@ -7,7 +7,7 @@ const TestimonialBlock = ({ data: { name, role, company, company_image, quote } 
                 {quote}
             </div>
             <div>
-                <div className="testimonial-logo" style={{backgroundImage: company_image}}></div>
+                <div className="testimonial-logo" style={{backgroundImage: 'url(' + company_image + ')'}}></div>
                 <p className="smallText2 text--lightGrey text-center">
                     {name}
                 </p>

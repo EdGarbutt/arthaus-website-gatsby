@@ -1,26 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ScrollTrigger from 'react-scroll-trigger'
 
 import ClientBlock from '../clients/client-block'
 
 const Clients = ({ data: { title, description, client_list } }) => {
+
+    const [logosAnimated, setLogosAnimated] = useState(false);
+
+    const onEnterViewport = () => {
+        setLogosAnimated(true);
+    }
+
     return (
-        <section id="clients" className="animated wow fadeIn padding-b--30 padding-t--30" data-wow-duration="2s" >
-            <div className="container-fluid">
-                <div className="row white">
-                    <h2 className="strong heading2 heading2--mainOrange padding-b--18">
-                        {title}
-                    </h2>
-                    <p style={{}} className="subHead padding-b--18">
-                        {description}
-                    </p>
-                    {client_list.map((client, index) => {
-                        return <ClientBlock data={client} index={index} />
-                    })}
+        <ScrollTrigger onEnter={onEnterViewport}>
+            <section id="clients" className={`animated padding-b--30 padding-t--30${logosAnimated ? ' animation' : ''}`}>
+                <div className="container-fluid">
+                    <div className="row white">
+                        <h2 className="strong heading2 heading2--mainOrange padding-b--18">
+                            {title}
+                        </h2>
+                        <p style={{}} className="subHead padding-b--18">
+                            {description}
+                        </p>
+                        {client_list.map((client, index) => {
+                            return <ClientBlock key={index} data={client} index={index} />
+                        })}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </ScrollTrigger>
     )
-    
 }
 
 export default Clients

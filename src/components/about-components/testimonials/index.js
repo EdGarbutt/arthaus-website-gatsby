@@ -17,8 +17,8 @@ const Testimonials = ({ data: { title, testimonial_blocks } }) => {
                 </div>
                 <div id="testimonial-list" className="">
                     <ul className="padding--none display-flex flex-wrap justify-spaceBetween">
-                        {testimonial_blocks.map(block => {
-                            return <TestimonialBlock data={block} />
+                        {testimonial_blocks.map((block, index) => {
+                            return <TestimonialBlock key={index} data={block} />
                         })}
                     </ul>
                 </div>

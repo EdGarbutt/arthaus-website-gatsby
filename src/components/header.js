@@ -14,8 +14,20 @@ const Header = () => {
     const location = useLocation();
     const searchParameters = new URLSearchParams(location.search);
 
-        // Need to use useState instead
+    let headerClasses = [];
 
+    switch(location.pathname) {
+        case "/about":
+            headerClasses.push('navbar-fixed-top', 'bkg--white');
+            break;
+        case "/expertise":
+            headerClasses.push('navbar-fixed-top', 'bkg--white');
+            break;
+        case "/work":
+            headerClasses.push('navbar-fixed-top', 'bkg--white');
+            break;
+    }
+    
     const [ pathState, setPathState ] = useState({
         insightBlogSelected: false,
         insightInspirationSelected: false,
@@ -76,8 +88,21 @@ const Header = () => {
         }
     }
 
+    const [ mobileNavShownState, setMobileNavShownState ] = useState(false);
+
+    const mobileNavToggle = () => {
+
+        // If mobile nav is showing
+        if (mobileNavShownState) {
+            setMobileNavShownState(false)
+        } else {
+            setMobileNavShownState(true)
+        }
+        
+    }
+
     return (
-        <header>
+        <header className={headerClasses.join(' ')}>
             <nav>
                 <div className="top-row-container">
                     <div className="arthaus-home">
@@ -96,7 +121,6 @@ const Header = () => {
                     </div>
                     <div className="desktop-menu">
                         <Link id="desktop-insights" to="/insights" activeClassName="active" rel="noopener noreferrer">Insights</Link>
-                        {/* <a id="desktop-insights" href="insights/index.html" rel="noopener noreferrer">Insights</a> */}
                         <ul className="insights-list">
                             <li className={"insights-list__item" + (pathState.insightBlogSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("blogPost")}>
                                 <Link to="/insights?postType=blogPost">
@@ -125,18 +149,17 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="desktop-menu">
-                        {/* <a href="contact.html">Contact</a> */}
                         <Link to="/contact" activeClassName="active">Contact</Link>
                     </div>
-                    <div className="mobile-menu">
-                        <div className="nav-icon">
+                    <div className="mobile-menu" onClick={() => mobileNavToggle()}>
+                        <div className={`nav-icon${mobileNavShownState ? ' open' : ''}`}>
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
                     </div>
                 </div>
-                <div className="menu-items">
+                <div className={`menu-items${mobileNavShownState ? ' open' : ''}`}>
                     <ul>
                         <li>
                             <Link to="/about" activeClassName="active">About</Link>
@@ -160,9 +183,8 @@ const Header = () => {
                                         <Link to="/insights?postType=inspiration">INSPIRATION</Link>
                                 </li>
                                 <li className={"mobile__insights-item" + (pathState.insightSocialSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("socialPost")}>
-                                    <img className="insights-item__icon" src={SocialsIcon} alt="Socials Icon" /><a
-                                        href="insights/index.html?postType=socialPost">SOCIAL</a>
-                                        <Link to="/insights?postType=socialPost">SOCIAL</Link>
+                                    <img className="insights-item__icon" src={SocialsIcon} alt="Socials Icon" />
+                                    <Link to="/insights?postType=socialPost">SOCIAL</Link>
                                 </li>
                                 <li className={"mobile__insights-item" + (pathState.insightAllSelected ? " post-active" : "")} onClick={() => onInsightCategoryChangedHandler("allPost")}>
                                     <img className="insights-item__icon" src={AllIcon} alt="Insights Icon" />

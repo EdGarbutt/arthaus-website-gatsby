@@ -9,10 +9,10 @@ const Introduction = ({data: { heading, body }}) => {
 
             {body.map((text, index) => {
                 let bodyClasses = ["bodyText"];
-                if (index != (body.length - 1)) {
+                if (index !== (body.length - 1)) {
                     bodyClasses.push("padding-b--10");
                 }
-                return <p className={bodyClasses.join(" ")}>{text}</p>
+                return <p key={index} className={bodyClasses.join(" ")}>{text}</p>
             })}
         </div>
     )

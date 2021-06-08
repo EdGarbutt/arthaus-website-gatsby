@@ -6,7 +6,7 @@ import SpecialismList from '../../about-components/specialisms/specialism-list'
 const Specialisms = ({data: { introduction, specialism_list }}) => {
 
     return (
-        <section id="specialisms" className="specialisms animated padding-b--30 padding-t--30">
+        <section id="specialisms" className="specialisms padding-b--30 padding-t--30">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-xs-12 col-md-12 padding--none">
