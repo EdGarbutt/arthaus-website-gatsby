@@ -67,8 +67,10 @@
     }
     
     .arthaus-terms-and-conditions-container {
-        padding-top: 30px;
-    
+        h4 {
+            font-weight: bold;
+        }
+
         @media (min-width: 992px) {
             .terms-of-service-container {
                 width: 80%;
@@ -89,5 +91,9 @@
         margin-top: 10px;
         margin-bottom: 5px;
         width: 90%;
+    }
+
+    .orange {
+        background-color: #f28b00;
     }
 }

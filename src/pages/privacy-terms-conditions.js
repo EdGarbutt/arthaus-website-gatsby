@@ -56,7 +56,7 @@ const TsAndCs = () => {
     }
 
     return (
-        <Layout page_className="contact" page_title="Terms and Conditions">
+        <Layout page_class="terms-conditions" page_title="Terms and Conditions">
             <div className="row">
                 <div className="arthaus-terms-and-conditions-container">
                     <div className="col-sm-12 col-md-7 animated arthaus-terms-content">
@@ -73,7 +73,8 @@ const TsAndCs = () => {
                         <div className="terms-of-service-container">
                             <h4>OUR TERMS OF SERVICE</h4>
                             <div className="panel arthaus-documents">
-                            {terms_conditions_data.documents.map(d => {
+                            {terms_conditions_data.documents.map((d, index) => {
+                                const horizontal_line_html = (index !== (terms_conditions_data.documents.length - 1)) ? React.createElement('hr') : ""
                                 return (
                                     <Fragment>
                                         <div className="row">
@@ -83,13 +84,13 @@ const TsAndCs = () => {
                                                 </div>
                                             </div>
                                             <div className="col-xs-9">
-                                                <div className="tos-content icon-container text-center">
+                                                <div className="tos-content">
                                                     <h4>{d.title}</h4>
                                                     <a className="btn orange" href={d.url} target="_blank">Download</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr />
+                                        {horizontal_line_html}
                                     </Fragment>
                                 )
                             })}

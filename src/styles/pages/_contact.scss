@@ -51,19 +51,47 @@
         font-size: 0.8*16px;
     }
 
+    .contact-intro-1 {
+        font-size: 33px;
+    }
 
+    .contact-intro-2 {
+        font-size: 32px;
+    }
+
+    .contact-intro-3 {
+        font-size: 22px;
+        line-height: 1.4;
+        white-space: pre-line;
+    }
 
     .head-image {
         max-width: 100%;
         margin: 0.8*25px 0 0 0;
     }
 
-    .map-image {
-        margin: 0.8*20px 0;
-        max-width: 100%;
+    // .map-image {
+    //     margin: 0.8*20px 0;
+    //     max-width: 100%;
+    // }
+
+    .map-figure {
+
+        position: relative;
+        margin-bottom: 32px !important;
+
+        .arthaus-map {
+            width: 100%;
+        }
+    }
+
+    #contactUsModalLabel {
+        padding-left: 0;
+        font-size: 32px;
     }
 
     .arthaus-social-main {
+        padding: 0;
 
         ul {
             list-style-type: none;
@@ -119,6 +147,11 @@
 
 
     #contact-area {
+
+        form {
+            max-width: 650px;
+        }
+
         padding: 0.8*15px;
 
         .btn {
@@ -136,6 +169,27 @@
             border: 1px solid #fff;
         }
 
+        .col-form-label {
+            font-family: "LatoWebBlack";
+        }
+
+        //Temporary laziness
+        #contactSave, #contactSave:hover {
+            width: 100%;
+            padding: 10px;
+            background-color: #f28b00;
+            border-radius: 4px;
+            border: none;
+        }
+
+        #contactSave {
+            color: #fff;
+        }
+
+        #contactSave:hover {
+            color: #333;
+        }
+
         #contactUsModal {
             color: #f28b00;
 
@@ -149,7 +203,11 @@
 
             #contactClose,
             #contactSave {
+                width: 100%;
                 color: #fff;
+                padding: 10px;
+                background-color: #f28b00;
+                border-radius: 4px;
             }
 
             #contactSave {
