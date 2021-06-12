@@ -353,27 +353,16 @@ const About = () => {
     }
 
     return (
-        <Layout page_class="about">
-            <div className="blockMainRow">
-              <div className="blockCol">
-                <div className="blockRow">
-                  <div className="block type-h height-auto">
-                    <h1 className="text-center page-title__wrap">
-                      <span className="heading1 underline padding-b--18">About us</span>
-                    </h1>
-                    <SubNav data={about_data.sub_navigation} />
-                    <Specialisms data={about_data.specialisms} />
-                    <Facts data={about_data.facts} />
-                    <OurPeople data={about_data.people} />
-                    <Testimonials data={about_data.testimonials} />
-                    <Clients data={about_data.clients} />
-                    <QualityAssurance data={about_data.quality_assurance} />
-                    {/* <!--============================== New form here ======================--> */}
-                    <GetInTouch />
-                  </div>
-                </div>
-              </div>
-            </div>
+        <Layout page_class="about" page_title="About us">
+          <SubNav data={about_data.sub_navigation} />
+          <Specialisms data={about_data.specialisms} />
+          <Facts data={about_data.facts} />
+          <OurPeople data={about_data.people} />
+          <Testimonials data={about_data.testimonials} />
+          <Clients data={about_data.clients} />
+          <QualityAssurance data={about_data.quality_assurance} />
+          {/* <!--============================== New form here ======================--> */}
+          <GetInTouch />
         </Layout>
     )
 }

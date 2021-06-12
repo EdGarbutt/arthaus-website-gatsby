@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'gatsby'
+
 import InstagramIcon from '../images/footer/dec2020/Instagram.png'
 import LinkedInIcon from '../images/footer/dec2020/linkedin.png'
 import TwitterInIcon from '../images/footer/dec2020/twitter.png'
@@ -63,11 +65,11 @@ const Footer = () => {
                 </div>
                 <div className="arthaus-terms">
                     <p style={{ width: "100%" }}>
-                        <a href="/documents/Privacy Policy.pdf" rel="noopener noreferrer" target="_blank">Privacy</a>
+                        <a href="https://www.arthaus.co.uk/documents/Privacy%20Policy.pdf" rel="noopener noreferrer" target="_blank">Privacy</a>
                         &#8194; | &#8194;
-                        <a href="/privacy-terms-conditions.html" rel="noopener noreferrer" target="_blank">Terms &amp;
-                            Conditions
-                        </a>
+                        <Link to="/privacy-terms-conditions" rel="noopener noreferrer">
+                            Terms &amp; Conditions
+                        </Link>
                     </p>
                 </div>
                 <div className="arthaus-certifications">

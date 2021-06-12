@@ -269,11 +269,9 @@ const Home = () => {
 
     return (
         <Layout id="home-page" page_class="home">
-            <div className="homepage-grid">
-                {gridCells.map((cell, index) => {
-                    return <HomeBlock key={index} index={index} data={cell} />
-                })}
-            </div>
+            {gridCells.map((cell, index) => {
+                return <HomeBlock key={index} index={index} data={cell} />
+            })}
         </Layout>
     )
 }

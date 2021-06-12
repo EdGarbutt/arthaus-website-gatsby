@@ -42,7 +42,7 @@
                 font-size: 14px;
             }
 
-            a {
+            a, .case-study-category {
                 color: #525252;
                 text-decoration: none;
                 cursor: pointer;
@@ -590,6 +590,9 @@
 
 
     .case-card {
+        &.hide-case-study {
+            display: none;
+        }
         max-width: 335px;
         width: 100%;
         padding-bottom: 0;

@@ -25,153 +25,157 @@ body {
         background-color: mixin.m-get-key(abstract.$s-colours, white);
         margin: 0 auto;
     }
-//
-//    .mainWrapper {
-//        background-color: mixin.m-get-key(abstract.$s-colours, white);
-//        margin: 0 auto;
-//        display: flex;
-//        align-items: center;
-//        min-height: 100vh;
-//        flex-direction: column;
-//
-//        .blocksContent,
-//        .blocksWrapper {
-//            flex: 1;
-//
-//            .blockMainRow,
-//            .blockRow {
-//                display: flex;
-//            }
-//
-//            .blockCol {
-//                display: flex;
-//                flex-flow: column nowrap;
-//
-//                .block {
-//                    @include respond-to(medium-max) {
-//                        img {
-//                            width: 100%;
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//
-//        .blockNum-17 {
-//            display: none;
-//
-//            @include respond-to(medium-max) {
-//                display: block;
-//            }
-//
-//            @include respond-to(small-max) {
-//                display: none;
-//            }
-//        }
-//
-//        .masthead {
-//            display: flex;
-//            align-content: center;
-//            justify-content: center;
-//            flex-direction: column;
-//            text-align: center;
-//            height: 100%;
-//            /*parallax*/
-//            /*background-size: 100% 100%;
-//            background-attachment: fixed;
-//            background-position: top left;*/
-//        }
-//
-//        .project-filter {
-//            height: 100%;
-//
-//            ul {
-//                display: flex;
-//                justify-content: center;
-//                align-items: center;
-//                list-style: none;
-//                padding: 0;
-//                margin: 0;
-//                height: 100%;
-//
-//                li {
-//                    padding-left: 10px;
-//
-//                    @include respond-to(medium) {
-//                        padding-left: 20px;
-//                    }
-//
-//                    &:first-of-type {
-//                        padding-left: 0;
-//                    }
-//                }
-//            }
-//        }
-//    }
-//
-//    .content {
-//        box-sizing: border-box;
-//        position: relative;
-//        padding: 10px;
-//        display: flex;
-//        flex-direction: column;
-//        min-height: 100%;
-//        background-size: 100% 100%;
-//        background-position: center;
-//
-//        h1 {
-//            margin: 0;
-//        }
-//
-//        h2 {
-//            margin: 0;
-//
-//            &.caps {
-//                margin-bottom: 20px;
-//            }
-//        }
-//
-//        .plusIcon {
-//            position: absolute;
-//            bottom: 10px;
-//            right: 10px;
-//            opacity: 0.5;
-//        }
-//
-//        @include respond-to(medium) {
-//            padding: 0.8*20px;
-//
-//            h1 {
-//                margin: 0;
-//            }
-//
-//            h2 {
-//                margin: 0;
-//
-//                &.caps {
-//                    margin-bottom: 0.8*20px;
-//                }
-//            }
-//
-//            .plusIcon {
-//                bottom: 0.8*20px;
-//                right: 0.8*20px;
-//            }
-//        }
-//
-//        .blockFooter {
-//            flex: 0;
-//        }
-//
-//        ul {
-//            list-style: none;
-//            padding: 0;
-//            margin: 0;
-//
-//            li {
-//                padding: 0;
-//                margin: 0;
-//            }
-//        }
-//    }
+
+    li {
+        list-style: none;
+     }
+
+   .mainWrapper {
+       background-color: mixin.m-get-key(abstract.$s-colours, white);
+       margin: 0 auto;
+       display: flex;
+       align-items: center;
+       min-height: 100vh;
+       flex-direction: column;
+
+       .blocksContent,
+       .blocksWrapper {
+           flex: 1;
+
+           .blockMainRow,
+           .blockRow {
+               display: flex;
+           }
+
+           .blockCol {
+               display: flex;
+               flex-flow: column nowrap;
+
+               .block {
+                    @include mixin.m-respond-to(medium-max, abstract.$s-breakpoints) {
+                       img {
+                           width: 100%;
+                       }
+                   }
+               }
+           }
+       }
+
+       .blockNum-17 {
+           display: none;
+
+           @include mixin.m-respond-to(medium-max, abstract.$s-breakpoints) {
+               display: block;
+           }
+
+           @include mixin.m-respond-to(small-max, abstract.$s-breakpoints) {
+               display: none;
+           }
+       }
+
+       .masthead {
+           display: flex;
+           align-content: center;
+           justify-content: center;
+           flex-direction: column;
+           text-align: center;
+           height: 100%;
+           /*parallax*/
+           /*background-size: 100% 100%;
+           background-attachment: fixed;
+           background-position: top left;*/
+       }
+
+       .project-filter {
+           height: 100%;
+
+           ul {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               list-style: none;
+               padding: 0;
+               margin: 0;
+               height: 100%;
+
+               li {
+                   padding-left: 10px;
+
+                   @include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+                       padding-left: 20px;
+                   }
+
+                   &:first-of-type {
+                       padding-left: 0;
+                   }
+               }
+           }
+       }
+   }
+
+   .content {
+       box-sizing: border-box;
+       position: relative;
+       padding: 10px;
+       display: flex;
+       flex-direction: column;
+       min-height: 100%;
+       background-size: 100% 100%;
+       background-position: center;
+
+       h1 {
+           margin: 0;
+       }
+
+       h2 {
+           margin: 0;
+
+           &.caps {
+               margin-bottom: 20px;
+           }
+       }
+
+       .plusIcon {
+           position: absolute;
+           bottom: 10px;
+           right: 10px;
+           opacity: 0.5;
+       }
+
+       @include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+           padding: 0.8*20px;
+
+           h1 {
+               margin: 0;
+           }
+
+           h2 {
+               margin: 0;
+
+               &.caps {
+                   margin-bottom: 0.8*20px;
+               }
+           }
+
+           .plusIcon {
+               bottom: 0.8*20px;
+               right: 0.8*20px;
+           }
+       }
+
+       .blockFooter {
+           flex: 0;
+       }
+
+       ul {
+           list-style: none;
+           padding: 0;
+           margin: 0;
+
+           li {
+               padding: 0;
+               margin: 0;
+           }
+       }
+   }
 }

@@ -27,6 +27,13 @@ const Header = () => {
             headerClasses.push('navbar-fixed-top', 'bkg--white');
             break;
     }
+
+    // Example: url is work/[case study name]
+    const inWorkDirectory = location.pathname.includes("/work/")
+
+    if (inWorkDirectory) {
+        headerClasses.push('navbar-fixed-top', 'bkg--white');
+    }
     
     const [ pathState, setPathState ] = useState({
         insightBlogSelected: false,
@@ -117,7 +124,7 @@ const Header = () => {
                         <Link to="/expertise" activeClassName="active">Expertise</Link>
                     </div>
                     <div className="desktop-menu">
-                        <Link to="/work" activeClassName="active">Work</Link>
+                        <Link to="/work" activeClassName="active" className={inWorkDirectory ? "active" : ""}>Work</Link>
                     </div>
                     <div className="desktop-menu">
                         <Link id="desktop-insights" to="/insights" activeClassName="active" rel="noopener noreferrer">Insights</Link>

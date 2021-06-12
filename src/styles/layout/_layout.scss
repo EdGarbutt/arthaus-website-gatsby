@@ -109,6 +109,24 @@
             }
         }
     }
+
+    .work,
+    .about,
+    .expertise {
+        main {
+            @include mixin.m-respond-to(small-max, abstract.$s-breakpoints) {
+                margin-top: 47px;
+            }
+    
+            @include mixin.m-respond-to(medium, abstract.$s-breakpoints) {
+                margin-top: 70px;
+            }
+    
+            @include mixin.m-respond-to(large, abstract.$s-breakpoints) {
+                margin-top: 56px;
+            }
+        }
+    }
 }
 
 /* generate the maps for the layouts */

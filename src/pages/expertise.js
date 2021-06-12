@@ -85,21 +85,10 @@ const Expertise = () => {
     }
 
     return (
-        <Layout page_class="expertise">
-            <div className="blockMainRow">
-                <div className="blockCol">
-                    <div className="blockRow">
-                        <div className="block type-h height-auto">
-                            <h1 className="text-center page-title__wrap">
-                                <span className="heading1 underline padding-b--18">Expertise</span>
-                            </h1>
-                            <SubNav data={expertise_data.sub_navigation} />
-                            <MainContent data={expertise_data.expertise_types} />
-                            <GetInTouch />
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <Layout page_class="expertise" page_title="Expertise">
+            <SubNav data={expertise_data.sub_navigation} />
+            <MainContent data={expertise_data.expertise_types} />
+            <GetInTouch />
         </Layout>
     )
 
