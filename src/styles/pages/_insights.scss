@@ -68,12 +68,31 @@ $toolkitViewpoint3: 1239px;
     #contact-form {
         overflow: hidden;
         height: 0;
-        opacity: 0;
-        transition: .3s;
+        
+        .container-fluid {
+            .row {
+                [class*="col-"] {
+                    h2, p, div {
+                        opacity: 0;
+                        transition: .3s;
+                    }
+                    
+                }
+            }
+        }
 
         &.show-form {
             height: auto;
-            opacity: 1;
+            .container-fluid {
+                .row {
+                    [class*="col-"] {
+                        h2, p, div {
+                            opacity: 1;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
         }
     }
 

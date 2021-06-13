@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ContactUs = () => {
+const ContactUs = ({ classes }) => {
     return (
-        <section id="contact-form">
+        <section id="contact-form" className={classes}>
             <div className="container-fluid">
             <div className="row">
                 <div className="col-xs-12 col-md-12 text-center bkg--whiteGrey padding-b--30 padding-t--30">

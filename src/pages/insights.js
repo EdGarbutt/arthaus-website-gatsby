@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout';
 
-import GetInTouch from '../components/contact-form'
+import ContactBlock from '../components/insights-components/insights-contact-block'
 
 const Insights = () => {
     
     return (
         <Layout page_class="toolkitPage" page_title="Insights">
-            <GetInTouch />
+            <ContactBlock />
         </Layout>
     )
 }

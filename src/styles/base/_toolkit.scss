@@ -68,12 +68,31 @@ $viewpoint3: 1239px;
     #contact-form {
         overflow: hidden;
         height: 0;
-        opacity: 0;
-        transition: .3s;
+
+        .container-fluid {
+            .row {
+                [class*="col-"] {
+                    h2, p, div {
+                        opacity: 0;
+                        transition: .3s;
+                    }
+                    
+                }
+            }
+        }
 
         &.show-form {
             height: auto;
-            opacity: 1;
+            .container-fluid {
+                .row {
+                    [class*="col-"] {
+                        h2, p, div {
+                            opacity: 1;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -81,6 +100,12 @@ $viewpoint3: 1239px;
         color: white;
         border: none;
         outline-color: #F6F6F6;
+    }
+
+    .contact-form__btn-wrap {
+        &.contact-form__hide-btn-wrap {
+            margin-bottom: 0;
+        }
     }
 }
 
