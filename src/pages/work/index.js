@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+
 import Layout from '../../components/layout'
 
 import AgNovosWebsiteImage from '../../images/work/agnovos_464x304.png'

@@ -1,4 +1,6 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+
 import Layout from '../../components/layout'
 
 import HeroImage from '../../images/work/Diageo-Workplace/png/DiageoWorkplace_heroimage_944x392.png'

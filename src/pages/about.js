@@ -1,4 +1,6 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+
 import Layout from '../components/layout';
 
 import EmployeeEngagementIcon from '../images/about/icons/ee-icon.png'
@@ -69,10 +71,6 @@ const About = () => {
             link: "clients",
             offset: -100
           }
-          // "all",
-          // "branding",
-          // "digital",
-          // "communications"
         ]
       },
       specialisms: {

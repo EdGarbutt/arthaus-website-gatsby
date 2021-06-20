@@ -7,6 +7,7 @@ const Insights = () => {
     
     return (
         <Layout page_class="toolkitPage" page_title="Insights">
+            
             <ContactBlock />
         </Layout>
     )
