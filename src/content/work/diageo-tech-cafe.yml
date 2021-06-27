@@ -1,0 +1,60 @@
+---
+  - 
+    title: "Diageo Tech Café"
+    hero_image: 
+      file: "/static/techcafe_room_944x431-236e0791494530708a0de5709d0f9412.png"
+      description: "Diageo Tech Café booth image"
+    main_content: 
+      - 
+        description: 
+          - "Diageo has launched an all new initiative to build a great technology employee experience in the                     form of a 'Tech Café'. A place where all employees can 'drop in' for face to face on site technical                     support, capability building & quick fixes."
+        type: "text"
+      - 
+        path: "/static/techcafe_logo_752x209-7f988fefa857a0af21e0578885126b54.png"
+        description: "Diageo Tech Café Logo"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+      - 
+        description: 
+          - "A key requirement for its success was to develop a strong, relevant and engaging brand approach and                     Arthaus was tasked to deliver this. Supporting Diageo in the scoping and positioning, Arthaus went on                     to design and deliver the overall visual brand, which included the design and production for the                     physical cafe and all the supporting assets, communications and collateral."
+        type: "text"
+      - 
+        path: "/static/techcafe_walkway_752x233-3f2954269903127d147ce91c54da726b.png"
+        description: "Diageo Tech Café Walkaway"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/techcafe_stickers_poster_752x374-41fcb5922b66c8e04d3f250c2c082306.png"
+        description: "Diageo Tech Café Stickers"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/techcafe_icons_752x214-f166ab62a0f93f1e25567b511f1684f4.png"
+        description: "Diageo Tech Café Icons"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/techcafe_mugs_752x329-0da71dc8128f363afda330cfe47a56cb.png"
+        description: "Diageo Tech Café Mugs"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/hsbc-university"
+        title: "HSBC University"
+        image: "/static/HSBCUniversity_464x304-8ece1aa66819cdb4115c4a779e76769f.png"
+      - 
+        url: "/work/ssy"
+        title: "Simpson Spence Young"
+        image: "/static/SSY-a35b96a7b3362009a4e1ca48ffea61c5.png"
+      - 
+        url: "/work/waves"
+        title: "Waves booking app"
+        image: "/static/Waves_464x304-c53a0450c8eb2a9badc094b2a1ab638e.png"

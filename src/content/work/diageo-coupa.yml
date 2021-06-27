@@ -1,0 +1,39 @@
+---
+  - 
+    title: "Diageo Coupa"
+    hero_image: 
+      file: "/static/iMac-a753e4dd7dcfc6432b2e317ea5b68c5d.jpg"
+      description: "Diageo Coupa iMac image"
+    main_content: 
+      - 
+        description: 
+          - "Diageo recently launched a new Source to Pay tool for all non-stocked goods and suppliers.                     The tool is called Coupa. As such a launch and roll out campaign was required to raise                     awareness and engage users across the business."
+          - "Arthaus was asked to develop the overall communication approach and concept that would                     cascade through the various channels and comms vehicles selected by Diageo. As part of the                     launch Arthaus helped to develop an online elearning module which was required to help embed                     and train users on the new tool."
+        type: "text"
+      - 
+        path: "/static/office-hangers-06b60160d97fb72b38fb8477c63be453.jpg"
+        description: "Diageo Coupa hangers"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/iPad-fcfca3521f80a121612cbb065a7a72ba.jpg"
+        description: "Diageo Coupa on an iPad"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/hsbc-university"
+        title: "HSBC University"
+        image: "/static/HSBCUniversity_464x304-8ece1aa66819cdb4115c4a779e76769f.png"
+      - 
+        url: "/work/ssy"
+        title: "Simpson Spence Young"
+        image: "/static/SSY-a35b96a7b3362009a4e1ca48ffea61c5.png"
+      - 
+        url: "/work/waves"
+        title: "Waves booking app"
+        image: "/static/Waves_464x304-c53a0450c8eb2a9badc094b2a1ab638e.png"

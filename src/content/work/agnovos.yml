@@ -1,0 +1,40 @@
+---
+  - 
+    title: "AgNovos Website"
+    hero_image: 
+      file: "/static/agnovos_heroimage_944x392-21112416a046147c29fee446ac961521.png"
+      description: "Agnovos website"
+    main_content: 
+      - 
+        description: 
+          - "AgNovos Healthcare is developing novel treatments                 for osteoporosis, a devastating bone disease affecting more than                 200 million women worldwide. The team approached Arthaus ahead of                 their launch to market with a request to design and build a website                 that would fit well with the company’s core values and aimed at medical                 professional. Originally built in Office 365 we have since updated and                 rebuilt the site using Umbraco, which is an open source Content Management System."
+        type: "text"
+      - 
+        url: "https://www.agnovos.com/"
+        button_text: "View the site"
+        type: "button"
+      - 
+        path: "/static/agnovos_mockups_752x426-30bd1c6ee31b5a1a778fa3c2701be61b.png"
+        description: "Agnovos site on devices"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/agnovos_website_752x425-15bdb4f68fd236e5eaaf7a42c45f415f.png"
+        description: "Agnovos site on devices"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/hsbc-mentoring-portal"
+        title: "HSBC Mentoring"
+        image: "/static/HSBCMentoring_464x304-d2810bdcf520dc73906e7f038ef3738a.png"
+      - 
+        url: "/work/bupa-talent"
+        title: "Bupa talent toolkit"
+        image: "/static/BupaTalent_464x304-9f69b8328b8d0c4ce440fa617f46ed7b.png"
+      - 
+        url: "/work/diageo-tech-cafe"
+        title: "Diageo Tech Café"
+        image: "/static/diageo_techcafe_464x304-a6f47a648dd96aad757c6a06d90f4c36.png"

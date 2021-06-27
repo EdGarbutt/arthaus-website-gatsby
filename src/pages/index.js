@@ -8,7 +8,7 @@ import HomeBlock from '../components/home-components/home-block'
 const Home = () => {
     const data = useStaticQuery(graphql`
         query {
-            allHomeJson {
+            allHomeYaml {
                 edges {
                     node {
                         classes
@@ -36,7 +36,7 @@ const Home = () => {
         }
     `)
 
-    const gridCells = data.allHomeJson.edges
+    const gridCells = data.allHomeYaml.edges
     
     return (
         <Layout id="home-page" page_class="home">

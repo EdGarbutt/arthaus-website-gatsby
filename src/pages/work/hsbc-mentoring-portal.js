@@ -79,7 +79,7 @@ const HSBCMentoringCaseStudy = () => {
             }
         ]
     }
-    
+    console.log(JSON.stringify(case_study_data))
     return (
         <Layout page_class="work project" page_title={case_study_data.title}>
             <HeroImageBlock data={case_study_data.hero_image} />

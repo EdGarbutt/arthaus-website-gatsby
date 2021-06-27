@@ -1,0 +1,66 @@
+---
+  - 
+    sub_navigation: 
+      links: 
+        - 
+          link: "all"
+          offset: -100
+        - 
+          link: "branding"
+          offset: 0
+        - 
+          link: "digital"
+          offset: 0
+        - 
+          link: "communications"
+          offset: 0
+    introduction: "Whether you need a powerful brand, engaging communications or a         great user centric digital solution, we have the skills, expertise         and experience to deliver."
+    case_studies: 
+      - 
+        title: "AgNovos website"
+        url: "agnovos"
+        image: "/static/agnovos_464x304-0a8932ddf91a88ab3a5ba28df8914334.png"
+        image_description: "thumbnail image for the work case study - Bupa talent toolkit - communications"
+        type: "digital"
+      - 
+        title: "HSBC Mentoring"
+        url: "hsbc-mentoring-portal"
+        image: "/static/HSBCMentoring_464x304-d2810bdcf520dc73906e7f038ef3738a.png"
+        image_description: "thumbnail image for the work case study - HSBC Mentoring - digital"
+        type: "digital"
+      - 
+        title: "Bupa talent toolkit"
+        url: "bupa-talent"
+        image: "/static/BupaTalent_464x304-9f69b8328b8d0c4ce440fa617f46ed7b.png"
+        image_description: "thumbnail image for the work case study - Bupa talent toolkit - communications"
+        type: "communications"
+      - 
+        title: "Diageo Tech Café"
+        url: "diageo-tech-cafe"
+        image: "/static/diageo_techcafe_464x304-a6f47a648dd96aad757c6a06d90f4c36.png"
+        image_description: "thumbnail image for the work case study - Diageo Tech Café - brand"
+        type: "branding"
+      - 
+        title: "HSBC University"
+        url: "hsbc-university"
+        image: "/static/HSBCUniversity_464x304-8ece1aa66819cdb4115c4a779e76769f.png"
+        image_description: "thumbnail image for the work case study - HSBC University - brand"
+        type: "branding"
+      - 
+        title: "Simpson Spence Young"
+        url: "ssy"
+        image: "/static/SSY-a35b96a7b3362009a4e1ca48ffea61c5.png"
+        image_description: "thumbnail image for the work case study - Simpson Spence Young - brand"
+        type: "branding"
+      - 
+        title: "Waves booking app"
+        url: "waves"
+        image: "/static/Waves_464x304-c53a0450c8eb2a9badc094b2a1ab638e.png"
+        image_description: "thumbnail image for the work case study - Waves booking app - digital"
+        type: "digital"
+      - 
+        title: "Diageo Workplace"
+        url: "diageo-workplace"
+        image: "/static/DiageoWorkplace_464x304-7c7a301e2b15e1e4105976150f33ffcc.png"
+        image_description: "thumbnail image for the work case study - Diageo Workplace - communications"
+        type: "communications"

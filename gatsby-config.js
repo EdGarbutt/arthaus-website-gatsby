@@ -15,7 +15,7 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    'gatsby-transformer-json',
+    'gatsby-transformer-yaml',
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
