@@ -20,65 +20,36 @@ import OtherCaseStudies from '../../components/work-components/other-case-studie
 import GetInTouch from '../../components/contact-form'
 
 const SSYCaseStudy = () => {
-    const case_study_data = {
-        title: "Simpson Spence Young",
-        hero_image: {
-            file: HeroImage,
-            description: "SSY Hero Image"
-        },
-        main_content: [
-            {
-                description: [
-                    "Simpson Spence Young, the world’s largest independent shipbroker, commissioned Arthaus to create \
-                    a new brand identity for the business that would build on their heritage whilst reflecting the fact \
-                    that this is very much a 21st century business. The brand design included creating brand guidelines, \
-                    a new corporate brochure and redesigning the web site. "
-                ],
-                type: "text"
-            },
-            {
-                url: "https://www.ssyonline.com/",
-                button_text: "View the site",
-                type: "button"
-            },
-            {
-                path: SSYSketchesImage,
-                description: "SSY Logo",
-                padding_classes: ["padding-b--30"],
-                type: "image"
-            },
-            {
-                path: SSYiPhoneImage,
-                description: "SSY site on iPhone",
-                padding_classes: ["padding-b--30"],
-                type: "image"
-            },
-            {
-                path: SSYStationeryImage,
-                description: "SSY Stationery",
-                padding_classes: ["padding-b--30"],
-                type: "image"
+    const data = useStaticQuery(graphql`
+        query {
+            allCaseStudiesYaml(filter: {id: {eq: "8"}}) {
+                edges {
+                    node {
+                        title
+                        hero_image {
+                            file
+                            description
+                        }
+                        main_content {
+                            paragraphs
+                            type
+                            url
+                            button_text
+                            padding_classes
+                            path
+                        }
+                        other_case_studies {
+                            url
+                            title
+                            image
+                        }
+                    }
+                }
             }
-        ],
-        other_case_studies: [
-            {
-                url: "/work/waves",
-                title: "Waves booking app",
-                image: WavesBookingAppImage
-            },
-            {
-                url: "/work/diageo-workplace",
-                title: "Diageo Workplace",
-                image: DiageoWorkplaceImage
-            },
-            {
-                url: "/work/agnovos",
-                title: "AgNovos website",
-                image: AgNovosImage
-            }
-        ]
-    }
-    console.log(JSON.stringify(case_study_data))
+        }
+    `)
+
+    const case_study_data = data.allCaseStudiesYaml.edges[0].node
     return (
         <Layout page_class="work project" page_title={case_study_data.title}>
             <HeroImageBlock data={case_study_data.hero_image} />

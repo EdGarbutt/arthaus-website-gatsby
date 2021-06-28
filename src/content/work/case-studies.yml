@@ -1,0 +1,413 @@
+---
+  - 
+    id: "1"
+    title: "AgNovos Website"
+    hero_image: 
+      file: "/static/agnovos_heroimage_944x392-21112416a046147c29fee446ac961521.png"
+      description: "Agnovos website"
+    main_content: 
+      - 
+        paragraphs: 
+          - "AgNovos Healthcare is developing novel treatments                 for osteoporosis, a devastating bone disease affecting more than                 200 million women worldwide. The team approached Arthaus ahead of                 their launch to market with a request to design and build a website                 that would fit well with the company’s core values and aimed at medical                 professional. Originally built in Office 365 we have since updated and                 rebuilt the site using Umbraco, which is an open source Content Management System."
+        type: "text"
+      - 
+        url: "https://www.agnovos.com/"
+        button_text: "View the site"
+        type: "button"
+      - 
+        path: "/static/agnovos_mockups_752x426-30bd1c6ee31b5a1a778fa3c2701be61b.png"
+        description: "Agnovos site on devices"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/agnovos_website_752x425-15bdb4f68fd236e5eaaf7a42c45f415f.png"
+        description: "Agnovos site on devices"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/hsbc-mentoring-portal"
+        title: "HSBC Mentoring"
+        image: "/static/HSBCMentoring_464x304-d2810bdcf520dc73906e7f038ef3738a.png"
+      - 
+        url: "/work/bupa-talent"
+        title: "Bupa talent toolkit"
+        image: "/static/BupaTalent_464x304-9f69b8328b8d0c4ce440fa617f46ed7b.png"
+      - 
+        url: "/work/diageo-tech-cafe"
+        title: "Diageo Tech Café"
+        image: "/static/diageo_techcafe_464x304-a6f47a648dd96aad757c6a06d90f4c36.png"
+  - 
+    id: "2"
+    title: "Bupa Talent Toolkit"
+    hero_image: 
+      file: "/static/bupa_talent_944x392-d830ad233247f90f9a690102bfe65b26.png"
+      description: "Cards"
+    main_content: 
+      - 
+        paragraphs: 
+          - "Bupa talent Toolkit is a creative communication guide that helps support the drive                     to global standardisation of talent management best practice. The guide was created                     to excite and engage Bupa managers and give them the tools to cascade to and engage                     their own teams. "
+        type: "text"
+      - 
+        path: "/static/bupa_booklet_752x528-3a9317eaa2c0427104276276a4e14f29.png"
+        description: "Bookvar"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/bupa_outcomecards_752x480-643e2c74090d23dab89804ee70b5a935.png"
+        description: "Outcome cards"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/diageo-tech-cafe"
+        title: "Diageo Tech Café"
+        image: "/static/diageo_techcafe_464x304-a6f47a648dd96aad757c6a06d90f4c36.png"
+      - 
+        url: "/work/hsbc-university"
+        title: "HSBC University"
+        image: "/static/HSBCUniversity_464x304-8ece1aa66819cdb4115c4a779e76769f.png"
+      - 
+        url: "/work/ssy"
+        title: "Simpson Spence Young"
+        image: "/static/SSY-a35b96a7b3362009a4e1ca48ffea61c5.png"
+  - 
+    id: "3"
+    title: "Diageo Coupa"
+    hero_image: 
+      file: "/static/iMac-a753e4dd7dcfc6432b2e317ea5b68c5d.jpg"
+      description: "Diageo Coupa iMac image"
+    main_content: 
+      - 
+        paragraphs: 
+          - "Diageo recently launched a new Source to Pay tool for all non-stocked goods and suppliers.                     The tool is called Coupa. As such a launch and roll out campaign was required to raise                     awareness and engage users across the business."
+          - "Arthaus was asked to develop the overall communication approach and concept that would                     cascade through the various channels and comms vehicles selected by Diageo. As part of the                     launch Arthaus helped to develop an online elearning module which was required to help embed                     and train users on the new tool."
+        type: "text"
+      - 
+        path: "/static/office-hangers-06b60160d97fb72b38fb8477c63be453.jpg"
+        description: "Diageo Coupa hangers"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/iPad-fcfca3521f80a121612cbb065a7a72ba.jpg"
+        description: "Diageo Coupa on an iPad"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/hsbc-university"
+        title: "HSBC University"
+        image: "/static/HSBCUniversity_464x304-8ece1aa66819cdb4115c4a779e76769f.png"
+      - 
+        url: "/work/ssy"
+        title: "Simpson Spence Young"
+        image: "/static/SSY-a35b96a7b3362009a4e1ca48ffea61c5.png"
+      - 
+        url: "/work/waves"
+        title: "Waves booking app"
+        image: "/static/Waves_464x304-c53a0450c8eb2a9badc094b2a1ab638e.png"
+  - 
+    id: "4"
+    title: "Diageo Tech Café"
+    hero_image: 
+      file: "/static/techcafe_room_944x431-236e0791494530708a0de5709d0f9412.png"
+      description: "Diageo Tech Café booth image"
+    main_content: 
+      - 
+        paragraphs: 
+          - "Diageo has launched an all new initiative to build a great technology employee experience in the                     form of a 'Tech Café'. A place where all employees can 'drop in' for face to face on site technical                     support, capability building & quick fixes."
+        type: "text"
+      - 
+        path: "/static/techcafe_logo_752x209-7f988fefa857a0af21e0578885126b54.png"
+        description: "Diageo Tech Café Logo"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+      - 
+        paragraphs: 
+          - "A key requirement for its success was to develop a strong, relevant and engaging brand approach and                     Arthaus was tasked to deliver this. Supporting Diageo in the scoping and positioning, Arthaus went on                     to design and deliver the overall visual brand, which included the design and production for the                     physical cafe and all the supporting assets, communications and collateral."
+        type: "text"
+      - 
+        path: "/static/techcafe_walkway_752x233-3f2954269903127d147ce91c54da726b.png"
+        description: "Diageo Tech Café Walkaway"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/techcafe_stickers_poster_752x374-41fcb5922b66c8e04d3f250c2c082306.png"
+        description: "Diageo Tech Café Stickers"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/techcafe_icons_752x214-f166ab62a0f93f1e25567b511f1684f4.png"
+        description: "Diageo Tech Café Icons"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/techcafe_mugs_752x329-0da71dc8128f363afda330cfe47a56cb.png"
+        description: "Diageo Tech Café Mugs"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/hsbc-university"
+        title: "HSBC University"
+        image: "/static/HSBCUniversity_464x304-8ece1aa66819cdb4115c4a779e76769f.png"
+      - 
+        url: "/work/ssy"
+        title: "Simpson Spence Young"
+        image: "/static/SSY-a35b96a7b3362009a4e1ca48ffea61c5.png"
+      - 
+        url: "/work/waves"
+        title: "Waves booking app"
+        image: "/static/Waves_464x304-c53a0450c8eb2a9badc094b2a1ab638e.png"
+  - 
+    id: "5"
+    title: "Diageo Workplace"
+    hero_image: 
+      file: "/static/DiageoWorkplace_heroimage_944x392-afe1c3d2bcb436aff54bd79a7741209e.png"
+      description: "Diageo Workplace Hero Image"
+    main_content: 
+      - 
+        paragraphs: 
+          - "Diageo wanted to introduce a new range of technologies into the Workplace that                     would help both individuals and the business collaborate, communicate, connect                     and meet long into the next decade. They looked to Arthaus to help them brand,                     launch and embed this initiative."
+          - "The YOURWORKPLACE change programme we developed was the result and ran across                     all the Diageo comms channels, using various vehicles from: office launch pop-up                     events to mail outs; launch animations to online information sites."
+        type: "text"
+      - 
+        path: "/static/workplace_logo_560x152-94f06273edbfa3036f0cc4d8e77e9828.png"
+        description: "Diageo Workplace Logo"
+        padding_classes: 
+          - "padding-t--20"
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/workplace_posters_752x519-88f8c6b4b13cf9df0360fc93277a18b1.png"
+        description: "Diageo Workplace Posters"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+      - 
+        paragraphs: 
+          - "The initial aim was to raise awareness, then build understanding and finally                     drive passion and commitment "
+          - "The campaign has ‘Powered possibilities’ at Diageo – it has been rolled out                     across all markets, helping to engage users and to deliver technologies that                     are transforming the business. "
+        type: "text"
+      - 
+        path: "/static/workplacecubes_ipad_752x372-a688f3b55e9507b78e7bcde0f62c1717.png"
+        description: "Diageo Workplace Cubes Image"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/agnovos"
+        title: "AgNovos website"
+        image: "/static/agnovos_464x304-0a8932ddf91a88ab3a5ba28df8914334.png"
+      - 
+        url: "/work/hsbc-mentoring-portal"
+        title: "HSBC Mentoring"
+        image: "/static/HSBCMentoring_464x304-d2810bdcf520dc73906e7f038ef3738a.png"
+      - 
+        url: "/work/bupa-talent"
+        title: "Bupa talent toolkit"
+        image: "/static/BupaTalent_464x304-9f69b8328b8d0c4ce440fa617f46ed7b.png"
+  - 
+    id: "6"
+    title: "HSBC Mentoring Portal"
+    hero_image: 
+      file: "/static/HSBCMentoring_heroimage_944x392-964ca2b951fbdd97a8188d99d79fa32b.png"
+      description: "Laptop, showing the HSBC Mentoring Portal"
+    main_content: 
+      - 
+        paragraphs: 
+          - "Design and develop an all new Mentoring solution on Sharepoint to allow our people to easily manage                     and build mentoring connections across the business’. This was the task HSBC set us."
+          - "They wanted a portal that would be a great user experience for mentors, mentees and admins. It also                     needed to automate as many tasks as possible which were previously handled manually."
+        type: "text"
+      - 
+        path: "/static/mentoringprofile_659x838-58e68167f801534db61ecf2d1f27c7b6.png"
+        description: "HSBC Mentoring Portal"
+        padding_classes: 
+          - "padding-b--30"
+          - "padding-t--18"
+        type: "image"
+      - 
+        paragraphs: 
+          - "Working within the HSBC digital guidelines, the result was a feature rich portal that enabled users                     to self register as mentors and mentees. It allowed them to find other mentors, connect with them and                     manage those relationships all through an engaging and user-friendly interface."
+          - "The system uses automated work flows to push out emails and surveys which are also captured in an admin                     dashboard for monitoring and reporting."
+          - "The system uses automated work flows to push out emails and surveys which are also captured in an admin                     dashboard for monitoring and reporting. "
+        type: "text"
+      - 
+        path: "/static/mentoringlaptop_775x430-b5def6871de660bdadd86f00716924bb.png"
+        description: "Mentoring Profile on a Laptop"
+        padding_classes: 
+          - "padding-b--30"
+          - "padding-t--18"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/bupa-talent"
+        title: "Bupa talent toolkit"
+        image: "/static/BupaTalent_464x304-9f69b8328b8d0c4ce440fa617f46ed7b.png"
+      - 
+        url: "/work/diageo-tech-cafe"
+        title: "Diageo Tech Café"
+        image: "/static/diageo_techcafe_464x304-a6f47a648dd96aad757c6a06d90f4c36.png"
+      - 
+        url: "/work/hsbc-university"
+        title: "HSBC University"
+        image: "/static/HSBCUniversity_464x304-8ece1aa66819cdb4115c4a779e76769f.png"
+  - 
+    id: "7"
+    title: "HSBC University"
+    hero_image: 
+      file: "/static/HSBCUni_heroimage_944x392-d6c2bfde85b7aea7252655e023d190d6.png"
+      description: "HSBC University hero image"
+    main_content: 
+      - 
+        paragraphs: 
+          - "HSBC set us the challenge of updating how ‘Learning’ was branded, structured, positioned,                     communicated and delivered throughout the business. HSBC University was the result, bringing                     together the many varied learning areas from across the business, including Leadership, Risk,                     Strategy & Performance into a structured and easily accessible brand."
+          - "The visual brand brings this all to life and was created to be distinctive, flexible and easy                     to implement across all media whilst adhering to the tight HSBC brand guidelines."
+        type: "text"
+      - 
+        path: "/static/HSBCUni_Icons_944x410-b4b0d627b04c30d3a05d67eadd78253b.png"
+        description: "HSBC University Icons"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+      - 
+        paragraphs: 
+          - "We worked closely with Nick Crussell, Global head of Learning Design, and the HSBC corporate                     brand team to deliver on the brief and to ensure that both the key stake holders and employees                     globally were fully engaged and inspired."
+          - "Along with an extensive set of brand guidelines and supporting visual assets, we have carried                     the brand across many communications materials from, the University buildings, through interactive                     learning modules, to the design and creation of the all new Sharepoint based University portal."
+        type: "text"
+      - 
+        path: "/static/HSBCUni_Laptop_944x587-eda00b3eabbadfaca21a798b487850f2.png"
+        description: "HSBC University Laptop Image"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/hsbcUni_collateral_818x641-16666d2ef73aaec6fc18a6af2cdd768f.png"
+        description: "HSBC University Uni Collateral Image"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/hsbcUni_officegraphics_790x312-b47263c9c77237384be72be0ec3c7d9d.png"
+        description: "DHSBC University Office Graphics"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/ssy"
+        title: "Simpson Spence Young"
+        image: "/static/SSY-a35b96a7b3362009a4e1ca48ffea61c5.png"
+      - 
+        url: "/work/waves"
+        title: "Waves booking app"
+        image: "/static/Waves_464x304-c53a0450c8eb2a9badc094b2a1ab638e.png"
+      - 
+        url: "/work/diageo-workplace"
+        title: "Diageo Workplace"
+        image: "/static/DiageoWorkplace_464x304-7c7a301e2b15e1e4105976150f33ffcc.png"
+  - 
+    id: "8"
+    title: "Simpson Spence Young"
+    hero_image: 
+      file: "/static/SSY_heroimage_944x392-483474aee66067354da412abea6d6dd4.png"
+      description: "SSY Hero Image"
+    main_content: 
+      - 
+        paragraphs: 
+          - "Simpson Spence Young, the world’s largest independent shipbroker, commissioned Arthaus to create                     a new brand identity for the business that would build on their heritage whilst reflecting the fact                     that this is very much a 21st century business. The brand design included creating brand guidelines,                     a new corporate brochure and redesigning the web site. "
+        type: "text"
+      - 
+        url: "https://www.ssyonline.com/"
+        button_text: "View the site"
+        type: "button"
+      - 
+        path: "/static/sketches_752x280-3990188d16e46ea5e45aeaab8ba89626.png"
+        description: "SSY Logo"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/SSY_iphone_752x565-89f8aab8b8381462d6745af3f20a742c.png"
+        description: "SSY site on iPhone"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/SSY_stationery_781x534-99de2580dc7ec20af8568f05e5b17daf.png"
+        description: "SSY Stationery"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/waves"
+        title: "Waves booking app"
+        image: "/static/Waves_464x304-c53a0450c8eb2a9badc094b2a1ab638e.png"
+      - 
+        url: "/work/diageo-workplace"
+        title: "Diageo Workplace"
+        image: "/static/DiageoWorkplace_464x304-7c7a301e2b15e1e4105976150f33ffcc.png"
+      - 
+        url: "/work/agnovos"
+        title: "AgNovos website"
+        image: "/static/agnovos_464x304-0a8932ddf91a88ab3a5ba28df8914334.png"
+  - 
+    id: "9"
+    title: "Waves App"
+    hero_image: 
+      file: "/static/waves2_754x453-819ffe8221a2d594118e6e1d39d57d56.png"
+      description: "Waves Hero Image"
+    main_content: 
+      - 
+        paragraphs: 
+          - "Hand car wash specialist Waves approached Arthaus to build a bespoke app that could                     be used to check cars in while monitoring their progress through the wash process.                     The system also needs to allow for real-time monitoring of the daily output from each                     of its 250+ sites. The app was designed to be simple to use and is delivered through                     the Apple App Store."
+          - "The app has been extremely successful and continues to be developed with a new Trade                     Account section and an Employee Compliance sub-site being recently launched to ensure                     all sites comply with Home Office employment laws. "
+        type: "text"
+      - 
+        path: "/static/waves1_754x465-6f66f53487d98411082f778cfc09f474.png"
+        description: "Waves App on Tablet"
+        padding_classes: 
+          - "padding-t--18"
+          - "padding-b--30"
+        type: "image"
+      - 
+        path: "/static/waves3_950x658-805ad98d55fb74fa37aa6ae98a325582.png"
+        description: "Waves on Mac Image"
+        padding_classes: 
+          - "padding-b--30"
+        type: "image"
+    other_case_studies: 
+      - 
+        url: "/work/diageo-workplace"
+        title: "Diageo Workplace"
+        image: "/static/DiageoWorkplace_464x304-7c7a301e2b15e1e4105976150f33ffcc.png"
+      - 
+        url: "/work/agnovos"
+        title: "AgNovos website"
+        image: "/static/agnovos_464x304-0a8932ddf91a88ab3a5ba28df8914334.png"
+      - 
+        url: "/work/hsbc-mentoring-portal"
+        title: "HSBC Mentoring"
+        image: "/static/HSBCMentoring_464x304-d2810bdcf520dc73906e7f038ef3738a.png"
+  

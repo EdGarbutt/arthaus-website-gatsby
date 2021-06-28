@@ -14,7 +14,7 @@ const MainContent = ({ data }) => {
                 CaseStudyText, 
                 {
                     key: index,
-                    text: single_content.description
+                    text: single_content.paragraphs
                 }, 
                 null
             )

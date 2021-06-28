@@ -20,54 +20,36 @@ import GetInTouch from '../../components/contact-form'
 
 const BupaTalentCaseStudy = () => {
     
-    const case_study_data = {
-        title: "Bupa Talent Toolkit",
-        hero_image: {
-            file: HeroImage,
-            description: "Cards"
-        },
-        main_content: [
-            {
-                description: [
-                    "Bupa talent Toolkit is a creative communication guide that helps support the drive \
-                    to global standardisation of talent management best practice. The guide was created \
-                    to excite and engage Bupa managers and give them the tools to cascade to and engage \
-                    their own teams. "
-                ],
-                type: "text"
-            },
-            {
-                path: BupaBookletImage,
-                description: "Bookvar",
-                padding_classes: ["padding-t--18", "padding-b--30"],
-                type: "image"
-            },
-            {
-                path: BupaOutcomeCardImage,
-                description: "Outcome cards",
-                padding_classes: ["padding-b--30"],
-                type: "image"
+    const data = useStaticQuery(graphql`
+        query {
+            allCaseStudiesYaml(filter: {id: {eq: "2"}}) {
+                edges {
+                    node {
+                        title
+                        hero_image {
+                            file
+                            description
+                        }
+                        main_content {
+                            paragraphs
+                            type
+                            url
+                            button_text
+                            padding_classes
+                            path
+                        }
+                        other_case_studies {
+                            url
+                            title
+                            image
+                        }
+                    }
+                }
             }
-        ],
-        other_case_studies: [
-            {
-                url: "/work/diageo-tech-cafe",
-                title: "Diageo Tech Café",
-                image: DiageoTechCafeImage
-            },
-            {
-                url: "/work/hsbc-university",
-                title: "HSBC University",
-                image: HSBCUniversityImage
-            },
-            {
-                url: "/work/ssy",
-                title: "Simpson Spence Young",
-                image: SSYImage
-            }
-        ]
-    }
-    console.log(JSON.stringify(case_study_data))
+        }
+    `)
+
+    const case_study_data = data.allCaseStudiesYaml.edges[0].node
     return (
         <Layout page_class="work project" page_title={case_study_data.title}>
             <HeroImageBlock data={case_study_data.hero_image} />

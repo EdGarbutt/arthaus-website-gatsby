@@ -19,58 +19,36 @@ import OtherCaseStudies from '../../components/work-components/other-case-studie
 import GetInTouch from '../../components/contact-form'
 
 const WavesBookingAppCaseStudy = () => {
-    const case_study_data = {
-        title: "Waves App",
-        hero_image: {
-            file: HeroImage,
-            description: "Waves Hero Image"
-        },
-        main_content: [
-            {
-                description: [
-                    "Hand car wash specialist Waves approached Arthaus to build a bespoke app that could \
-                    be used to check cars in while monitoring their progress through the wash process. \
-                    The system also needs to allow for real-time monitoring of the daily output from each \
-                    of its 250+ sites. The app was designed to be simple to use and is delivered through \
-                    the Apple App Store.",
-                    "The app has been extremely successful and continues to be developed with a new Trade \
-                    Account section and an Employee Compliance sub-site being recently launched to ensure \
-                    all sites comply with Home Office employment laws. "
-                ],
-                type: "text"
-            },
-            {
-                path: WavesSingleTabletImage,
-                description: "Waves App on Tablet",
-                padding_classes: ["padding-t--18", "padding-b--30"],
-                type: "image"
-            },
-            {
-                path: WavesMacImage,
-                description: "Waves on Mac Image",
-                padding_classes: ["padding-b--30"],
-                type: "image"
+    const data = useStaticQuery(graphql`
+        query {
+            allCaseStudiesYaml(filter: {id: {eq: "9"}}) {
+                edges {
+                    node {
+                        title
+                        hero_image {
+                            file
+                            description
+                        }
+                        main_content {
+                            paragraphs
+                            type
+                            url
+                            button_text
+                            padding_classes
+                            path
+                        }
+                        other_case_studies {
+                            url
+                            title
+                            image
+                        }
+                    }
+                }
             }
-        ],
-        other_case_studies: [
-            {
-                url: "/work/diageo-workplace",
-                title: "Diageo Workplace",
-                image: DiageoWorkplaceImage
-            },
-            {
-                url: "/work/agnovos",
-                title: "AgNovos website",
-                image: AgNovosImage
-            },
-            {
-                url: "/work/hsbc-mentoring-portal",
-                title: "HSBC Mentoring",
-                image: HSBCMentoringImage
-            }
-        ]
-    }
-    console.log(JSON.stringify(case_study_data))
+        }
+    `)
+
+    const case_study_data = data.allCaseStudiesYaml.edges[0].node
     return (
         <Layout page_class="work project" page_title={case_study_data.title}>
             <HeroImageBlock data={case_study_data.hero_image} />

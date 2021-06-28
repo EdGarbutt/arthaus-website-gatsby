@@ -22,81 +22,36 @@ import OtherCaseStudies from '../../components/work-components/other-case-studie
 import GetInTouch from '../../components/contact-form'
 
 const DiageoTechCafeCaseStudy = () => {
-    
-    const case_study_data = {
-        title: "Diageo Tech Café",
-        hero_image: {
-            file: HeroImage,
-            description: "Diageo Tech Café booth image"
-        },
-        main_content: [
-            {
-                description: [
-                    "Diageo has launched an all new initiative to build a great technology employee experience in the \
-                    form of a 'Tech Café'. A place where all employees can 'drop in' for face to face on site technical \
-                    support, capability building & quick fixes."
-                ],
-                type: "text"
-            },
-            {
-                path: DiageoTechCafeLogo,
-                description: "Diageo Tech Café Logo",
-                padding_classes: ["padding-t--18", "padding-b--30"],
-                type: "image"
-            },
-            {
-                description: [
-                    "A key requirement for its success was to develop a strong, relevant and engaging brand approach and \
-                    Arthaus was tasked to deliver this. Supporting Diageo in the scoping and positioning, Arthaus went on \
-                    to design and deliver the overall visual brand, which included the design and production for the \
-                    physical cafe and all the supporting assets, communications and collateral."
-                ],
-                type: "text"
-            },
-            {
-                path: DiageoTechCafeWalkawayImage,
-                description: "Diageo Tech Café Walkaway",
-                padding_classes: ["padding-t--18", "padding-b--30"],
-                type: "image"
-            },
-            {
-                path: DiageoTechCafeStickersImage,
-                description: "Diageo Tech Café Stickers",
-                padding_classes: ["padding-b--30"],
-                type: "image"
-            },
-            {
-                path: DiageoTechCafeIconsImage,
-                description: "Diageo Tech Café Icons",
-                padding_classes: ["padding-b--30"],
-                type: "image"
-            },
-            {
-                path: DiageoTechCafeMugsImage,
-                description: "Diageo Tech Café Mugs",
-                padding_classes: ["padding-b--30"],
-                type: "image"
+    const data = useStaticQuery(graphql`
+        query {
+            allCaseStudiesYaml(filter: {id: {eq: "4"}}) {
+                edges {
+                    node {
+                        title
+                        hero_image {
+                            file
+                            description
+                        }
+                        main_content {
+                            paragraphs
+                            type
+                            url
+                            button_text
+                            padding_classes
+                            path
+                        }
+                        other_case_studies {
+                            url
+                            title
+                            image
+                        }
+                    }
+                }
             }
-        ],
-        other_case_studies: [
-            {
-                url: "/work/hsbc-university",
-                title: "HSBC University",
-                image: HSBCUniversityImage
-            },
-            {
-                url: "/work/ssy",
-                title: "Simpson Spence Young",
-                image: SSYImage
-            },
-            {
-                url: "/work/waves",
-                title: "Waves booking app",
-                image: WavesBookingAppImage
-            }
-        ]
-    }
-    console.log(JSON.stringify(case_study_data))
+        }
+    `)
+
+    const case_study_data = data.allCaseStudiesYaml.edges[0].node
     return (
         <Layout page_class="work project" page_title={case_study_data.title}>
             <HeroImageBlock data={case_study_data.hero_image} />

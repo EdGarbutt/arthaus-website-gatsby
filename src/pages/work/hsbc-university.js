@@ -21,80 +21,36 @@ import OtherCaseStudies from '../../components/work-components/other-case-studie
 import GetInTouch from '../../components/contact-form'
 
 const HSBCUniversityCaseStudy = () => {
-    const case_study_data = {
-        title: "HSBC University",
-        hero_image: {
-            file: HeroImage,
-            description: "HSBC University hero image"
-        },
-        main_content: [
-            {
-                description: [
-                    "HSBC set us the challenge of updating how ‘Learning’ was branded, structured, positioned, \
-                    communicated and delivered throughout the business. HSBC University was the result, bringing \
-                    together the many varied learning areas from across the business, including Leadership, Risk, \
-                    Strategy & Performance into a structured and easily accessible brand.",
-                    "The visual brand brings this all to life and was created to be distinctive, flexible and easy \
-                    to implement across all media whilst adhering to the tight HSBC brand guidelines."
-                ],
-                type: "text"
-            },
-            {
-                path: HSBCUniIconsImage,
-                description: "HSBC University Icons",
-                padding_classes: ["padding-t--18", "padding-b--30"],
-                type: "image"
-            },
-            {
-                description: [
-                    "We worked closely with Nick Crussell, Global head of Learning Design, and the HSBC corporate \
-                    brand team to deliver on the brief and to ensure that both the key stake holders and employees \
-                    globally were fully engaged and inspired.",
-                    "Along with an extensive set of brand guidelines and supporting visual assets, we have carried \
-                    the brand across many communications materials from, the University buildings, through interactive \
-                    learning modules, to the design and creation of the all new Sharepoint based University portal."
-                ],
-                type: "text"
-            },
-            {
-                path: HSBCUniLaptopImage,
-                description: "HSBC University Laptop Image",
-                padding_classes: ["padding-t--18", "padding-b--30"],
-                type: "image"
-            },
-            {
-                path: HSBCUniCollateralImage,
-                description: "HSBC University Uni Collateral Image",
-                padding_classes: ["padding-b--30"],
-                type: "image"
-            },
-            {
-                path: HSBCUniOfficeGraphicsImage,
-                description: "DHSBC University Office Graphics",
-                padding_classes: ["padding-b--30"],
-                type: "image"
+    const data = useStaticQuery(graphql`
+        query {
+            allCaseStudiesYaml(filter: {id: {eq: "7"}}) {
+                edges {
+                    node {
+                        title
+                        hero_image {
+                            file
+                            description
+                        }
+                        main_content {
+                            paragraphs
+                            type
+                            url
+                            button_text
+                            padding_classes
+                            path
+                        }
+                        other_case_studies {
+                            url
+                            title
+                            image
+                        }
+                    }
+                }
             }
-        ],
-        other_case_studies: [
-            {
-                url: "/work/ssy",
-                title: "Simpson Spence Young",
-                image: SSYImage
-            },
-            {
-                url: "/work/waves",
-                title: "Waves booking app",
-                image: WavesBookingAppImage
-            },
-            {
-                url: "/work/diageo-workplace",
-                title: "Diageo Workplace",
-                image: DiageoWorkplaceImage
-            }
+        }
+    `)
 
-        ]
-    }
-    console.log(JSON.stringify(case_study_data))
+    const case_study_data = data.allCaseStudiesYaml.edges[0].node
     return (
         <Layout page_class="work project" page_title={case_study_data.title}>
             <HeroImageBlock data={case_study_data.hero_image} />

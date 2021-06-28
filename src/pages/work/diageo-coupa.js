@@ -19,57 +19,36 @@ import OtherCaseStudies from '../../components/work-components/other-case-studie
 import GetInTouch from '../../components/contact-form'
 
 const DiageoCoupaCaseStudy = () => {
-    const case_study_data = {
-        title: "Diageo Coupa",
-        hero_image: {
-            file: HeroImage,
-            description: "Diageo Coupa iMac image"
-        },
-        main_content: [
-            {
-                description: [
-                    "Diageo recently launched a new Source to Pay tool for all non-stocked goods and suppliers. \
-                    The tool is called Coupa. As such a launch and roll out campaign was required to raise \
-                    awareness and engage users across the business.",
-                    "Arthaus was asked to develop the overall communication approach and concept that would \
-                    cascade through the various channels and comms vehicles selected by Diageo. As part of the \
-                    launch Arthaus helped to develop an online elearning module which was required to help embed \
-                    and train users on the new tool."
-                ],
-                type: "text"
-            },
-            {
-                path: DiageoCoupaHangers,
-                description: "Diageo Coupa hangers",
-                padding_classes: ["padding-t--18", "padding-b--30"],
-                type: "image"
-            },
-            {
-                path: DiageCoupaiPad,
-                description: "Diageo Coupa on an iPad",
-                padding_classes: ["padding-t--18", "padding-b--30"],
-                type: "image"
-            },
-        ],
-        other_case_studies: [
-            {
-                url: "/work/hsbc-university",
-                title: "HSBC University",
-                image: HSBCUniversityImage
-            },
-            {
-                url: "/work/ssy",
-                title: "Simpson Spence Young",
-                image: SSYImage
-            },
-            {
-                url: "/work/waves",
-                title: "Waves booking app",
-                image: WavesBookingAppImage
+    const data = useStaticQuery(graphql`
+        query {
+            allCaseStudiesYaml(filter: {id: {eq: "3"}}) {
+                edges {
+                    node {
+                        title
+                        hero_image {
+                            file
+                            description
+                        }
+                        main_content {
+                            paragraphs
+                            type
+                            url
+                            button_text
+                            padding_classes
+                            path
+                        }
+                        other_case_studies {
+                            url
+                            title
+                            image
+                        }
+                    }
+                }
             }
-        ]
-    }
-    console.log(JSON.stringify(case_study_data))
+        }
+    `)
+
+    const case_study_data = data.allCaseStudiesYaml.edges[0].node
     return (
         <Layout page_class="work project" page_title={case_study_data.title}>
             <HeroImageBlock data={case_study_data.hero_image} />

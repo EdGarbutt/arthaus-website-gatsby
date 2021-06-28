@@ -19,61 +19,37 @@ import OtherCaseStudies from '../../components/work-components/other-case-studie
 import GetInTouch from '../../components/contact-form'
 
 const AgNovosCaseStudy = () => {
-    
-    const case_study_data = {
-        title: "AgNovos Website",
-        hero_image: {
-            file: HeroImage,
-            description: "Agnovos website"
-        },
-        main_content: [
-            {
-                description: ["AgNovos Healthcare is developing novel treatments \
-                for osteoporosis, a devastating bone disease affecting more than \
-                200 million women worldwide​. The team approached Arthaus ahead of \
-                their launch to market with a request to design and build a website \
-                that would fit well with the company’s core values and aimed at medical \
-                professional. Originally built in Office 365 we have since updated and \
-                rebuilt the site using Umbraco, which is an open source Content Management System."],
-                type: "text"
-            },
-            {
-                url: "https://www.agnovos.com/",
-                button_text: "View the site",
-                type: "button"
-            },
-            {
-                path: MockUpsImage,
-                description: "Agnovos site on devices",
-                padding_classes: ["padding-b--30"],
-                type: "image"
-            },
-            {
-                path: WebsiteImage,
-                description: "Agnovos site on devices",
-                padding_classes: ["padding-b--30"],
-                type: "image"
-            },
-        ],
-        other_case_studies: [
-            {
-                url: "/work/hsbc-mentoring-portal",
-                title: "HSBC Mentoring",
-                image: HSBCMentoringImage
-            },
-            {
-                url: "/work/bupa-talent",
-                title: "Bupa talent toolkit",
-                image: BupaTalentToolkitImage
-            },
-            {
-                url: "/work/diageo-tech-cafe",
-                title: "Diageo Tech Café",
-                image: DiageoTechCafeImage
+    const data = useStaticQuery(graphql`
+        query {
+            allCaseStudiesYaml(filter: {id: {eq: "1"}}) {
+                edges {
+                    node {
+                        title
+                        hero_image {
+                            file
+                            description
+                        }
+                        main_content {
+                            paragraphs
+                            type
+                            url
+                            button_text
+                            padding_classes
+                            path
+                        }
+                        other_case_studies {
+                            url
+                            title
+                            image
+                        }
+                    }
+                }
             }
-        ]
-    }
-    console.log(JSON.stringify(case_study_data))
+        }
+    `)
+
+    const case_study_data = data.allCaseStudiesYaml.edges[0].node
+    
     return (
         <Layout page_class="work project" page_title={case_study_data.title}>
             <HeroImageBlock data={case_study_data.hero_image} />
