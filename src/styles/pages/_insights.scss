@@ -151,10 +151,14 @@ $toolkitViewpoint3: 1239px;
 }
 
 .toolKit__block {
-    background-color: red;
+    // background-color: red;
+    // width: 100%;
+    // display: block;
+    // border-bottom: 4px solid;
+    background-color: #f4f4f4;
     width: 100%;
     display: block;
-    border-bottom: 4px solid;
+    position: relative;
 
     &:hover {
         color: red;
@@ -188,6 +192,12 @@ $toolkitViewpoint3: 1239px;
 }
 
 .toolKit__block#block-a {
+    .toolKit__photo {
+        max-width: 468.5px;
+        max-height: 468.5px;
+        overflow: hidden;
+    }
+
     @media (min-width: $toolkitViewpoint2) {
         grid-column: 1/ span 2;
         grid-row: 1 / span 2;

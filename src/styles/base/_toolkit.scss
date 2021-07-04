@@ -140,6 +140,8 @@ $viewpoint3: 1239px;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: 450px;
 
+    
+
     // grid-template-rows:auto;
     @media(min-width:$viewpoint2) {
         max-width: 710px;
@@ -153,17 +155,55 @@ $viewpoint3: 1239px;
         max-width: 960px;
         grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: 350px;
+        .block-special {
+            display: none;
+        }
+    }
+}
+
+#toolKitList_bottom {
+    /*width:354px;*/
+    margin: 0 auto;
+    padding: 20px 0px;
+    min-width: 320px;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 450px;
+    // grid-template-rows:auto;
+    @media(min-width:$viewpoint2) {
+        max-width: 710px;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 330px;
+        grid-gap: 15px;
+        .block-special {
+            display: none;
+        }
+    }
+
+    @media (min-width: $viewpoint3) {
+        max-width: 960px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 350px;
+        .block-special {
+            display: block;
+        }
     }
 }
 
 .toolKit__block {
-    background-color: red;
+    background-color: #f4f4f4;
     width: 100%;
     display: block;
-    border-bottom: 4px solid;
+    position: relative;
 
     &:hover {
         color: red;
+        text-decoration: none !important;
+    }
+
+    &:focus {
         text-decoration: none !important;
     }
 
@@ -179,6 +219,35 @@ $viewpoint3: 1239px;
     &.socialPost {
         border-bottom-color: #365b7f;
     }
+
+    .toolKit__photo {
+        max-width: 320px;
+        max-height: 320px;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            content: "";
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 10%) 0%, rgba(0, 0, 0, 20%) 100%);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .photo {
+            width: 100%;
+        }
+
+        .toolKit__iconPostType {
+            position: absolute;
+            right: 13px;
+            bottom: 12px;
+            max-width: 30px;
+            z-index: 1;
+        }
+    }
 }
 
 .toolKit__block.blogPost:hover {
@@ -193,7 +262,23 @@ $viewpoint3: 1239px;
     font-family: 'LatoWebBlack';
 }
 
+.toolKit__title-createdAt {
+    padding: 0 20px;
+    font-size: 14px;
+    color: #878679;
+    position: absolute;
+    bottom: 0px;
+    // font-family: 'LatoWebLight';
+    margin: 0 0 8px !important;
+}
+
 .toolKit__block#block-a {
+    .toolKit__photo {
+        max-width: 468.5px;
+        max-height: 468.5px;
+        overflow: hidden;
+    }
+
     @media (min-width: $viewpoint2) {
         grid-column: 1/ span 2;
         grid-row: 1 / span 2;
