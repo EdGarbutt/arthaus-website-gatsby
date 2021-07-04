@@ -3,6 +3,15 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../../components/layout'
 
+import HeroImage from '../../images/work/HSBC-Mentoring-Portal/png/HSBCMentoring_heroimage_944x392.png'
+
+import MentoringProfileImage from '../../images/work/HSBC-Mentoring-Portal/png/mentoringprofile_659x838.png'
+import MentoringLaptopImage from '../../images/work/HSBC-Mentoring-Portal/png/mentoringlaptop_775x430.png'
+
+import BupaTalentToolkitImage from '../../images/work/BupaTalent_464x304.png'
+import DiageoTechCafeImage from '../../images/work/diageo_techcafe_464x304.png'
+import HSBCUniversityImage from '../../images/work/HSBCUniversity_464x304.png'
+
 import HeroImageBlock from '../../components/work-components/hero-image'
 import MainContent from '../../components/work-components/main-content'
 import OtherCaseStudies from '../../components/work-components/other-case-studies'

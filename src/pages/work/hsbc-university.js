@@ -3,6 +3,17 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../../components/layout'
 
+import HeroImage from '../../images/work/HSBC-University/png/HSBCUni_heroimage_944x392.png'
+
+import HSBCUniIconsImage from '../../images/work/HSBC-University/png/HSBCUni_Icons_944x410.png'
+import HSBCUniLaptopImage from '../../images/work/HSBC-University/png/HSBCUni_Laptop_944x587.png'
+import HSBCUniCollateralImage from '../../images/work/HSBC-University/png/hsbcUni_collateral_818x641.png'
+import HSBCUniOfficeGraphicsImage from '../../images/work/HSBC-University/png/hsbcUni_officegraphics_790x312.png'
+
+import SSYImage from '../../images/work/SSY.png'
+import WavesBookingAppImage from '../../images/work/Waves_464x304.png'
+import DiageoWorkplaceImage from '../../images/work/DiageoWorkplace_464x304.png'
+
 import HeroImageBlock from '../../components/work-components/hero-image'
 import MainContent from '../../components/work-components/main-content'
 import OtherCaseStudies from '../../components/work-components/other-case-studies'
