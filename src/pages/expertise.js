@@ -3,10 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
 
-import BrandingImage from '../images/expertise/branding.png'
-import CommunicationsImage from '../images/expertise/communications.png'
-import DigitalImage from '../images/expertise/digital.png'
-
 import SubNav from '../components/sub-navigation'
 import MainContent from '../components/expertise-components/main-content'
 
@@ -39,6 +35,7 @@ const Expertise = () => {
               }
         }
     `)
+    console.log(data)
     const expertise_data = data.allExpertiseYaml.edges[0].node
 
     return (

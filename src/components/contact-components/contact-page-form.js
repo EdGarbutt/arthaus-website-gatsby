@@ -7,15 +7,15 @@ const ContactForm = () => {
                 <form className="text-left" action="" method="POST">
                     <input type="hidden" name="_redirect" value="https://arthauswebsite.azurewebsites.net/thanks.html" />
                     <div className="form-group col-md-6">
-                        <label for="recipient-name" className="col-form-label text--midGrey">Your name:</label>
+                        <label htmlFor="recipient-name" className="col-form-label text--midGrey">Your name:</label>
                         <input type="text" className="form-control" name="name" id="recipient-name" required="" />
                     </div>
                     <div className="form-group col-md-6">
-                        <label for="recipient-email" className="col-form-label text--midGrey">Your email:</label>
+                        <label htmlFor="recipient-email" className="col-form-label text--midGrey">Your email:</label>
                         <input type="email" className="form-control" name="email" id="recipient-email" required="" />
                     </div>
                     <div className="form-group col-md-12">
-                        <label for="message-text" className="col-form-label col-form-label-lg text--midGrey">
+                        <label htmlFor="message-text" className="col-form-label col-form-label-lg text--midGrey">
                             Your message
                         </label>
                         <textarea className="form-control" name="message" id="message-text"></textarea>

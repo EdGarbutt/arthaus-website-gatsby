@@ -9,8 +9,6 @@ const InsightsContactBlock = () => {
         displayed: false,
         class: ""
     })
-    
-    let button_text = "Get in touch"
 
     const contactFormDisplayToggle = () => {
         if (formState.displayed) {

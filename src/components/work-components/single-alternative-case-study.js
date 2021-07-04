@@ -8,7 +8,7 @@ const SingleAlternativeCaseStudy = ({ data: { url, title, image }}) => {
                 <div className="smallText2 strong text-center text--lightGrey padding-t--20 padding-b--20">
                     {title}
                 </div>
-                <img className="work-carousel__item-img img-fullWidth" src={image} />
+                <img className="work-carousel__item-img img-fullWidth" src={image} alt="" />
             </Link> 
         </li>
     )

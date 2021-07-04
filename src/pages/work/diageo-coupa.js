@@ -3,15 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../../components/layout'
 
-import HeroImage from '../../images/work/Diageo-Coupa/iMac.jpg'
-
-import DiageoCoupaHangers from '../../images/work/Diageo-Coupa/office-hangers.jpg'
-import DiageCoupaiPad from '../../images/work/Diageo-Coupa/iPad.jpg'
-
-import HSBCUniversityImage from '../../images/work/HSBCUniversity_464x304.png'
-import SSYImage from '../../images/work/SSY.png'
-import WavesBookingAppImage from '../../images/work/Waves_464x304.png'
-
 import HeroImageBlock from '../../components/work-components/hero-image'
 import MainContent from '../../components/work-components/main-content'
 import OtherCaseStudies from '../../components/work-components/other-case-studies'

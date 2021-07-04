@@ -6,7 +6,7 @@ import SocialIcon from '../../images/insights/icon_socials.png'
 
 import Block from './toolkit-block'
 
-const TopList = ({ data }) => {
+const List = ({ data }) => {
     return (
         <div class="toolKit-list padding-b--60" id="toolKitList">
             {data.map((tk, i) => {
@@ -15,9 +15,6 @@ const TopList = ({ data }) => {
 
                 if (i === 0) {
                     block_id = 'block-a'
-                } else if (i === 5) {
-                    block_class.push('block-c')
-                    block_class.push('block-special')
                 } else {
                     block_id = 'block-' + i
                     block_class.push('block-b')
@@ -31,6 +28,8 @@ const TopList = ({ data }) => {
                         break;
                     case "socialPost":
                         block_type_icon = SocialIcon
+                        break;
+                    default: 
                         break;
                 }
 
@@ -51,4 +50,4 @@ const TopList = ({ data }) => {
     )
 }
 
-export default TopList
+export default List

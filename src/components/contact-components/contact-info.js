@@ -44,25 +44,25 @@ const ContactInfo = () => {
                     <div className="arthaus-social-main">
                         <ul className="arthaus-social-main">
                             <li>
-                                <a href="https://www.instagram.com/arthaus_design/" target="_blank">
+                                <a href="https://www.instagram.com/arthaus_design/" target="_blank" rel="noreferrer">
                                     <img className="contact-social-icon instagram-icon" src={InstagramIcon} alt="Social media icon, instagram icon in orange links to company's instagram account" />
                                 </a>
                             </li>
                             &nbsp;
                             <li>
-                                <a href="https://www.linkedin.com/company/arthaus-visual-communications-" target="_blank">
+                                <a href="https://www.linkedin.com/company/arthaus-visual-communications-" target="_blank" rel="noreferrer">
                                     <img className="contact-social-icon linkedin-icon" src={LinkedInIcon} alt="Social media icon, linkedin icon in orange links to company's linkedin account" />
                                 </a>
                             </li>
                             &nbsp;
                             <li>
-                                <a href="https://twitter.com/arthaus" target="_blank">
+                                <a href="https://twitter.com/arthaus" target="_blank" rel="noreferrer">
                                     <img className="contact-social-icon twitter-icon" src={TwitterIcon} alt="Social media icon, twitter icon in orange links to company's twitter account" />
                                 </a>
                             </li>
                             &nbsp;
                             <li>
-                                <a href="https://www.facebook.com/ArtHaus.design/" target="_blank">
+                                <a href="https://www.facebook.com/ArtHaus.design/" target="_blank" rel="noreferrer">
                                     <img className="contact-social-icon facebook-icon" src={FacebookIcon} alt="Social media icon, facebook icon in orange links to company's facebook account" />
                                 </a>
                             </li>

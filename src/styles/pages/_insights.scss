@@ -9,6 +9,10 @@ $toolkitViewpoint2: 759px;
 $toolkitViewpoint3: 1239px;
 
 @media screen and (max-width: 758px) {
+    header {
+        width: 320px;
+    }
+
     .toolkitPage {
         nav.sub-nav .opt {
             width: 105px;

@@ -48,13 +48,13 @@ const TsAndCs = () => {
                                         <div className="row">
                                             <div className="col-xs-3">
                                                 <div className="tos-content icon-container text-center">
-                                                    <img className="credit-card" src={d.icon} />
+                                                    <img className="credit-card" src={d.icon} alt="" />
                                                 </div>
                                             </div>
                                             <div className="col-xs-9">
                                                 <div className="tos-content">
                                                     <h4>{d.title}</h4>
-                                                    <a className="btn orange" href={d.url} target="_blank">Download</a>
+                                                    <a className="btn orange" href={d.url} target="_blank" rel="noreferrer">Download</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -37,7 +37,6 @@ const Insights = ({ query }) => {
     const [toolKit, setToolKit] = useState([]);
     
     useEffect(() => {
-      
       getToolKit(insights_filter).then(response => {
         let insight_blocks = [];
         response.forEach(b => {
@@ -50,7 +49,6 @@ const Insights = ({ query }) => {
             created: block_object.createdAt.toDate()
           })
         })
-        insight_blocks = insight_blocks.sort((a, b) => b.created - a.created)
         setToolKit(insight_blocks)
       })
     }, [])

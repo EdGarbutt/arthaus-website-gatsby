@@ -9,7 +9,7 @@ const CaseStudy = ({ data: { title, url, image, image_description, type }, case_
     }
 
     return (
-        <div className={case_study_classes.join(" ")} data-projectType={type}>
+        <div className={case_study_classes.join(" ")}>
             <div className="case-study">
                 <Link to={url} className="case-study--link">
                     <p className="padding-b--18 padding-t--18 subHead strong text--lightGrey text-center case-study--title">{title}</p>

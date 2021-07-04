@@ -18,10 +18,10 @@ const ToolKitBlock = ({ data }) => {
     }
 
     return (
-        <a id={data.id} className={data.classes.join(' ')} target="_blank" href={data.url}>
+        <a id={data.id} className={data.classes.join(' ')} target="_blank" href={data.url} rel="noreferrer">
             <figure className="toolKit__photo">
-                <img className="photo" src={data.image} />
-                <img className="toolKit__iconPostType" src={data.type_icon} />
+                <img className="photo" src={data.image} alt="" />
+                <img className="toolKit__iconPostType" src={data.type_icon} alt="" />
             </figure>
             <div className="toolKit__title">
                 {data.title}
