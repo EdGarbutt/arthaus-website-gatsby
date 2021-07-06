@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link } from 'gatsby'
 
-import InstagramIcon from '../images/footer/dec2020/Instagram.png'
+import InstagramIcon from './../images/footer/dec2020/Instagram.png'
 import LinkedInIcon from '../images/footer/dec2020/linkedin.png'
 import TwitterInIcon from '../images/footer/dec2020/twitter.png'
 import FacebookIcon from '../images/footer/dec2020/facebook.png'

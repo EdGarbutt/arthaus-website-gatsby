@@ -6,7 +6,7 @@ import Layout from '../../components/layout'
 import HeroImage from '../../images/work/Waves/png/waves2_754x453.png'
 
 import WavesSingleTabletImage from '../../images/work/Waves/png/waves1_754x465.png'
-import WavesMacImage from '../../images/work/waves/png/waves3_950x658.png'
+import WavesMacImage from './../../images/work/waves/png/waves3_950x658.png'
 
 import DiageoWorkplaceImage from '../../images/work/DiageoWorkplace_464x304.png'
 import AgNovosImage from '../../images/work/agnovos_464x304.png'
