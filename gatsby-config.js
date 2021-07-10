@@ -7,6 +7,28 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'ArtHaus Visual Communication Ltd',
+        short_name: 'ArtHaus Visual Communication Ltd',
+        display: 'standalone',
+        icon: `${__dirname}/src/images/arthaus-icon.png`,
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#f28b00',
+        cache_busting_mode: 'none'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: ['/insights/'],
+        workboxConfig: {
+          globPatterns: [`${__dirname}/src/images/arthaus-icon.png`]
+       }
+      }
+    },
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',

@@ -19,6 +19,7 @@ const List = ({ data }) => {
                     block_id = 'block-' + i
                     block_class.push('block-b')
                 }
+                
                 switch (tk.type) {
                     case "blogPost":
                         block_type_icon = BlogIcon

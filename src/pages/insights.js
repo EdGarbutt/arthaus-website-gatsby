@@ -11,13 +11,15 @@ import ContactBlock from '../components/insights-components/insights-contact-blo
 
 import { getToolKit } from '../utilities/toolKit'
 
-const Insights = ({ query }) => {
+const Insights = () => {
 
     const location = useLocation();
     const searchParameters = new URLSearchParams(location.search);
 
     let insights_page_title = 'Insights'
     let insights_filter
+
+    const [insightType, setInsightType] = useState()
 
     if (searchParameters.has("postType")) {
       switch(searchParameters.get("postType")) {
@@ -30,14 +32,19 @@ const Insights = ({ query }) => {
         case "socialPost":
             insights_page_title = 'Social'
             break;
+        default:
+            insights_filter = 'all'
+            break;
       }
       insights_filter = searchParameters.get("postType")
+    } else {
+      insights_filter = 'all'
     }
 
     const [toolKit, setToolKit] = useState([]);
     
     useEffect(() => {
-      getToolKit(insights_filter).then(response => {
+      getToolKit().then(response => {
         let insight_blocks = [];
         response.forEach(b => {
           const block_object = b.data();
@@ -52,7 +59,10 @@ const Insights = ({ query }) => {
         setToolKit(insight_blocks)
       })
     }, [])
-    
+
+    useEffect(() => {
+      setInsightType(insights_filter)
+    })
 
     const data = useStaticQuery(graphql`
         query {
@@ -69,7 +79,7 @@ const Insights = ({ query }) => {
     const insights_data = data.allInsightsYaml.edges[0].node
     return (
         <Layout page_class="toolkitPage" page_title={insights_page_title}>
-            <ToolKit data={toolKit} />
+            <ToolKit data={toolKit} filter={insightType} />
             <ContactBlock />
         </Layout>
     )

@@ -27,6 +27,7 @@ const Header = () => {
             headerClasses.push('navbar-fixed-top', 'bkg--white');
             break;
         case "/insights":
+
             headerClasses.push('navbar-fixed-top', 'bkg--white');
             break;
     }
@@ -46,32 +47,37 @@ const Header = () => {
     });
 
     useState(() => {
-        if (location.pathname === "/insights" && searchParameters.has("postType")) {
-            switch(searchParameters.get("postType")) {
-                case "blogPost":
-                    setPathState({
-                        insightBlogSelected: true
-                    });
-                    break;
-                case "inspiration":
-                    setPathState({
-                        insightInspirationSelected: true
-                    });
-                    break;
-                case "socialPost":
-                    setPathState({
-                        insightSocialSelected: true
-                    });
-                    break;
-                case "all":
-                    setPathState({
-                        insightAllSelected: true
-                    });
-                    break;
+        if (location.pathname === "/insights") {
+            if (searchParameters.has("postType")) {
+                switch(searchParameters.get("postType")) {
+                    case "blogPost":
+                        setPathState({
+                            insightBlogSelected: true
+                        });
+                        break;
+                    case "inspiration":
+                        setPathState({
+                            insightInspirationSelected: true
+                        });
+                        break;
+                    case "socialPost":
+                        setPathState({
+                            insightSocialSelected: true
+                        });
+                        break;
+                    case "all":
+                        setPathState({
+                            insightAllSelected: true
+                        });
+                        break;
+                }
+            } else {
+                setPathState({
+                    insightAllSelected: true
+                });
             }
         }
     }, [])
-
 
     const onInsightCategoryChangedHandler = (insight_type) => {
         switch(insight_type) {
