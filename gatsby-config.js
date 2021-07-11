@@ -20,15 +20,7 @@ module.exports = {
         cache_busting_mode: 'none'
       }
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        precachePages: ['/insights/'],
-        workboxConfig: {
-          globPatterns: [`${__dirname}/src/images/arthaus-icon.png`]
-       }
-      }
-    },
+    'gatsby-plugin-offline',
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
